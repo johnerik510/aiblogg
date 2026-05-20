@@ -7,6 +7,7 @@ publishDate: "2026-05-09"
 
 import Callout from '../../../components/Callout.astro';
 import FAQ from '../../../components/FAQ.astro';
+import Figure from '../../../components/Figure.astro';
 
 Cursor AI har på två år gått från okänd uppstickare till det verktyg som de flesta professionella utvecklare jag pratar med använder dagligen. Editorn är en fork av Visual Studio Code med AI inbyggt på ett sätt som faktiskt fungerar i ett riktigt arbetsflöde, inte bara som autocomplete på enstaka rader. Den här genomgången förklarar vad Cursor är, varför så många bytt över från GitHub Copilot, och hur du faktiskt får ut värde av tab-completion och agent-läget.
 
@@ -38,7 +39,7 @@ Chatten har två viktiga inställningar. Med @-kommandon kan du peka ut specifik
 
 För större refaktoreringar är chatten överlägsen att försöka göra ändringar manuellt. För enskilda buggar eller frågor om syntax är tab-completion ofta snabbare.
 
-{/* INLINE-BILD: Cursor-editorn med AI-chattruta öppen och tab-completion-förslag synliga i koden */}
+<Figure src="/images/inline/cursor-ai-svenska.webp" alt="Utvecklare som kodar med AI-stöd i Cursor" caption="" />
 
 ## Agent-läget, för uppgifter över flera filer
 

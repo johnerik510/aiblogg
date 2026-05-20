@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { clusters, articlesByCluster } from '../../data/articles';
 import { site } from '../../data/site';
+import { formatDate } from '../../lib/date';
 
 export function getStaticPaths() {
   return clusters.map(c => ({ params: { category: c.slug }, props: { cluster: c } }));
@@ -73,7 +74,7 @@ const isViolet = cluster.accent === 'violet';
                 <div class="flex items-center gap-2 mb-2">
                   <span class="label text-[var(--color-accent)]">Cornerstone</span>
                   <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                  <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+                  <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
                   <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
                   <span class="mono text-xs text-[var(--color-text-lighter)]">{a.readingTime} min</span>
                 </div>
@@ -103,7 +104,7 @@ const isViolet = cluster.accent === 'violet';
             </a>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
-                <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+                <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
                 <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
                 <span class="mono text-xs text-[var(--color-text-lighter)]">{a.readingTime} min</span>
               </div>

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { site } from '../../data/site';
 import { publishedArticles } from '../../data/articles';
+import { formatDate } from '../../lib/date';
 
 export function getStaticPaths() {
   return [
@@ -71,7 +72,7 @@ const written = publishedArticles
               <div class="flex items-center gap-2 mb-2">
                 <span class="label text-[var(--color-accent)]">{art.categoryLabel}</span>
                 <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                <time class="mono text-xs text-[var(--color-text-lighter)]">{art.publishDate}</time>
+                <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(art.publishDate)}</time>
               </div>
               <h3 class="font-semibold text-[1.02rem] leading-snug tracking-tight">
                 <a href={art.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{art.title}</a>

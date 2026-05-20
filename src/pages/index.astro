@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { clusters, recentArticles, publishedArticles, articlesByCluster } from '../data/articles';
 import { site } from '../data/site';
+import { formatDate } from '../lib/date';
 
 const recent = recentArticles(8);
 const featured = publishedArticles.filter(a => a.cornerstone).slice(0, 3);
@@ -9,7 +10,7 @@ const leadArticle = recent[0];
 const sideArticles = recent.slice(1, 5);
 ---
 <BaseLayout
-  title={`${site.name} — ${site.tagline}`}
+  title={`${site.name}, ${site.tagline}`}
   description={site.description}
 >
   <!-- Magasin-hero: lead article + sidebar -->
@@ -38,7 +39,7 @@ const sideArticles = recent.slice(1, 5);
           <div class="flex items-center gap-3 mb-3">
             <span class="label text-[var(--color-accent)]">{leadArticle.categoryLabel}</span>
             <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-            <time class="mono text-xs text-[var(--color-text-lighter)]">{leadArticle.publishDate}</time>
+            <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(leadArticle.publishDate)}</time>
           </div>
           <h2 class="font-semibold text-2xl md:text-3xl leading-tight tracking-tight mb-3">
             <a href={leadArticle.url} class="hover:text-[var(--color-accent)] transition-colors">{leadArticle.title}</a>
@@ -54,7 +55,7 @@ const sideArticles = recent.slice(1, 5);
             <div class="flex items-center gap-2 mb-2">
               <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
               <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-              <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+              <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
             </div>
             <h3 class="font-semibold text-[1.02rem] leading-snug tracking-tight">
               <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
@@ -141,7 +142,7 @@ const sideArticles = recent.slice(1, 5);
             <div class="flex items-center gap-2 mb-2">
               <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
               <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-              <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+              <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
             </div>
             <h3 class="font-semibold text-[1.05rem] leading-snug tracking-tight mb-2">
               <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>

@@ -6,6 +6,7 @@ import AuthorBio from '../components/AuthorBio.astro';
 import RelatedReading from '../components/RelatedReading.astro';
 import { site } from '../data/site';
 import { relatedArticles, type Article } from '../data/articles';
+import { formatDate } from '../lib/date';
 
 export interface Heading { id: string; text: string; }
 export interface Props {
@@ -73,11 +74,11 @@ const schema = {
         </a>
         <span class="text-[var(--color-text-dim)] mono text-xs hidden sm:inline">·</span>
         <div class="flex items-center gap-3 text-xs mono text-[var(--color-text-lighter)]">
-          <time datetime={article.publishDate}>Publicerad {article.publishDate}</time>
+          <time datetime={article.publishDate}>Publicerad {formatDate(article.publishDate)}</time>
           {article.updateDate && article.updateDate !== article.publishDate && (
             <>
               <span class="text-[var(--color-text-dim)]">·</span>
-              <time datetime={article.updateDate}>Uppdaterad {article.updateDate}</time>
+              <time datetime={article.updateDate}>Uppdaterad {formatDate(article.updateDate)}</time>
             </>
           )}
           <span class="text-[var(--color-text-dim)]">·</span>
