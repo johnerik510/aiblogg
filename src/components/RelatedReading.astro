@@ -1,26 +1,28 @@
 ---
 import type { Article } from '../data/articles';
-import { formatDate } from '../lib/date';
 export interface Props { items: Article[]; title?: string; }
 const { items, title = 'Mer från aiblogg' } = Astro.props;
 ---
 {items.length > 0 && (
   <section class="mt-16 pt-12 border-t border-[var(--color-border)]">
     <h2 class="text-xl font-semibold tracking-tight mb-6">{title}</h2>
-    <ol class="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {items.map(a => (
-        <li class="group">
-          <a href={a.url} class="grid grid-cols-1 sm:grid-cols-[1fr_140px] gap-2 sm:gap-6 items-baseline py-4 hover:bg-[var(--color-bg-card)] transition-colors px-2 -mx-2 rounded-md">
-            <div class="min-w-0">
-              <div class="flex flex-wrap items-center gap-x-3 mb-1">
-                <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
-              </div>
-              <h3 class="font-semibold text-base leading-snug tracking-tight text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">{a.title}</h3>
-            </div>
-            <time class="mono text-xs text-[var(--color-text-lighter)] sm:text-right">{formatDate(a.publishDate)}</time>
+        <article class="group rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+          <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+            <img src={a.hero} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
-        </li>
+          <div class="p-5">
+            <div class="flex items-center gap-3 mb-2.5">
+              <span class="label">{a.categoryLabel}</span>
+            </div>
+            <h3 class="font-semibold text-[1.05rem] leading-snug tracking-tight mb-2">
+              <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
+            </h3>
+            <p class="text-sm text-[var(--color-text-light)] line-clamp-2 leading-relaxed">{a.excerpt}</p>
+          </div>
+        </article>
       ))}
-    </ol>
+    </div>
   </section>
 )}
