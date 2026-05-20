@@ -11,7 +11,7 @@ const leadArticle = recent[0];
 const sideArticles = recent.slice(1, 5);
 ---
 <BaseLayout
-  title={`${site.name}, ${site.tagline}`}
+  title={`aiblogg.se: AI-nyheter, guider och verktyg på svenska 2026`}
   description={site.description}
 >
   <!-- Magasin-hero: lead article + sidebar -->
@@ -24,10 +24,10 @@ const sideArticles = recent.slice(1, 5);
         </div>
         <h1 class="display text-4xl sm:text-5xl md:text-6xl max-w-3xl">
           AI utan <span class="gradient-text">hype</span>.<br/>
-          Verktyg, guider och analys.
+          Nyheter, guider och verktyg.
         </h1>
       </div>
-      <p class="text-[var(--color-text-light)] max-w-md text-base leading-relaxed">Oberoende redaktion. Tekniskt grundade jämförelser av verktyg, praktiska guider och nyktra analyser av AI-utvecklingen i Sverige.</p>
+      <p class="text-[var(--color-text-light)] max-w-md text-base leading-relaxed">AI-nyheter, jämförelser av AI-verktyg och praktiska guider på svenska. Oberoende redaktion utan techbolagshype, sedan 2026.</p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -118,7 +118,7 @@ const sideArticles = recent.slice(1, 5);
               <span class="mono text-xs text-[var(--color-text-dim)]">{String(count).padStart(2,'0')} artiklar</span>
             </div>
             <h3 class="font-semibold text-lg tracking-tight mb-2 group-hover:text-[var(--color-accent)] transition-colors">{c.label}</h3>
-            <p class="text-sm text-[var(--color-text-light)] leading-relaxed">{c.description}</p>
+            <p class="text-sm text-[var(--color-text-light)] leading-relaxed">{c.seoDescription}</p>
           </a>
         );
       })}

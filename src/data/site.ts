@@ -2,8 +2,8 @@ export const site = {
   name: 'aiblogg.se',
   domain: 'aiblogg.se',
   url: 'https://aiblogg.se',
-  tagline: 'AI på svenska, utan hype',
-  description: 'Oberoende analys av AI-verktyg, utvecklingen och vad det betyder för svenska användare. Tekniskt grundat, marknadsförings-fritt.',
+  tagline: 'AI-nyheter, guider och verktyg på svenska',
+  description: 'AI-nyheter på svenska, jämförelser av AI-verktyg och praktiska guider. Oberoende redaktion utan techbolagshype.',
   contactEmail: 'elscatalyst@proton.me',
   founded: '2026',
   company: {

@@ -3,7 +3,11 @@ export interface Cluster {
   url: string;
   label: string;
   shortLabel: string;
-  description: string;
+  /** SEO title för meta-tag (35-65 tecken, innehåller primärsökord) */
+  seoTitle: string;
+  /** Meta description (120-160 tecken, innehåller primärsökord) */
+  seoDescription: string;
+  /** Intro-stycke som visas på kategorisidan */
   intro: string;
   accent: 'cyan' | 'violet';
 }
@@ -38,7 +42,8 @@ export const clusters: Cluster[] = [
     url: '/verktyg/',
     label: 'AI-verktyg',
     shortLabel: 'Verktyg',
-    description: 'AI-verktyg på svenska, bästa, gratis och betalda. Genomgångar av ChatGPT, Claude, Gemini, Perplexity och Cursor som du faktiskt använder.',
+    seoTitle: 'AI-verktyg på svenska 2026: alla recensioner och jämförelser',
+    seoDescription: 'Genomgångar av de bästa AI-verktygen på svenska 2026. ChatGPT, Claude, Gemini, Perplexity, Cursor och Midjourney testade hands-on av oberoende redaktion.',
     intro: 'Här samlar vi genomgångar och jämförelser av de AI-verktyg som svenska användare faktiskt har nytta av. Vi testar verktygen hands-on på riktiga uppgifter och förklarar vad som skiljer dem åt, så du slipper läsa marknadsföringssidor.',
     accent: 'cyan',
   },
@@ -47,26 +52,29 @@ export const clusters: Cluster[] = [
     url: '/guider/',
     label: 'AI-guider',
     shortLabel: 'Guider',
-    description: 'Praktiska AI-guider på svenska. Prompting, ChatGPT-funktioner, AI i Excel, sammanfatta dokument och bygga arbetsflöden steg för steg.',
+    seoTitle: 'AI-guider på svenska 2026: praktiska steg-för-steg-genomgångar',
+    seoDescription: 'Praktiska AI-guider på svenska. Prompting, ChatGPT-funktioner, AI i Excel, sammanfatta dokument och bygga AI-arbetsflöden steg för steg.',
     intro: 'AI-verktyg är bara värdefulla när du vet hur du faktiskt använder dem. Här samlar vi steg-för-steg-guider som tar dig från registrering till resultat, oavsett om det gäller ChatGPT, Copilot eller andra tjänster.',
     accent: 'cyan',
   },
   {
     slug: 'jobb',
     url: '/jobb/',
-    label: 'AI på jobbet',
+    label: 'AI jobb och företag',
     shortLabel: 'Jobb',
-    description: 'AI för företag och arbetsplatsen. Småföretag, mötesprotokoll, automation, mail, kundtjänst och AI-policy som faktiskt fungerar.',
-    intro: 'AI används redan på de flesta arbetsplatser, men sällan strukturerat. Vi tittar på vad som fungerar, vad som inte fungerar, och vad ledningen borde tänka på innan de skalar upp.',
+    seoTitle: 'AI jobb och företag: så används AI på svenska arbetsplatser 2026',
+    seoDescription: 'AI jobb, småföretag, mötesprotokoll, automation och kundtjänst. Hur AI faktiskt används på svenska arbetsplatser, vad som fungerar och AI-policy.',
+    intro: 'AI används redan på de flesta arbetsplatser, men sällan strukturerat. Här tittar vi på AI jobb och företagsanvändning, vad som fungerar, vad som inte fungerar, och vad ledningen borde tänka på innan de skalar upp.',
     accent: 'violet',
   },
   {
     slug: 'integritet',
     url: '/integritet/',
-    label: 'Integritet & säkerhet',
-    shortLabel: 'Integritet',
-    description: 'GDPR, ChatGPT-data, deepfakes och AI-bedrägerier. Vad du måste veta innan du klistrar in företagets uppgifter i ett AI-verktyg.',
-    intro: 'AI-tjänster läser, lagrar och tränar ofta på det du skickar in. Här går vi igenom riskerna konkret, vad GDPR säger om ChatGPT och hur du skyddar dig och företaget.',
+    label: 'AI-säkerhet och integritet',
+    shortLabel: 'Säkerhet',
+    seoTitle: 'AI-säkerhet och integritet 2026: GDPR, dataskydd och deepfakes',
+    seoDescription: 'AI-säkerhet, GDPR och ChatGPT, deepfakes och AI-bedrägerier. Vad du måste veta om AI och dataskydd 2026 innan du klistrar in företagets uppgifter.',
+    intro: 'AI-tjänster läser, lagrar och tränar ofta på det du skickar in. Här går vi igenom AI-säkerhet och integritet konkret: vad GDPR säger om ChatGPT, hur deepfakes används i bedrägerier och hur du skyddar dig och företaget.',
     accent: 'violet',
   },
   {
@@ -74,16 +82,18 @@ export const clusters: Cluster[] = [
     url: '/bild-och-video/',
     label: 'AI-bilder & video',
     shortLabel: 'Bild & video',
-    description: 'AI-bilder gratis, Midjourney, DALL-E, Sora och Runway. Hur du skapar AI-bilder och AI-video på svenska, juridik och bästa verktygen.',
+    seoTitle: 'AI-bilder och video på svenska 2026: alla guider och verktyg',
+    seoDescription: 'Skapa AI-bilder och AI-video på svenska. Midjourney, DALL-E, Sora, Runway och AI-bilder gratis. Alla våra guider och verktygsjämförelser.',
     intro: 'Generativ bild och video har gått från experiment till verktygslåda på två år. Vi visar vilka verktyg som faktiskt fungerar, hur du skapar bra AI-bilder gratis, och hur juridiken kring AI-genererat innehåll ser ut i Sverige.',
     accent: 'cyan',
   },
   {
     slug: 'samhalle',
     url: '/samhalle/',
-    label: 'AI & samhälle',
+    label: 'AI och samhälle',
     shortLabel: 'Samhälle',
-    description: 'EU AI Act, svensk AI-strategi, AI och jobben, AI i skolan, energiåtgång. Analys av AI-utvecklingen i Sverige.',
+    seoTitle: 'AI och samhälle 2026: EU AI Act, jobben och svensk politik',
+    seoDescription: 'AI och samhället: EU AI Act, svensk AI-strategi, AI och jobben, AI i skolan och energiåtgång. Nykter analys av AI-utvecklingen i Sverige.',
     intro: 'AI förändrar arbetsmarknaden, lagstiftningen och energisystemet samtidigt. Vi följer utvecklingen i Sverige och EU och försöker skilja på reella effekter och hypeartiklar.',
     accent: 'violet',
   },

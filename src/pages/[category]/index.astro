@@ -18,8 +18,8 @@ const others = all.filter(a => !a.cornerstone);
 const isViolet = cluster.accent === 'violet';
 ---
 <BaseLayout
-  title={`${cluster.label}, ${site.name}`}
-  description={cluster.description}
+  title={cluster.seoTitle}
+  description={cluster.seoDescription}
 >
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
     <Breadcrumbs crumbs={[{ label: cluster.label }]} />
