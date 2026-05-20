@@ -1,0 +1,31 @@
+---
+export interface Spec {
+  label: string;
+  values: string[];
+}
+export interface Props {
+  columns: string[];
+  rows: Spec[];
+  caption?: string;
+}
+const { columns, rows, caption } = Astro.props;
+---
+<figure class="my-8 overflow-x-auto rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+  <table class="w-full text-sm">
+    <thead>
+      <tr class="border-b border-[var(--color-border)]">
+        <th class="text-left px-4 py-3 label font-semibold"></th>
+        {columns.map(c => <th class="text-left px-4 py-3 label font-semibold text-[var(--color-text)]">{c}</th>)}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row, i) => (
+        <tr class={i < rows.length - 1 ? "border-b border-[var(--color-border-light)]" : ""}>
+          <td class="px-4 py-3 font-medium text-[var(--color-text)] align-top">{row.label}</td>
+          {row.values.map(v => <td class="px-4 py-3 text-[var(--color-text-light)] align-top">{v}</td>)}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+  {caption && <figcaption class="px-4 py-2 text-xs mono text-[var(--color-text-lighter)] border-t border-[var(--color-border-light)] bg-[var(--color-bg-alt)]">{caption}</figcaption>}
+</figure>

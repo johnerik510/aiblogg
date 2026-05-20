@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "aiblogg",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 4322,
+      "cwd": "/Users/axeljonemyr/Documents/aiblogg"
+    }
+  ]
+}

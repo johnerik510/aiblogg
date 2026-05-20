@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Vår metod, så testar och granskar vi AI på aiblogg.se`} description="Hur aiblogg.se testar AI-verktyg, granskar fakta och hanterar källor. Konkret arbetsmetod, inte marknadsföringsfraser.">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Vår metod' }]} />
+    <div class="label mb-3">Redaktionell metod</div>
+    <h1 class="display text-4xl md:text-5xl mb-6">Så testar och granskar vi AI</h1>
+    <p class="text-lg text-[var(--color-text-light)] mb-10 leading-relaxed">aiblogg.se publicerar bara material vi själva tagit fram, testat och granskat. Här är arbetsmetoden i klartext.</p>
+
+    <div class="prose-article">
+      <h2>Hur vi testar AI-verktyg</h2>
+      <p>När vi recenserar eller jämför ett AI-verktyg har vi använt det själva, i flera dagar, på riktiga arbetsuppgifter. Vi citerar inte funktionslistor från leverantörens marknadsföringssida som "test".</p>
+
+      <p>En typisk test omfattar:</p>
+      <ul>
+        <li><strong>Samma promptbank.</strong> Vid jämförelser kör vi identiska prompter i alla testade verktyg. Promptbanken täcker fyra till sex domäner som är relevanta för svenska användare: sammanfatta svensk text, koda en mindre funktion, skriva ett brev på svenska, lösa ett resonemangsproblem, hantera lång kontext, generera struktur.</li>
+        <li><strong>Tester på svenska och engelska.</strong> Eftersom de flesta modeller är tränade övervägande på engelska blir resultatet ofta sämre på svenska. Vi noterar uttryckligen var skillnaden är stor.</li>
+        <li><strong>Realistiska arbetsflöden.</strong> Vi testar inte bara "fungerar funktionen", utan om verktyget håller över ett halvtimmars arbetspass. Det är där hallucineringar, retentions-problem och hastighet visar sig.</li>
+        <li><strong>Pris i SEK.</strong> Alla prisangivelser räknas om till svenska kronor med dagens valutakurs, inklusive moms när relevant.</li>
+      </ul>
+
+      <h2>Hur vi hanterar källor</h2>
+      <p>Påståenden om lagstiftning, marknadsdata, prestanda eller statistik styrks alltid med primärkälla. Vi citerar:</p>
+      <ul>
+        <li>Lagtexter och förordningar (EUR-Lex, Riksdagens öppna data)</li>
+        <li>Myndigheter (Integritetsskyddsmyndigheten, Skolverket, Vinnova, SCB, Energimyndigheten)</li>
+        <li>Leverantörers tekniska dokumentation och modellkort</li>
+        <li>Granskade forskningsartiklar via Google Scholar, arXiv eller institutioners egna publikationer</li>
+        <li>Officiell statistik från IEA, OECD, Eurostat när det är internationella jämförelser</li>
+      </ul>
+      <p>Sekundärkällor (nyhetsartiklar, blogginlägg, tweets) används bara som komplement, aldrig som enda underlag för en hård siffra.</p>
+
+      <h2>Faktagranskning innan publicering</h2>
+      <p>Innan en artikel publiceras går vi igenom följande punkter:</p>
+      <ol>
+        <li>Verifiera varje siffra mot primärkällan. Om primärkällan inte kan hittas tas påståendet bort.</li>
+        <li>Kontrollera tekniska termer mot leverantörens egen dokumentation.</li>
+        <li>Verifiera priser och prisplaner genom att besöka leverantörens prissida samma dag som artikeln publiceras.</li>
+        <li>Kontrollera alla länkar.</li>
+        <li>Läs igenom artikeln högt, en gång, för att fånga formuleringar som inte håller.</li>
+      </ol>
+
+      <h2>Uppdatering och freshness</h2>
+      <p>AI-fältet ändras snabbt. Modellnamn, prisplaner och funktioner uppdateras varannan vecka i de stora bolagen. Vi gör därför följande:</p>
+      <ul>
+        <li><strong>Cornerstone-artiklar</strong> (de viktigaste pillar-sidorna) granskas och uppdateras minst var sjätte vecka.</li>
+        <li><strong>Övriga artiklar</strong> granskas minst två gånger per år, eller direkt om en stor händelse påverkar innehållet.</li>
+        <li>När en artikel uppdateras får den ett <code>updateDate</code>-stämpel i frontmatter. Större faktauppdateringar markeras synligt i toppen av artikeln med datum och beskrivning av vad som rättats.</li>
+      </ul>
+
+      <h2>Korrigeringspolicy</h2>
+      <p>Hittar du ett faktafel? Mejla <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off--> med en kort beskrivning och länk till primärkällan. Vi svarar inom 48 timmar, granskar och rättar inom en vecka om felet är belagt.</p>
+
+      <p>Vi tar inte bort artiklar eller justerar slutsatser baserat på påtryckningar från leverantörer eller PR-byråer. Korrigeringar görs bara när faktan är fel.</p>
+
+      <h2>AI i vårt eget arbetsflöde</h2>
+      <p>Vi använder AI-verktyg som hjälp i research, redigering och faktakontroll. Konkret:</p>
+      <ul>
+        <li>Vi använder LLM:er för att hitta källor och föreslå strukturer för längre artiklar.</li>
+        <li>Vi använder dem inte för att skriva färdig brödtext som publiceras utan mänsklig genomgång.</li>
+        <li>Varje artikel är slutgiltigt granskad och godkänd av en mänsklig redaktör som tar fullt ansvar för innehållet.</li>
+        <li>När vi citerar AI-output (till exempel exempel-promptar och svar) markerar vi det tydligt i texten.</li>
+      </ul>
+
+      <h2>Oberoende och finansiering</h2>
+      <p>aiblogg.se finansieras genom redaktionellt oberoende samarbeten, sponsrat innehåll som tydligt markeras, och i begränsad omfattning affiliatelänkar till verktyg vi själva använder. Vi har inga ägarintressen i någon AI-leverantör. Se vår <a href="/sponsrat-innehall/">sponsringspolicy</a> för detaljer.</p>
+
+      <h2>Frågor om en specifik artikel</h2>
+      <p>Varje artikel har en angiven skribent. Frågor om en specifik artikel kan riktas direkt till skribenten via <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->. Skriv artikelns titel eller URL i ämnesraden så når frågan rätt person.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { site } from '../../data/site';
+const a = site.author;
+---
+<BaseLayout title={`Redaktionen, ${site.name}`} description={`Möt redaktionen bakom aiblogg.se. ${a.name}, ${a.role}.`}>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Redaktionen' }]} />
+    <div class="label mb-3">Redaktionen</div>
+    <h1 class="display text-4xl md:text-5xl mb-4">Bakom aiblogg.se</h1>
+    <p class="text-lg text-[var(--color-text-light)] mb-12 leading-relaxed max-w-2xl">aiblogg.se drivs av en redaktion på en person. Här är vem som skriver, vad bakgrunden är och hur du når hen.</p>
+
+    <article class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start mb-12 p-6 rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+      <img src={a.image} alt={`Porträtt av ${a.name}`} width="200" height="200" loading="eager" class="rounded-xl w-full max-w-[200px] aspect-square object-cover border border-[var(--color-border-bright)]" />
+      <div>
+        <h2 class="text-2xl font-semibold tracking-tight mb-1">
+          <a href="/redaktionen/adrian-hellstrom/" class="hover:text-[var(--color-accent)] transition-colors">{a.name}</a>
+        </h2>
+        <div class="mono text-sm text-[var(--color-text-lighter)] mb-3">{a.role}</div>
+        <p class="text-[var(--color-text-light)] leading-relaxed mb-4">{a.bio}</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          {a.expertise.map(e => (
+            <span class="mono text-xs px-2 py-0.5 rounded bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-light)]">{e}</span>
+          ))}
+        </div>
+        <a href="/redaktionen/adrian-hellstrom/" class="inline-flex items-center gap-2 text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors">
+          Se skribentsidan och alla artiklar <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </article>
+
+    <div class="prose-article max-w-none">
+      <h2>Så arbetar vi</h2>
+      <p>aiblogg.se följer en tydlig redaktionell metod, dokumenterad öppet på vår <a href="/metod/">metodsida</a>. I korthet: vi testar verktygen själva i flera dagar, vi citerar bara primärkällor, och vi markerar tydligt när något är sponsrat eller affiliate-länkat.</p>
+
+      <h2>Ansvarig utgivare</h2>
+      <p>{a.name}, chefredaktör och ansvarig utgivare för aiblogg.se.</p>
+
+      <h2>Kontakt</h2>
+      <p>För frågor, källkritik eller felrättning, mejla <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->. Se även vår <a href="/kontakt/">kontaktsida</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

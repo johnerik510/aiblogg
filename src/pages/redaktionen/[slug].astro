@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { site } from '../../data/site';
+import { publishedArticles } from '../../data/articles';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'adrian-hellstrom' } },
+  ];
+}
+
+const a = site.author;
+const written = publishedArticles
+  .sort((x, y) => y.publishDate.localeCompare(x.publishDate))
+  .slice(0, 9);
+---
+<BaseLayout
+  title={`${a.name}, ${a.role}, aiblogg.se`}
+  description={`${a.name}, ${a.role} på aiblogg.se. ${a.short}`}
+>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Redaktionen', url: '/redaktionen/' }, { label: a.name }]} />
+
+    <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-10 items-start mb-14">
+      <img src={a.image} alt={`Porträtt av ${a.name}`} width="240" height="240" loading="eager" fetchpriority="high" class="rounded-xl w-full max-w-[240px] aspect-square object-cover border border-[var(--color-border)]" />
+      <div>
+        <div class="label mb-3">Skribent</div>
+        <h1 class="display text-3xl md:text-4xl mb-2">{a.name}</h1>
+        <div class="mono text-sm text-[var(--color-text-lighter)] mb-5">{a.role}</div>
+        <p class="text-lg text-[var(--color-text-light)] leading-relaxed mb-5">{a.bio}</p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          {a.expertise.map(e => (
+            <span class="mono text-xs px-2.5 py-1 rounded-md bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-light)]">{e}</span>
+          ))}
+        </div>
+        <p class="text-sm text-[var(--color-text-lighter)]">
+          Kontakt: <!--email_off--><a href={`mailto:${site.contactEmail}`} class="text-[var(--color-accent)] hover:text-[var(--color-text)]">{site.contactEmail}</a><!--/email_off-->
+        </p>
+      </div>
+    </div>
+
+    <div class="prose-article mb-12 max-w-none">
+      <h2>Bakgrund</h2>
+      <p>Civilingenjör i datateknik från Kungliga Tekniska Högskolan, examen 2014. Specialisering inom maskininlärning och naturlig språkbehandling.</p>
+
+      <p>Har arbetat som data scientist och senior ML-ingenjör hos flera svenska scaleups inom rekommendationssystem, sökmotorer och språkmodeller. Driver aiblogg.se på heltid sedan 2025.</p>
+
+      <h2>Vad jag skriver om</h2>
+      <p>Jag fokuserar på AI som det faktiskt används, inte hypeartiklar. Det innebär jämförelser av verktyg jag själv kör dagligen, genomgångar av regleringar som påverkar svenska användare, och praktiska guider där jag bygger eller automatiserar något från grunden.</p>
+
+      <h2>Principer</h2>
+      <ul>
+        <li>Skriv inget som inte kan beläggas mot en primärkälla.</li>
+        <li>Recensera inget verktyg jag inte själv använt i flera dagar på riktiga uppgifter.</li>
+        <li>Markera tydligt när något är sponsrat eller affiliate-länkat.</li>
+        <li>Korrigera fel öppet och snabbt när de upptäcks.</li>
+      </ul>
+    </div>
+
+    <section class="mt-12 pt-10 border-t border-[var(--color-border)]">
+      <div class="label mb-3">Senast publicerat av {a.name}</div>
+      <h2 class="text-2xl font-semibold tracking-tight mb-8">Artiklar</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {written.map(art => (
+          <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+            <a href={art.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+              <img src={art.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </a>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="label text-[var(--color-accent)]">{art.categoryLabel}</span>
+                <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
+                <time class="mono text-xs text-[var(--color-text-lighter)]">{art.publishDate}</time>
+              </div>
+              <h3 class="font-semibold text-[1.02rem] leading-snug tracking-tight">
+                <a href={art.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{art.title}</a>
+              </h3>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  </section>
+</BaseLayout>
