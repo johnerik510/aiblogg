@@ -1,0 +1,21 @@
+---
+export interface Props { slug: string; class?: string; }
+const { slug, class: cls = '' } = Astro.props;
+// Lucide-style outline icons per kategori
+const icons: Record<string, string> = {
+  // Cube (verktyg)
+  'verktyg': '<path d="m21 16-9 5-9-5V8l9-5 9 5v8Z"/><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="M12 13v8"/>',
+  // Book / document (guider)
+  'guider': '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/>',
+  // Briefcase (jobb)
+  'jobb': '<rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>',
+  // Shield-check (integritet)
+  'integritet': '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>',
+  // Image / sparkles (bild-och-video)
+  'bild-och-video': '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/>',
+  // Globe (samhalle)
+  'samhalle': '<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+};
+const path = icons[slug] || icons['verktyg'];
+---
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class={cls} set:html={path} />

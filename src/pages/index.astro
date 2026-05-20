@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import CategoryIcon from '../components/CategoryIcon.astro';
 import { clusters, recentArticles, publishedArticles, articlesByCluster } from '../data/articles';
 import { site } from '../data/site';
 import { formatDate } from '../lib/date';
@@ -111,8 +112,8 @@ const sideArticles = recent.slice(1, 5);
         return (
           <a href={c.url} class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6 card-hover block">
             <div class="flex items-center justify-between mb-3">
-              <span class={`inline-flex items-center justify-center w-8 h-8 rounded-md ${isViolet ? 'bg-[rgba(139,92,246,0.15)] text-[var(--color-violet)]' : 'bg-[rgba(0,229,255,0.12)] text-[var(--color-accent)]'}`}>
-                <span class="text-xs mono">{c.shortLabel.charAt(0)}</span>
+              <span class={`inline-flex items-center justify-center w-10 h-10 rounded-lg ${isViolet ? 'bg-[rgba(139,92,246,0.12)] text-[var(--color-violet)]' : 'bg-[rgba(0,229,255,0.1)] text-[var(--color-accent)]'}`}>
+                <CategoryIcon slug={c.slug} class="w-5 h-5" />
               </span>
               <span class="mono text-xs text-[var(--color-text-dim)]">{String(count).padStart(2,'0')} artiklar</span>
             </div>

@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CategoryIcon from '../../components/CategoryIcon.astro';
 import { clusters, articlesByCluster } from '../../data/articles';
 import { site } from '../../data/site';
 import { formatDate } from '../../lib/date';
@@ -26,8 +27,8 @@ const isViolet = cluster.accent === 'violet';
     <div class="grid grid-cols-1 md:grid-cols-12 gap-10 mb-12 items-start">
       <div class="md:col-span-7">
         <div class="flex items-center gap-3 mb-4">
-          <span class={`inline-flex items-center justify-center w-9 h-9 rounded-md ${isViolet ? 'bg-[rgba(139,92,246,0.18)] text-[var(--color-violet)]' : 'bg-[rgba(0,229,255,0.15)] text-[var(--color-accent)]'}`}>
-            <span class="text-sm mono font-semibold">{cluster.shortLabel.charAt(0)}</span>
+          <span class={`inline-flex items-center justify-center w-11 h-11 rounded-lg ${isViolet ? 'bg-[rgba(139,92,246,0.15)] text-[var(--color-violet)]' : 'bg-[rgba(0,229,255,0.12)] text-[var(--color-accent)]'}`}>
+            <CategoryIcon slug={cluster.slug} class="w-6 h-6" />
           </span>
           <div class="label">Kategori</div>
         </div>
