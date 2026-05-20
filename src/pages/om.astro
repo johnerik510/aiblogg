@@ -2,13 +2,15 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { site } from '../data/site';
+const a = site.author;
 ---
-<BaseLayout title={`Om aiblogg.se — ${site.tagline}`} description="aiblogg.se är en oberoende svensk redaktion som täcker AI-verktyg, utveckling och samhällseffekter utan techbolagshype.">
-  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <Breadcrumbs crumbs={[{ label: 'Om aiblogg.se' }]} />
+<BaseLayout title={`Om oss, ${site.tagline} | ${site.name}`} description="aiblogg.se är en oberoende svensk redaktion som täcker AI-verktyg, utveckling och samhällseffekter utan techbolagshype.">
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Om oss' }]} />
     <div class="label mb-3">Om sajten</div>
-    <h1 class="display text-4xl md:text-5xl mb-6">Om aiblogg.se</h1>
-    <div class="prose-article">
+    <h1 class="display text-4xl md:text-5xl mb-6">Om oss</h1>
+
+    <div class="prose-article max-w-3xl mb-14">
       <p>aiblogg.se är en oberoende svensk redaktion som täcker AI-utvecklingen utan techbolagens marknadsföringsspråk. Vi gör hands-on-tester av verktyg, skriver praktiska guider och analyserar vad utvecklingen faktiskt betyder för svenska användare och företag.</p>
 
       <h2>Varför den här sajten finns</h2>
@@ -17,11 +19,36 @@ import { site } from '../data/site';
       <h2>Hur vi arbetar</h2>
       <p>Varje verktyg som recenseras har vi använt själva, på riktiga uppgifter, under flera dagar. Vi kör inte testsessioner på 30 minuter och drar slutsatser. Jämförelser görs på samma prompter och samma uppgifter, så att du kan se de faktiska skillnaderna sida vid sida.</p>
 
-      <p>När vi skriver om regleringar, marknadsdata eller statistik citerar vi alltid primärkällan. Påståenden som inte kan beläggas tas inte med.</p>
+      <p>När vi skriver om regleringar, marknadsdata eller statistik citerar vi alltid primärkällan. Påståenden som inte kan beläggas tas inte med. Hela arbetsmetoden finns dokumenterad öppet på <a href="/metod/">metodsidan</a>.</p>
 
       <h2>Oberoende</h2>
       <p>aiblogg.se är inte sponsrad av någon AI-leverantör. Vi tar inte emot betalt för positiva recensioner. Om en artikel innehåller affiliatelänkar eller är ett sponsrat samarbete kommer det att framgå tydligt i toppen av den artikeln. Se vår <a href="/redaktionell-policy/">redaktionella policy</a> och <a href="/sponsrat-innehall/">policy för sponsrat innehåll</a> för detaljer.</p>
+    </div>
 
+    <!-- Skribent / redaktion -->
+    <section class="mb-14 pt-10 border-t border-[var(--color-border)]">
+      <div class="label mb-3">Bakom redaktionen</div>
+      <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start">
+        <img src={a.image} alt={`Porträtt av ${a.name}`} width="200" height="200" loading="lazy" class="rounded-xl w-full max-w-[200px] aspect-square object-cover border border-[var(--color-border)]" />
+        <div>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">
+            <a href="/redaktionen/adrian-hellstrom/" class="hover:text-[var(--color-accent)] transition-colors">{a.name}</a>
+          </h2>
+          <div class="text-[var(--color-text-lighter)] mb-4 mono text-sm">{a.role}</div>
+          <p class="text-[var(--color-text-light)] leading-relaxed mb-5">{a.bio}</p>
+          <div class="flex flex-wrap gap-2 mb-5">
+            {a.expertise.map(e => (
+              <span class="mono text-xs px-2.5 py-1 rounded-md bg-[var(--color-bg-elevated)] border border-[var(--color-border)] text-[var(--color-text-light)]">{e}</span>
+            ))}
+          </div>
+          <a href="/redaktionen/adrian-hellstrom/" class="inline-flex items-center gap-2 text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors">
+            Hela skribentsidan <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="prose-article max-w-3xl">
       <h2>Kontakta oss</h2>
       <p>Frågor, tips eller felrättning: <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->. Mer på <a href="/kontakt/">kontaktsidan</a>.</p>
     </div>
