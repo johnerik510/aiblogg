@@ -7,9 +7,9 @@ export const site = {
   contactEmail: 'elscatalyst@proton.me',
   founded: '2026',
   company: {
-    name: 'aiblogg.se',
-    legalForm: 'enskild firma',
-    orgNumber: null,
+    name: 'ELS Catalyst AB',
+    legalForm: 'aktiebolag',
+    orgNumber: '559583-6163',
     contactEmail: 'elscatalyst@proton.me',
   },
   social: {},
