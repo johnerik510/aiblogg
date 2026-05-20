@@ -82,6 +82,24 @@ IMY hanterar klagomål från enskilda och initierar egna granskningar. Vid brist
 
 I praktiken har IMY hittills varit relativt mild mot förstagångsöverträdelser om företaget visar god vilja och åtgärdar bristerna. Men det förändras sannolikt när AI-användning blir mainstream och tillsynsprioriteringen flyttas dit. EU AI Act lägger dessutom på en extra reglering ovanpå GDPR, och du kan läsa mer om vad [EU AI Act](/samhalle/eu-ai-act-sverige/) innebär i Sverige.
 
+## ChatGPT Team, Enterprise och API ur GDPR-perspektiv
+
+De tre kommersiella varianterna av ChatGPT skiljer sig på flera punkter som är avgörande för GDPR-bedömningen. Det är värt att förstå skillnaderna innan du tecknar avtal.
+
+**ChatGPT Team** är den enklaste företagsplanen, från 25 dollar per användare och månad. OpenAI tränar inte på input, ett DPA finns automatiskt, och du får ett administratörsgränssnitt för användarhantering. Lagring sker i 30 dagar för abuse monitoring. Det räcker för de flesta små och medelstora svenska företag som vill ha en laglig grund för intern AI-användning utan komplicerad upphandling.
+
+**ChatGPT Enterprise** är klivet upp, med SOC 2 Type 2, SSO via SAML, högre kvoter och förhandlingsbar zero data retention. Här är GDPR och ChatGPT i sin enklaste form: OpenAI agerar personuppgiftsbiträde under svensk lag, du får data residency-val (USA eller Europa) och du kan stänga av all loggning. Prismodell är offertbaserad och börjar runt 60 dollar per användare och månad vid minst 150 säten.
+
+**OpenAI API** är råversionen som utvecklare bygger egna applikationer mot. Här är default att OpenAI inte tränar på din input alls, även utan särskild förhandling. DPA finns och kan signeras digitalt. För svenska SaaS-bolag som vill bygga AI in i sin egen produkt är API:et oftast rätt val, både kostnadsmässigt och juridiskt.
+
+## Vad IMY har sagt om generativ AI
+
+Integritetsskyddsmyndigheten har inte fällt OpenAI direkt, men har publicerat vägledning och granskat svenska aktörer som använder ChatGPT internt. Under 2025 öppnade IMY granskning av flera kommunala förvaltningar som infört ChatGPT utan att genomföra konsekvensbedömning (DPIA) först.
+
+Myndighetens linje är att generativ AI inte är en separat juridisk kategori, utan att samma regler gäller som vid all annan personuppgiftsbehandling. Det innebär krav på rättslig grund, registerförteckning, biträdesavtal och dataminimering. Den som hoppar över DPIA:n riskerar både föreläggande och sanktionsavgift.
+
+IMY pekar också ut tre röda flaggor som ofta utlöser granskning: användning av gratis-ChatGPT i kommunala verksamheter, AI-stödd behandling av känsliga personuppgifter inom vård och skola, och avsaknad av information till registrerade om att AI används i beslutsprocessen.
+
 ## Vanliga frågor om GDPR och ChatGPT
 
 <FAQ items={[

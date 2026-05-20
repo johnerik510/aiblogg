@@ -121,6 +121,24 @@ För den som ändå vill välja verktyg är ordningen i vårt test:
 
 Inga av dem är värda att lita på blint. Använd som signal, inte som dom.
 
+## Falska positiva på svensk text, varför det händer så ofta
+
+Andelen falska positiva på en ChatGPT detector svenska är en av de största praktiska problemen. I vårt eget test flaggades två av sex mänskliga svenska texter som AI-genererade, vilket är en oacceptabel felmarginal för det som verktyget marknadsförs som.
+
+Tekniskt beror det på tre saker. För det första är detektorernas träningsdata kraftigt obalanserad mot engelska. Modeller som GPTZero och Originality.ai har sett kanske 50 gånger mer engelsk text under träningen än svensk. För det andra är formell svenska statistiskt sett mer förutsägbar än formell engelska, eftersom språket har stramare ordföljd och färre synonymer för många begrepp. För det tredje använder svenska skribenter ofta längre meningar med bisatser, vilket gör burstiness-måttet platt.
+
+Resultatet är att exakt de texter som ska bedömas mest noggrant, alltså formella uppsatser, tjänsteskrivelser och vetenskapliga arbeten, är de som flaggas felaktigt oftast. För en lärare som vill använda en ChatGPT detector svenska som beslutsstöd är det därför extra viktigt att aldrig agera ensamt på ett detektorsvar.
+
+Praktiskt råd: testa alltid detektorn på två till tre kända mänskliga prov från samma skribent innan du bedömer ett misstänkt arbete. Får skribentens äldre texter höga AI-poäng utan att vara AI, är det detektorn som är fel, inte texten.
+
+## Vad Google säger om AI-genererat content
+
+Google publicerade 2023 en uppdaterad policy som klargör att AI-genererat innehåll inte automatiskt straffas i sökresultaten. Det som straffas är spam och innehåll utan värde för läsaren, oavsett om det är skrivet av människa eller maskin. För svenska bloggar och företagssajter betyder det att AI-stödd produktion är OK så länge slutresultatet är användbart, faktagranskat och tillför något.
+
+Googles Quality Rater Guidelines pekar dock på E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) som faktor. Rena AI-texter utan personlig erfarenhet eller expertis tenderar att hamna lågt i ranking på sikt, även om de inte algoritmiskt detekteras som AI.
+
+Praktiskt: använd AI för struktur och draft, lägg till egen erfarenhet och faktaverifiering, redigera språket så att det låter som dig. Den hybridmodellen ger oftast bättre ranking än både ren AI och ren handarbete.
+
 ## Vanliga frågor om ChatGPT-detektorer på svenska
 
 <FAQ items={[

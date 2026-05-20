@@ -85,6 +85,26 @@ Verktyg som [ChatGPT på svenska](/guider/chatgpt-svenska-guide/) kan hjälpa di
 
 Text i AI-bilder var ett av de större problemen fram till 2024. Idag klarar Ideogram, Imagen 3 och Flux 1.1 Pro text rimligt bra. Midjourney v6 och v7 har också blivit acceptabla. För korta ord och rubriker fungerar de flesta moderna modeller. För längre stycken eller exakt typografi rekommenderas fortfarande att lägga texten manuellt efteråt.
 
+## Skapa AI-bilder från en referensbild
+
+Att skapa AI-bilder från noll är en sak. Att skapa AI-bilder utifrån en befintlig referens är en annan workflow som är värd att lära sig separat, eftersom kontrollen blir mycket högre.
+
+De flesta moderna verktyg stöder image-to-image-generering. I Midjourney laddar du upp en bild, kopierar bildens URL och klistrar in den i början av din prompt med flaggan `--iw` (image weight) för att styra hur mycket modellen ska följa originalet. I ChatGPT med GPT-image kan du bifoga bilden direkt i chatten och be om "samma stil men med en annan motivposition". I Stable Diffusion finns ControlNet, som styr exempelvis pose, kant- och djupinformation från referensen.
+
+Konkret användning: du har en produktbild på en svensk soffa som du vill se i tio olika miljöer för en kampanj. Ladda upp soffbilden, prompta "samma soffa i en ljus skandinavisk vardagsrum med björkgolv, golvfönster, morgonljus" och iterera. ControlNet med depth- eller canny-läge bevarar soffans form bättre än ren image-prompt.
+
+Begränsningen är att exakt produktreproduktion fortfarande är svår. Logotyper, mönster och exakt färgton driftar ofta. För kommersiell produktion där produkten ska se identisk ut används istället AI för bakgrund och miljö, medan själva produkten compositeras in i Photoshop.
+
+## Skapa AI-bilder som ser realistiska ut
+
+För att skapa AI-bilder som faktiskt går att förväxla med foto behöver du tre saker utöver bra prompt: rätt modell, rätt ljus och rätt efterbehandling.
+
+Modellval först. Flux 1.1 Pro Ultra och Imagen 3 är 2026 års bästa fotorealistiska generatorer, framför allt på hudtoner och naturligt ljus. Midjourney v7 är nära men har en lätt "Midjourney-look" som tränat öga känner igen. Stable Diffusion med rätt checkpoint (exempelvis RealVisXL eller JuggernautXL) räcker långt för den som kör lokalt.
+
+Ljuset är det som skiljer en AI-bild från ett foto. Verkliga foton har asymmetrisk belysning, ofta en huvudkälla plus fyllnadsljus och reflexer. AI-modeller tenderar att lägga symmetriskt ljus om du inte specificerar. Skriv "single key light from camera left, ambient fill from window, rim light from behind" istället för "good lighting".
+
+Efterbehandling avslöjar eller döljer ofta AI-ursprunget. Lägg till lätt filmkorn (5 till 10 procent), justera ner mikrokontrast, lägg till chromatic aberration i hörnen. Det är detaljer som finns i alla riktiga foton men sällan i råa AI-bilder.
+
 ## Vanliga frågor om att skapa AI-bilder
 
 <FAQ items={[
