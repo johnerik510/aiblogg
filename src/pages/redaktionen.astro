@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+const a = site.author;
+---
+<BaseLayout title={`Redaktionen — ${site.name}`} description={`Möt redaktionen bakom aiblogg.se. ${a.name}, ${a.role}.`}>
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Redaktionen' }]} />
+    <div class="label mb-3">Redaktionen</div>
+    <h1 class="display text-4xl md:text-5xl mb-10">Bakom aiblogg.se</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-[240px_1fr] gap-8 items-start mb-12">
+      <img src={a.image} alt={`Porträtt av ${a.name}`} width="240" height="240" loading="eager" class="rounded-xl w-full max-w-[240px] aspect-square object-cover border border-[var(--color-border)]" />
+      <div class="prose-article">
+        <h2 style="margin-top:0">{a.name}</h2>
+        <div class="mono text-sm text-[var(--color-text-lighter)] mb-4">{a.role}</div>
+        <p>{a.bio}</p>
+
+        <h3>Expertområden</h3>
+        <ul>
+          {a.expertise.map(e => <li>{e}</li>)}
+        </ul>
+
+        <h3>Bakgrund</h3>
+        <p>Civilingenjör i datateknik från Kungliga Tekniska Högskolan, 2014. Har arbetat som data scientist och senior ML-ingenjör hos flera svenska scaleups inom rekommendationssystem, sökmotorer och naturlig språkbehandling. Driver aiblogg.se på heltid sedan 2025.</p>
+
+        <h3>Kontakt</h3>
+        <p>För frågor, källkritik eller felrättning: <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off--></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

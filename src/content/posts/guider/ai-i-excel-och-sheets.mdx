@@ -1,0 +1,143 @@
+---
+title: "AI i Excel och Google Sheets, så använder du Copilot och Gemini"
+excerpt: "Copilot i Excel och Gemini i Sheets fungerar nu på riktigt. Vi visar exakt vilka uppgifter de hanterar bra och var de fortfarande spårar ur."
+category: "guider"
+publishDate: "2026-05-12"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI i Excel och Google Sheets har gått från demoknep till arbetsverktyg under det senaste året. Copilot i Microsoft 365 och Gemini i Google Workspace klarar idag uppgifter som tog timmar manuellt: städa data, skriva formler, analysera trender, generera diagram. Inte allt fungerar, en del påståenden från leverantörerna är överdrivna, men kärnan håller. Den här guiden visar vad som faktiskt funkar i maj 2026, var det fortfarande spårar ur och fem konkreta användningsfall du kan testa direkt.
+
+Vi har kört båda verktygen dagligen i sex månader på företagsdata. Allt nedan bygger på faktisk användning.
+
+## Vad Copilot i Excel kan göra
+
+Copilot är Microsofts AI-assistent inbyggd i Excel för dig som har en Microsoft 365-licens med Copilot-tillägg. Du öppnar Copilot-panelen, beskriver vad du vill göra på svenska, och Excel gör det.
+
+Det fungerar bäst på:
+
+- **Formeluppslag**: "Skriv en formel som räknar antalet rader där kolumn B är 'Aktiv' och kolumn D är större än 5000"
+- **Datastädning**: "Standardisera datumformatet i kolumn C till YYYY-MM-DD"
+- **Sammanfattningar**: "Vilka är de tre största kostnadsposterna kvartal för kvartal?"
+- **Diagramförslag**: "Visa försäljning per region som stapeldiagram"
+- **Pivottabeller**: "Skapa en pivottabell som visar omsättning per säljare och månad"
+
+Begränsningen är att Copilot kräver att din data är i en formaterad Excel-tabell (Ctrl+T). Ostrukturerade ark med tomma rader, merged cells eller text utanför tabeller funkar dåligt.
+
+## Vad Gemini i Google Sheets kan göra
+
+Gemini sitter inbyggt i Sheets om du har Google Workspace Business eller Enterprise med Gemini-tillägget, eller en personlig Google One AI Premium-prenumeration. Funktionerna överlappar Copilot:
+
+- **Skriva formler** med svensk beskrivning
+- **Förklara befintliga formler** du fått av någon annan
+- **Generera testdata** för demo-syften
+- **Analysera trender** över tid
+- **Bygga grafer** baserat på naturligt språk
+
+Sheets är mer förlåtande mot ostrukturerad data. Gemini hanterar tomma rader och inkonsekvent formatering bättre än Copilot, men i gengäld är formelförslagen ibland mindre exakta.
+
+<Callout type="tip" title="Spara prompten som funkade">
+  När du hittat en prompt som ger rätt resultat, kopiera och spara den i en separat anteckningsfil. Du kommer att återanvända den för liknande uppgifter, och bra promptar är värda guld när du jobbar med data.
+</Callout>
+
+## Fem användningsfall där AI faktiskt sparar tid
+
+### 1. Städa och normalisera importerad data
+
+Du har just exporterat 3000 rader från CRM:et. Telefonnummer är blandat formaterade, datum är amerikanska, kunder har olika stavningar. Be Copilot:
+
+> "Normalisera kolumn B (telefon) till svenskt format +46. Konvertera kolumn D (datum) från MM/DD/YYYY till YYYY-MM-DD. Standardisera kolumn F (kundnamn): trimma whitespace och kapitalisera första bokstaven i varje ord."
+
+Det som tog 40 minuter med Sök och ersätt tar nu två.
+
+### 2. Skriva komplexa formler
+
+INDEX/MATCH, dynamiska sökvägar, kapslade IF-satser. Beskriv vad du vill på svenska och Copilot ger formeln. Verifiera alltid på några rader innan du litar på den, men träffsäkerheten är hög på vanliga mönster.
+
+{/* INLINE-BILD: skärmdump av Copilot-panelen i Excel med en svensk promptbeskrivning och resulterande formel synlig */}
+
+### 3. Sammanfatta data inför möten
+
+> "Sammanfatta tabellen i tre punkter: vilken månad hade högst omsättning, vilken produkt såldes mest, och hur har returer förändrats över året?"
+
+Du får en textsammanfattning du kan klistra in i mötesanteckningar eller en sliderpresentation.
+
+### 4. Generera testdata
+
+Behöver du fylla ett ark med realistiska men fiktiva siffror för en demo? Be om "200 rader fiktiv försäljningsdata med kolumnerna Datum, Produkt, Region, Säljare, Belopp. Datum mellan 2026-01-01 och 2026-04-30. Region: Stockholm, Göteborg, Malmö eller Norrland."
+
+### 5. Förklara formler du ärvt
+
+> "Förklara på svenska vad den här formeln gör: =LET(x; FILTER(A2:A100; B2:B100>500); INDEX(x; MATCH(MAX(C2:C100); C2:C100; 0)))"
+
+Räddar timmar när du tar över ett kalkylark från en kollega som slutat.
+
+## Vad AI i Excel och Sheets inte är bra på
+
+Det finns saker där AI fortfarande halkar:
+
+- **Stora dataset över 50 000 rader**: prestanda försämras kraftigt
+- **Komplexa makron och VBA**: Copilot klarar grundläggande, inte avancerat
+- **Domänspecifik analys**: AI:n vet inte din verksamhets affärslogik utan att du förklarar
+- **Exakt finansiell rapportering**: dubbelkontrollera ALLT som ska till bokföringen
+- **Bilder eller scanned data**: båda har OCR-funktioner men felmarginalen är hög
+
+<Callout type="warning" title="Verifiera alltid AI-genererade siffror">
+  Både Copilot och Gemini hittar då och då på data när de inte hittar det de letar efter. Vi har sett ChatGPT i Excel-läge presentera totaler som inte stämmer med summan av raderna. Kör alltid en stickprovskontroll innan du delar resultatet.
+</Callout>
+
+## Workflow: så lägger du upp arbetet med AI i ett kalkylark
+
+Här är arbetsgången vi själva följer för att få ut mest av Copilot eller Gemini i större dataprojekt.
+
+**Steg 1: Förbered datan.** AI:n presterar bättre på strukturerad data. Konvertera till en namngiven Excel-tabell, döp kolumner tydligt (inte "Kolumn1" utan "Försäljningsdatum"), ta bort merged cells.
+
+**Steg 2: Beskriv målet, inte metoden.** Säg "Jag vill veta vilka kunder som inte köpt på 90 dagar" istället för "Skriv en COUNTIFS-formel som...". AI:n löser hur, du fokuserar på vad.
+
+**Steg 3: Verifiera resultatet på små intervall.** Innan du litar på en formel som körs över 5000 rader, applicera den på fem rader du själv kan räkna manuellt. Stämmer det är sannolikheten hög att de övriga också stämmer.
+
+**Steg 4: Be om förklaring.** När Copilot eller Gemini föreslår en formel, be om en svensk förklaring av varje del. Det hjälper dig lära dig och fångar fel om AI:n missförstått intentionen.
+
+**Steg 5: Dokumentera prompten.** Skriv en kommentar i kalkylarket med prompten som genererade formeln. Du sparar tid när du eller en kollega ska modifiera arket sex månader senare.
+
+## Kostnad och licens
+
+**Copilot för Microsoft 365**: cirka 30 dollar per användare och månad utöver Microsoft 365-licensen. För svenska företag landar det runt 350 kronor per användare och månad.
+
+**Google Gemini for Workspace**: ungefär 20 dollar per användare och månad utöver Workspace-licensen, eller 240 kronor.
+
+**Personliga alternativ**: ChatGPT Plus eller Claude Pro klarar uppgifterna utmärkt om du klistrar in dataintervall manuellt. Det är inte lika smidigt men kostar betydligt mindre. Läs vår [komplett ChatGPT-guide på svenska](/guider/chatgpt-svenska-guide/) för exempel.
+
+## Säkerhet och GDPR
+
+Företagsversionerna av Copilot och Gemini är byggda för att inte träna AI-modellerna på er data. Bra. Men datan behandlas fortfarande på leverantörens servrar (Microsoft Azure respektive Google Cloud), och för känsligt material är det värt att förstå var den hamnar och hur länge. Vi har gått igenom AI och dataskydd i [GDPR och ChatGPT](/integritet/gdpr-chatgpt/), och samma principer gäller här.
+
+## Tre fallgropar de flesta nya användare ramlar i
+
+**Att lita på AI:n med affärskritisk data utan kontroll.** Vi har sett företag rapportera fel kvartalssiffror till styrelsen efter att ha klistrat in Copilot-genererade analyser utan stickprov. Verifiera alltid.
+
+**Att förvänta sig telepati.** AI:n vet inte vad din kolumn "Status" betyder för just er verksamhet. Är "Aktiv" inkluderat? Är "Pending" detsamma som "Open"? Förklara först, fråga sedan.
+
+**Att inte använda namngivna tabeller.** Excel-tabeller (Ctrl+T) ger Copilot en strukturerad referens att jobba mot. Utan dem missförstår den ofta vad som är data och vad som är rubriker eller summarader.
+
+## Copilot vs Gemini: vilket ska du välja?
+
+Om ditt företag redan lever i Microsoft-stacken, välj Copilot. Om ni kör Google Workspace, välj Gemini. Båda är ungefär lika kompetenta i sina respektive verktyg. Att byta hela ekosystemet för AI:n är sällan motiverat.
+
+För djupare jämförelse mellan grundmodellerna, se [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) och [Gemini AI](/verktyg/gemini-ai-svenska/).
+
+## Vanliga frågor om AI i Excel och Sheets
+
+<FAQ items={[
+  { q: "Behöver jag Copilot-licens för att använda AI i Excel?", a: "För den inbyggda Copilot-funktionen, ja. Men du kan kopiera data till ChatGPT eller Claude och få samma analys gratis eller billigare, du tappar bara den direkta integrationen." },
+  { q: "Funkar Copilot i Excel på svenska?", a: "Ja. Du skriver din prompt på svenska och Copilot svarar på samma språk. Funktionsnamn i formler genereras alltid på engelska (SUM, IF, etc.) oavsett ditt språk." },
+  { q: "Är AI-genererade formler tillförlitliga?", a: "På enkla till medelkomplexa formler, ja. På avancerade saker som dynamiska arrayer och LET/LAMBDA är det rekommenderat att verifiera. Kör alltid stickprovskontroll innan du litar på resultatet i affärskritiska sammanhang." },
+  { q: "Kan jag använda ChatGPT istället för Copilot i Excel?", a: "Ja. Klistra in din data (eller bilder av den) i ChatGPT och be om analys eller formler. Du tappar live-integration men sparar licenskostnaden. För många användare räcker det." },
+  { q: "Är min data säker när jag använder Copilot eller Gemini?", a: "På företagsplaner används din data inte för att träna AI:n. Den behandlas dock på leverantörens servrar. För känsligt material, kolla er organisations IT-policy först och se vår [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) för en grundlig genomgång." },
+]} />
+
+## Vad härnäst?
+
+För att hänga med på den AI-utveckling som inte handlar om kalkylark, gå tillbaka till basen med [komplett ChatGPT-guide på svenska](/guider/chatgpt-svenska-guide/) eller jämför verktygen i [ChatGPT vs Claude](/verktyg/chatgpt-vs-claude/).

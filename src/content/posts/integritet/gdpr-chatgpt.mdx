@@ -1,0 +1,97 @@
+---
+title: "GDPR och ChatGPT, vad får du klistra in egentligen?"
+excerpt: "OpenAI:s villkor och GDPR krockar på flera punkter. Vi går igenom exakt vilka datatyper som är riskabla, vad lagen säger och vilka lösningar som finns för svenska företag."
+category: "integritet"
+publishDate: "2026-05-18"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Frågan om GDPR och ChatGPT dyker upp varje gång ett svenskt företag funderar på att låta personalen använda AI på riktiga uppgifter. Och det är en bra fråga, eftersom OpenAI:s standardvillkor och dataskyddsförordningen krockar på flera tydliga punkter.
+
+Den här artikeln går igenom vad du faktiskt får och inte får klistra in i ChatGPT, vad Integritetsskyddsmyndigheten (IMY) har sagt, och vilka konkreta lösningar som finns för företag som vill använda tekniken utan att hamna i en sanktionsavgift.
+
+## Vad GDPR säger om ChatGPT i klartext
+
+GDPR reglerar all behandling av personuppgifter. När du klistrar in ett kundmejl, en patientjournal eller ens en kollegas namn i ChatGPT, så behandlar du personuppgifter. Det betyder att hela förordningen aktiveras: laglig grund, ändamålsbegränsning, informationsplikt och dataminimering.
+
+Två konkreta problem följer av detta. Det första är att OpenAI är personuppgiftsbiträde när du som företag använder tjänsten, vilket kräver ett biträdesavtal (DPA). Det andra är att ChatGPT på gratisplanen och Plus-planen kan använda din input för att träna modellen, vilket i praktiken är en överföring av personuppgifter för ett nytt ändamål utan laglig grund.
+
+<Callout type="warning" title="Krockpunkten i en mening">
+  Standard-ChatGPT (gratis och Plus) tränar på din input som default, och det är inte förenligt med GDPR om inputen innehåller personuppgifter, oavsett om det är dina egna eller andras.
+</Callout>
+
+## IMY:s vägledning och de italienska besluten
+
+IMY har inte fällt OpenAI ännu, men har publicerat vägledning under 2024 och 2025 som pekar i en tydlig riktning. Myndigheten skriver att användning av generativ AI med personuppgifter kräver samma DPIA-arbete som vilken annan systemupphandling som helst, och att leverantörens villkor måste granskas innan beslut.
+
+Den italienska tillsynsmyndigheten Garante fällde OpenAI 2024 för 15 miljoner euro efter att ha hittat brister i laglig grund, transparens och åldersverifiering. Beslutet är inte direkt bindande i Sverige, men det visar hur tillsynen ser ut även inom EU. Polens UODO och tyska delstatsmyndigheter har öppnat egna utredningar med liknande frågor.
+
+## Vad du får klistra in (och vad du absolut inte ska)
+
+Den enklaste regeln är att skilja på allmän information och personuppgifter. Du får klistra in publik produktdata, dina egna anteckningar utan namn, kodsnuttar utan kommentarer som identifierar någon, och hypotetiska scenarier.
+
+{/* INLINE-BILD: Skärmdump av ChatGPT-inställningar med "Improve the model for everyone" avstängt */}
+
+## Riskklassificering: tre nivåer av input
+
+Det här är den modell vi rekommenderar svenska företag att utgå från när de skriver intern policy:
+
+**Grön nivå.** Allmän information, anonymiserad data, fiktiva exempel och teknisk dokumentation utan personuppgifter. Får klistras in i gratis- och Plus-versionen om träningsalternativet är avstängt.
+
+**Gul nivå.** Interna affärsdata utan personuppgifter, anonymiserade kunddata, sammanfattningar av interna dokument. Får hanteras i ChatGPT Team eller Enterprise, där träning är avstängt som default och DPA finns.
+
+**Röd nivå.** Personuppgifter, känsliga personuppgifter (hälsa, etnicitet, fackligt medlemskap), brottsuppgifter, källskyddat material och affärshemligheter. Hör inte hemma i konsument-ChatGPT över huvud taget. Använd ChatGPT Enterprise med zero data retention, eller en Azure OpenAI-instans i EU.
+
+<Callout type="warning" title="Vanliga misstag">
+  Att byta namn till "Person A" och tro att texten är anonymiserad. Om beskrivningen är detaljerad nog att identifiera personen är det fortfarande personuppgifter enligt GDPR. Riktig anonymisering är svårare än det låter.
+</Callout>
+
+## Tre lagliga vägar framåt för svenska företag
+
+**Väg 1: ChatGPT Enterprise eller Team.** OpenAI tränar inte på input, DPA finns, SOC 2 Type 2-certifiering, möjlighet till zero data retention (ZDR). Detta är den enklaste lagliga vägen om personalen redan vill ha just ChatGPT.
+
+**Väg 2: Azure OpenAI Service.** Samma modeller som ChatGPT, men hostat i Microsoft Azure med val av region (Sverige, Västeuropa). Microsoft är personuppgiftsbiträde under deras DPA, ingen träning sker på input, och du får full kontroll över retention. Lämpligt för större organisationer som redan kör Microsoft 365.
+
+**Väg 3: Lokal modell eller EU-hostad alternativ.** Mistral (franskt), Anthropic Claude via AWS Bedrock i EU, eller helt lokala open weights-modeller som Llama eller Mixtral. Mer arbete, men full kontroll.
+
+Skriver du en [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/) bör de tre nivåerna ovan vara med, plus tydligt val av vilken av vägarna ni godkänner.
+
+## Zero Data Retention och vad det faktiskt innebär
+
+ZDR är ett avtal du kan teckna med OpenAI som innebär att din input och output inte sparas alls efter att svaret returneras. Ingen logg, ingen träningsanvändning, inget abuse-monitoring-fönster (som annars är 30 dagar). Det löser stora delar av lagringsbiten i GDPR.
+
+ZDR kräver ChatGPT Enterprise eller API-access, och i praktiken en faktureringsvolym som motiverar en separat förhandling med OpenAI Sales. Mindre företag får oftast nöja sig med standard-Enterprise där retention är 30 dagar för abuse monitoring, men ingen träning.
+
+## Konkreta steg för att bli compliant
+
+1. **Kartlägg vad personalen gör idag.** De flesta använder redan ChatGPT, ofta från privata konton. Det är värsta scenariot ur GDPR-synpunkt.
+2. **Välj en av de tre vägarna ovan** och teckna avtal. Microsoft 365-kunder hamnar oftast på Copilot eller Azure OpenAI utan extra arbete.
+3. **Skriv klassificeringspolicy** med grön/gul/röd-skalan eller motsvarande.
+4. **Genomför DPIA** för rött och gult bruk, och dokumentera ändamål, laglig grund och risker.
+5. **Utbilda personalen** konkret med exempel. Generella policydokument läses inte.
+6. **Sätt teknisk kontroll** där det går: blockera konsument-ChatGPT i nätverket, kräv SSO till företagets ChatGPT-instans.
+
+Komplettera med en grundlig genomgång av [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) innan ni låser in er på en leverantör. Och om ni undrar [hur AI-leverantörer hanterar dina data](/integritet/dina-data-i-ai/) finns en separat genomgång av sex stora aktörer.
+
+## Det här gör IMY när någon klagar
+
+IMY hanterar klagomål från enskilda och initierar egna granskningar. Vid bristande GDPR-efterlevnad kan sanktionsavgifter på upp till 4 procent av global omsättning eller 20 miljoner euro utdömas, beroende på vilket som är högst.
+
+I praktiken har IMY hittills varit relativt mild mot förstagångsöverträdelser om företaget visar god vilja och åtgärdar bristerna. Men det förändras sannolikt när AI-användning blir mainstream och tillsynsprioriteringen flyttas dit. EU AI Act lägger dessutom på en extra reglering ovanpå GDPR, och du kan läsa mer om vad [EU AI Act](/samhalle/eu-ai-act-sverige/) innebär i Sverige.
+
+## Vanliga frågor om GDPR och ChatGPT
+
+<FAQ items={[
+  { q: "Får jag använda gratis-ChatGPT på jobbet om jag bara skriver allmänna frågor?", a: "Ja, så länge inputen inte innehåller personuppgifter eller företagshemligheter, och så länge träningsalternativet är avstängt i inställningarna. Men det är svårt att hålla isär i praktiken, så de flesta arbetsplatser bör ge personalen tillgång till en företagsversion." },
+  { q: "Räcker det att slå av träning i ChatGPT-inställningarna?", a: "Det stoppar OpenAI från att träna modellen på din input, men inputen sparas fortfarande i 30 dagar för abuse monitoring. Om du behöver fullständig retention-kontroll krävs ChatGPT Enterprise med ZDR eller Azure OpenAI." },
+  { q: "Är ChatGPT Plus tillräckligt för företagsbruk?", a: "Nej. Plus är en konsumentprodukt utan biträdesavtal med OpenAI. För att behandla personuppgifter behöver du Team, Enterprise eller Azure OpenAI där ett DPA finns på plats." },
+  { q: "Vad händer om en anställd klistrar in personuppgifter i sitt privata ChatGPT-konto?", a: "Det är en personuppgiftsincident som ska bedömas av personuppgiftsansvarig. Beroende på allvar kan den behöva anmälas till IMY inom 72 timmar. Det är därför teknisk blockering ofta är värd besväret." },
+  { q: "Funkar det att anonymisera texten innan jag klistrar in?", a: "Pseudonymisering (att byta namn till bokstäver) räcker inte. Riktig anonymisering kräver att personen inte kan identifieras ens med kombination av övrig information i texten. I praktiken är det väldigt svårt." },
+  { q: "Är Azure OpenAI ett säkert val ur GDPR-synpunkt?", a: "Azure OpenAI är ofta det enklaste lagliga valet för svenska organisationer, eftersom Microsoft har DPA, EU-regioner och inte tränar på input. Schrems II-frågor kring USA-överföringar kvarstår dock och bör adresseras i DPIA." },
+]} />
+
+## Vad härnäst?
+
+GDPR är grunden, men den fångar inte allt. Läs igenom [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/) för konkret mallarbete, och [dina data i AI-tjänster](/integritet/dina-data-i-ai/) för en jämförelse av hur sex stora leverantörer skiljer sig i datapolicy.

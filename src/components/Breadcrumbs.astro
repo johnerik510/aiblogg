@@ -1,0 +1,20 @@
+---
+export interface Crumb { label: string; url?: string; }
+export interface Props { crumbs: Crumb[]; }
+const { crumbs } = Astro.props;
+---
+<nav aria-label="Brödsmulor" class="mb-6">
+  <ol class="flex flex-wrap items-center gap-2 text-xs mono text-[var(--color-text-lighter)]">
+    <li><a href="/" class="hover:text-[var(--color-text)]">Hem</a></li>
+    {crumbs.map((c, i) => (
+      <>
+        <li aria-hidden="true">/</li>
+        <li>
+          {c.url && i < crumbs.length - 1
+            ? <a href={c.url} class="hover:text-[var(--color-text)]">{c.label}</a>
+            : <span class="text-[var(--color-text-light)]">{c.label}</span>}
+        </li>
+      </>
+    ))}
+  </ol>
+</nav>

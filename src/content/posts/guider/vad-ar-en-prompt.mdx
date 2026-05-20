@@ -1,0 +1,151 @@
+---
+title: "Vad är en prompt inom AI? Förklaring med exempel"
+excerpt: "En prompt är instruktionen du ger en AI för att få ett bra svar. Vi förklarar vad det är, varför formuleringen spelar roll och visar 8 mönster som faktiskt fungerar."
+category: "guider"
+publishDate: "2026-05-14"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Vad är en prompt inom AI? Enkelt: det är texten du skriver in i ChatGPT, Claude eller någon annan AI-modell för att få den att göra något. Bra prompt ger bra svar. Slarvig prompt ger slarvigt svar. Skillnaden mellan en användare som tycker AI är medioker och en som får ut riktigt värde är nästan alltid just promptarna.
+
+Den här guiden går igenom vad ordet betyder, varför formuleringen spelar så stor roll och presenterar åtta beprövade mönster du kan kopiera och anpassa direkt. Allt skrivet utifrån faktisk användning, inte teori.
+
+## Vad ordet prompt faktiskt betyder
+
+Prompt är engelska och betyder ungefär "uppmaning" eller "stimulus". I AI-sammanhang är det instruktionen du ger modellen. Det kan vara en fråga ("Vad är BNP?"), ett kommando ("Skriv ett mejl till min hyresvärd"), en mer komplex specifikation ("Du är en svensk skattekonsult, förklara K10-blanketten för en småföretagare") eller hela dokument du klistrar in för bearbetning.
+
+Termen används också om bilden eller röst-input som du matar in i multimodala modeller. På svenska har ordet etablerat sig som "prompt" rakt av, ingen översättning har slagit igenom. På samma sätt som "mejl" eller "blogg" är prompt nu ett svenskt ord.
+
+## Därför spelar formuleringen så stor roll
+
+AI-modellen ser bara texten du skriver. Den vet inte vem du är, vad du har för bakgrund, vilken ton du vill ha eller vem som ska läsa svaret, om du inte säger det. Ju mer specifik kontext du ger, desto bättre svar.
+
+Jämför:
+
+**Dålig prompt:** "Skriv en text om hund."
+
+**Bra prompt:** "Skriv en kort informativ text på svenska, 150 ord, om hur valpar bör socialiseras under sina första 12 veckor. Målgrupp: förstagångsägare. Ton: vänlig men saklig, undvik klyschor."
+
+Den första ger en generisk text som passar ingen. Den andra ger något du faktiskt kan använda. Tiden du lägger på att formulera prompten får du tillbaka tiofalt i kvalitet på svaret.
+
+<Callout type="tip" title="Tänk som en uppdragsbeställare">
+  Föreställ dig att du ska anlita en frilansare för uppgiften. Vad skulle du behöva berätta för henne för att hon skulle leverera rätt sak utan följdfrågor? Det är ungefär den nivån av kontext en bra prompt har.
+</Callout>
+
+## Åtta mönster som funkar i praktiken
+
+Här är de mönster vi själva använder dagligen, med konkreta svenska exempel.
+
+### 1. Rolltilldelning
+
+Berätta vem AI:n ska vara. Det styr ton, ordval och vilken expertis modellen drar fram.
+
+> "Du är en erfaren svensk redaktör på en ekonomitidning. Granska följande text och föreslå tre konkreta förbättringar. Behåll skribentens röst."
+
+### 2. Format-instruktion
+
+Säg exakt hur du vill ha svaret formaterat.
+
+> "Sammanfatta texten nedan i punktform. Max sex punkter, max 15 ord per punkt. Behåll alla siffror och datum."
+
+{/* INLINE-BILD: jämförelse mellan en kort otydlig prompt och en strukturerad prompt med svaren bredvid varandra */}
+
+### 3. Få-shot (exempel-driven)
+
+Visa modellen vad du vill ha genom att ge ett eller två exempel först.
+
+> "Översätt svenska idiom till engelska motsvarigheter, inte direkt översättning. Exempel: 'Det är ingen ko på isen' blir 'Don't get your knickers in a twist'. Översätt nu: 'Att kasta pärlor för svin'."
+
+### 4. Stegvis tänkande
+
+Be modellen tänka högt steg för steg innan den ger slutsvaret. Höjer kvaliteten markant på resonemang.
+
+> "Tänk igenom följande steg för steg innan du svarar: Varför ökade svensk inflation mer än EU-snittet 2022 till 2023? Lista först faktorerna, väg sedan deras inbördes betydelse, ge sedan din slutsats."
+
+### 5. Bryt ner uppgiften
+
+Stora uppgifter blir bättre om du delar upp dem.
+
+> "Jag ska skriva en pitch för min nya tjänst. Hjälp mig i tre steg: 1) Lista tre möjliga vinklar. 2) Vi väljer en tillsammans. 3) Då skriver vi pitchen. Börja med steg 1."
+
+### 6. Negativa instruktioner
+
+Säg vad du inte vill ha. AI-modeller har klassiska skrivmönster du kan stänga av.
+
+> "Skriv ett blogginlägg om hemförsäkring. Använd inte fraser som 'I dagens samhälle', 'Det är viktigt att notera' eller 'Sammanfattningsvis'. Inga em-dash. Skriv som en kunnig vän förklarar för en kompis."
+
+### 7. Output-mall
+
+Ge en mall som modellen ska fylla i.
+
+> "Fyll i följande mall för en kundcase-studie:
+>
+> Företag: [namn]
+> Utmaning: [3 meningar]
+> Lösning: [3 meningar]
+> Resultat: [3 mätbara siffror]
+>
+> Företaget är ICA Maxi i Borås, utmaningen är minskat svinn på frukt och grönt."
+
+### 8. Iterativ förbättring
+
+Använd ChatGPT i flera vändor istället för att försöka få allt rätt i första svaret.
+
+> "Det här är bra men för formellt. Skriv om i en mer ledig ton, ungefär som en LinkedIn-text snarare än en pressrelease."
+
+## Bilder och röst räknas också som promptar
+
+Termen prompt började som textinstruktion, men i moderna multimodala modeller är en uppladdad bild eller röstinspelning också en prompt. När du tar foto på en restaurangmeny och frågar "Vad rekommenderar du för en laktosintolerant?" består din prompt av både bilden och texten. Modellen tolkar dem tillsammans.
+
+För bildgenerering är prompten beskrivningen av vad bilden ska föreställa. Ju mer specifik, desto bättre. "En katt" ger en generisk illustration. "En orange Maine Coon-katt som sover på en stickad filt, mjukt eftermiddagsljus från fönster, fotografisk stil" ger något konkret. Vi går in djupare på detta i [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/).
+
+Röstpromptar fungerar tekniskt likadant. Det du säger transkriberas till text, sedan processas det av modellen. Skillnaden ligger i naturlig taltakt. Du blir ofta mindre specifik när du pratar än när du skriver, så röstpromptar behöver oftare följdfrågor.
+
+## Vanliga misstag som dödar promptar
+
+- **För vagt**: "Skriv något om..." utan ramar
+- **För många frågor i en prompt**: gör en sak åt gången
+- **Antagande om kontext**: AI:n vet inte vad du jobbar med eller vem du är
+- **Inget exempel på bra resultat**: en mall eller exempel höjer kvaliteten radikalt
+- **Ingen iteration**: första svaret är sällan det bästa, du ska be om revideringar
+
+## Tre nivåer av promptar du växer igenom
+
+När du börjar med AI går du oftast igenom tre stadier i hur du formulerar dig.
+
+**Nivå ett: enradsfrågor.** "Vad är BNP?", "Skriv en text om hund." Du behandlar AI:n som en sökmotor. Du får svar men inget bättre än Google hade gett.
+
+**Nivå två: strukturerade promptar.** Du börjar lägga till kontext, ton, målgrupp, format. Svaren blir markant användbarare. De flesta som har glädje av AI fastnar och är produktiva på den här nivån.
+
+**Nivå tre: iterativa konversationer.** Du behandlar AI:n som en kollega och förbättrar resultatet i flera vändor. "Det här är bra men för långt", "Mer konkreta exempel", "Skriv om i passiv form, vi har en formell mottagare". Den som når hit jobbar tio gånger snabbare än novisen.
+
+Det tar i regel några veckors daglig användning att komma till nivå tre. Det är inte teori, det är reflexen att alltid be om en revision.
+
+## Skiljer sig promptar mellan olika AI-verktyg?
+
+Ja, men inte dramatiskt. ChatGPT, Claude och Gemini följer samma grundlogik. Detaljerna skiljer sig:
+
+- **ChatGPT**: starkt på rolltilldelning och systeminstruktioner
+- **Claude**: bäst på långa kontextfönster och skrivuppgifter med specifik ton
+- **Gemini**: integrerat med Google-datan, bra på faktasök
+
+Vi har jämfört de två största i [ChatGPT vs Claude](/verktyg/chatgpt-vs-claude/), och samtliga huvudverktyg listas i [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/).
+
+För bildgenerering ser promptar annorlunda ut, mer beskrivande och visuella. Vi går igenom det i [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/).
+
+## Vanliga frågor om vad en prompt är
+
+<FAQ items={[
+  { q: "Måste en prompt vara på engelska?", a: "Nej. Alla stora modeller fungerar på svenska. Engelska kan ge marginellt bättre resultat på komplex resonering, men i 95 procent av fallen märks ingen skillnad." },
+  { q: "Hur lång ska en prompt vara?", a: "Så lång som behövs för att förmedla kontext. En enkel fråga klarar sig på en mening. En komplex skrivuppgift kan kräva 200 till 500 ord. Längre är inte alltid bättre, men för kort är vanligaste felet." },
+  { q: "Vad är skillnaden mellan prompt och prompt engineering?", a: "Promptengineering är yrkesdisciplinen att systematiskt designa, testa och förbättra promptar, ofta i programmerade system. För vanlig användning räcker bra promptvanor, du behöver inte vara prompt engineer." },
+  { q: "Finns det färdiga promptar jag kan kopiera?", a: "Ja, det finns hela bibliotek online. Men en kopierad prompt utan anpassning till din specifika situation ger sällan toppresultat. Använd dem som mall och bygg om för din kontext." },
+  { q: "Vad är systemprompt?", a: "En systemprompt är en bakgrundsinstruktion som styr AI:n i alla kommande meddelanden, ofta osynlig för slutanvändaren. I ChatGPT kan du sätta din egen via Custom Instructions." },
+  { q: "Kan jag skydda mina promptar?", a: "Inte tekniskt om du delar dem med en AI-tjänst. Företagshemliga prompts bör köras på Enterprise-konton där datan inte används för träning. Se vår [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) för mer." },
+]} />
+
+## Vad härnäst?
+
+Nu när du förstår grunderna, sätt det i praktik. Vår [komplett ChatGPT-guide på svenska](/guider/chatgpt-svenska-guide/) går igenom tio konkreta användningsfall med färdiga promptar du kan kopiera och anpassa.

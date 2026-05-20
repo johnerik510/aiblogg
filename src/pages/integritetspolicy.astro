@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Integritetspolicy — ${site.name}`} description="aiblogg.se integritetspolicy. Hur vi hanterar personuppgifter och GDPR." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Integritetspolicy' }]} />
+    <h1 class="display text-3xl md:text-4xl mb-6">Integritetspolicy</h1>
+    <div class="prose-article">
+      <p class="mono text-xs text-[var(--color-text-lighter)]">Senast uppdaterad: 2026-05-20</p>
+
+      <h2>Personuppgiftsansvarig</h2>
+      <p>aiblogg.se drivs som en enskild firma. Kontakt: <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->.</p>
+
+      <h2>Vilka uppgifter vi samlar in</h2>
+      <p>När du besöker aiblogg.se loggas inga personuppgifter av oss. Vi använder ingen tredjepartsanalys, ingen tracking och inga reklamcookies.</p>
+      <p>Om du mejlar oss sparas mejlet och din mejladress så länge konversationen pågår, och raderas inom rimlig tid efter avslutad ärendehantering.</p>
+
+      <h2>Cookies</h2>
+      <p>aiblogg.se sätter inga egna cookies. Se vår <a href="/cookies/">cookie-sida</a> för detaljer.</p>
+
+      <h2>Externa länkar</h2>
+      <p>Vi länkar ibland till externa webbplatser (leverantörers dokumentation, källor, EU-portaler etc.). Dessa har egna integritetsregler som vi inte ansvarar för.</p>
+
+      <h2>Dina rättigheter</h2>
+      <p>Enligt GDPR har du rätt att begära ut, rätta eller radera personuppgifter vi har om dig. Skicka begäran till <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->.</p>
+
+      <h2>Tillsynsmyndighet</h2>
+      <p>Du kan klaga till Integritetsskyddsmyndigheten (IMY) om du anser att vi hanterat dina uppgifter felaktigt.</p>
+    </div>
+  </section>
+</BaseLayout>

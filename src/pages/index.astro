@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { clusters, recentArticles, publishedArticles, articlesByCluster } from '../data/articles';
+import { site } from '../data/site';
+
+const recent = recentArticles(8);
+const featured = publishedArticles.filter(a => a.cornerstone).slice(0, 3);
+const leadArticle = recent[0];
+const sideArticles = recent.slice(1, 5);
+---
+<BaseLayout
+  title={`${site.name} — ${site.tagline}`}
+  description={site.description}
+>
+  <!-- Magasin-hero: lead article + sidebar -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 md:pt-16 pb-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
+      <div>
+        <div class="label mb-3 flex items-center gap-2">
+          <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]"></span>
+          AI på svenska
+        </div>
+        <h1 class="display text-4xl sm:text-5xl md:text-6xl max-w-3xl">
+          AI utan <span class="gradient-text">hype</span>.<br/>
+          Verktyg, guider och analys.
+        </h1>
+      </div>
+      <p class="text-[var(--color-text-light)] max-w-md text-base leading-relaxed">Oberoende redaktion. Tekniskt grundade jämförelser av verktyg, praktiska guider och nyktra analyser av AI-utvecklingen i Sverige.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Lead article -->
+      <article class="lg:col-span-8 group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+        <a href={leadArticle.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+          <img src={leadArticle.hero} alt="" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
+        </a>
+        <div class="p-6 md:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="label text-[var(--color-accent)]">{leadArticle.categoryLabel}</span>
+            <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
+            <time class="mono text-xs text-[var(--color-text-lighter)]">{leadArticle.publishDate}</time>
+          </div>
+          <h2 class="font-semibold text-2xl md:text-3xl leading-tight tracking-tight mb-3">
+            <a href={leadArticle.url} class="hover:text-[var(--color-accent)] transition-colors">{leadArticle.title}</a>
+          </h2>
+          <p class="text-[var(--color-text-light)] leading-relaxed">{leadArticle.excerpt}</p>
+        </div>
+      </article>
+
+      <!-- Sidebar 4 senaste -->
+      <div class="lg:col-span-4 flex flex-col gap-4">
+        {sideArticles.map(a => (
+          <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 card-hover">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
+              <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
+              <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+            </div>
+            <h3 class="font-semibold text-[1.02rem] leading-snug tracking-tight">
+              <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
+            </h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Cornerstone-block -->
+  {featured.length > 0 && (
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
+      <div class="flex items-end justify-between mb-8">
+        <div>
+          <div class="label mb-2">Redaktionens utvalda</div>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Att börja med</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {featured.map(a => (
+          <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+            <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+              <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            </a>
+            <div class="p-5">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
+              </div>
+              <h3 class="font-semibold text-lg leading-snug tracking-tight mb-2">
+                <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
+              </h3>
+              <p class="text-sm text-[var(--color-text-light)] line-clamp-2 leading-relaxed">{a.excerpt}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
+
+  <!-- Kategorier -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="label mb-2">Bläddra efter ämne</div>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Kategorier</h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {clusters.map(c => {
+        const count = articlesByCluster(c.slug).length;
+        const isViolet = c.accent === 'violet';
+        return (
+          <a href={c.url} class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6 card-hover block">
+            <div class="flex items-center justify-between mb-3">
+              <span class={`inline-flex items-center justify-center w-8 h-8 rounded-md ${isViolet ? 'bg-[rgba(139,92,246,0.15)] text-[var(--color-violet)]' : 'bg-[rgba(0,229,255,0.12)] text-[var(--color-accent)]'}`}>
+                <span class="text-xs mono">{c.shortLabel.charAt(0)}</span>
+              </span>
+              <span class="mono text-xs text-[var(--color-text-dim)]">{String(count).padStart(2,'0')} artiklar</span>
+            </div>
+            <h3 class="font-semibold text-lg tracking-tight mb-2 group-hover:text-[var(--color-accent)] transition-colors">{c.label}</h3>
+            <p class="text-sm text-[var(--color-text-light)] leading-relaxed">{c.description}</p>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- Senaste artiklarna -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
+    <div class="flex items-end justify-between mb-8">
+      <div>
+        <div class="label mb-2">Senaste från redaktionen</div>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Nyligen publicerat</h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {recent.slice(0, 6).map(a => (
+        <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+          <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+            <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="label text-[var(--color-accent)]">{a.categoryLabel}</span>
+              <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
+              <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+            </div>
+            <h3 class="font-semibold text-[1.05rem] leading-snug tracking-tight mb-2">
+              <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
+            </h3>
+            <p class="text-sm text-[var(--color-text-light)] line-clamp-2 leading-relaxed">{a.excerpt}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Editor / E-E-A-T-signal -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
+    <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start max-w-4xl">
+      <img src={site.author.image} alt={`Porträtt av ${site.author.name}`} width="200" height="200" loading="lazy" class="rounded-xl w-full max-w-[200px] aspect-square object-cover border border-[var(--color-border)]" />
+      <div>
+        <div class="label mb-2">Bakom redaktionen</div>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">{site.author.name}</h2>
+        <div class="text-[var(--color-text-lighter)] mb-4 mono text-sm">{site.author.role}</div>
+        <p class="text-[var(--color-text-light)] leading-relaxed mb-5">{site.author.bio}</p>
+        <a href="/redaktionen/" class="inline-flex items-center gap-2 text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors">
+          Läs hela redaktionssidan <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

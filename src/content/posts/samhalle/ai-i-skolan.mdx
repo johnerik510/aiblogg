@@ -1,0 +1,147 @@
+---
+title: "AI i skolan, vad forskningen säger om lärande, fusk och rättvisa"
+excerpt: "Svenska kommuner har olika linjer om AI i klassrummet. Genomgång av vad forskningen säger om lärande, fusk och rättvisa konsekvenser."
+category: "samhalle"
+publishDate: "2026-05-12"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI i skolan har snabbt blivit en av de mest splittrande frågorna i svensk utbildningspolitik. Vissa kommuner har infört ChatGPT brett i undervisningen, andra har gått åt motsatt håll och försökt blockera AI-verktyg helt. Skolverket har lämnat övergripande riktlinjer, men det praktiska arbetet ligger fortfarande mest på enskilda lärare och rektorer.
+
+Den här artikeln tittar på vad forskningen faktiskt säger om AI och lärande, hur fuskproblematiken ser ut tre år efter att ChatGPT lanserades, vad detektorer faktiskt kan och inte kan, och hur rättviseaspekten utvecklas när vissa elever har betalda AI-verktyg och andra inte.
+
+## Skolverkets nuvarande linje
+
+Skolverket publicerade sin första vägledning om generativ AI i undervisningen 2023 och har uppdaterat den flera gånger sedan dess. Huvudbudskapet 2026 är att skolor ska förhålla sig aktivt till AI snarare än att ignorera eller förbjuda det.
+
+Konkret betyder det att skolor förväntas ta fram lokala riktlinjer för när AI-verktyg får användas, undervisa om AI som ämne (källkritik, integritet, hur språkmodeller faktiskt fungerar) och utbilda lärare i hur AI förändrar bedömningsformer. Men Skolverket ger ingen rikstäckande policy som säger "så här gör vi". Det är överlämnat till huvudmännen.
+
+<Callout type="info" title="Skolverket är inte ensamt ansvarigt">
+Beslut om AI i klassrummet fattas av huvudmannen (kommun eller fristående skola), rektor och slutligen läraren. Det är därför svaren skiljer sig så mycket från skola till skola och kommun till kommun.
+</Callout>
+
+## Kommunala policies: stor variation
+
+Det är värt att titta på hur olika svenska kommuner gjort. Bilden är spretig.
+
+Stockholm stad har gått aktivt ut och rullat ut ett kommunlicensierat ChatGPT-alternativ för lärare och äldre elever, med tydliga riktlinjer för när det får användas och inte. Göteborgs stad har valt en mer försiktig linje med pilotprojekt i utvalda skolor. Vissa mindre kommuner har inga formaliserade riktlinjer alls, vilket lämnar enskilda lärare att lösa frågan själva.
+
+Det här är en del av varför [Sveriges AI-strategi](/samhalle/ai-sverige-strategi/) har pekats ut för att inte ge tillräcklig vägledning till offentlig sektor. DIGG och Skolverket arbetar med tydligare ramar, men under tiden tar varje kommun sina egna beslut.
+
+## Vad forskningen säger om lärande
+
+Här är det viktigt att vara försiktig. Forskningen är ny, ofta begränsad i urval och de stora longitudinella studierna är ännu inte gjorda. Men några tydliga mönster har börjat framträda i internationella studier under 2023-2025.
+
+### Tutorial-effekt: betydande
+
+När AI används som en personlig handledare (förklarar matematik, ger feedback på texter, leder elever genom problemlösning steg för steg) ser flera studier tydliga inlärningseffekter, ofta jämförbara med dyra mänskliga handledare. En Stanford-studie 2024 och flera europeiska replikationer pekar i samma riktning.
+
+### Avlastning: blandat
+
+När AI tar över skrivandet eller resonemanget åt eleven minskar inlärningseffekten kraftigt. Det är samma logik som att låta en kompis skriva uppsatsen åt dig. Eleven får bättre slutprodukt men lär sig mindre.
+
+### Cognitive offloading: oroväckande
+
+Flera studier pekar på att intensiv AI-användning utan styrning kan leda till att elever slutar utveckla egna problemlösningsstrategier. Effekten är tydligast inom skrivande och matematik. Det är inte att AI är farligt i sig, det är att det måste användas på rätt sätt för rätt syfte.
+
+## Fuskproblematiken: var står vi?
+
+Ekvationen är enkel. Elever har tillgång till verktyg som kan producera bra text på sekunder. Bedömningssystem är till stor del byggda på antagandet att eleven själv producerat texten. Det krockar.
+
+Tre huvudvägar har formats i svenska skolor 2024-2026.
+
+### Linje 1: Acceptans och nya bedömningsformer
+
+Många lärare har gått över till bedömningsformer där AI inte kan göra jobbet åt eleven: muntliga presentationer, processarbete med löpande feedback, examinationer på plats utan internetåtkomst, källkritiska analyser där eleven måste jämföra och värdera. Det är arbetsintensivt för läraren men robust mot fusk.
+
+### Linje 2: AI-detektion
+
+Detektorer som GPTZero, Originality.ai och liknande verktyg har använts av många lärare. Problemet är att de inte fungerar tillförlitligt på svensk text. Vår test av [ChatGPT-detektor på svenska](/integritet/chatgpt-detector-svenska/) visar att falska positiva träffar är ett reellt problem, särskilt för elever som skriver formellt eller är andraspråkstalare.
+
+### Linje 3: Förbud och blockering
+
+Vissa skolor har försökt blockera ChatGPT på skolnätverket. Det fungerar i praktiken sällan, eftersom eleverna har egna telefoner. Som principiell hållning blir det svårt att försvara, dessutom missar man att lära eleverna ett verktyg som finns i deras vardag och kommer finnas i arbetslivet.
+
+{/* INLINE-BILD: jämförelse av tre olika bedömningsformer och hur de står emot AI-fusk */}
+
+## AI-detektorer: det här är problemet
+
+AI-detektorer fungerar i princip genom att leta efter statistiska mönster i texten (förutsägbarhet, ordval, meningsbyggnad) som är vanliga i AI-genererad text. På engelska har de fått hyfsad träffsäkerhet på rena AI-texter. På svensk text är situationen sämre.
+
+Tre konkreta problem:
+
+1. **Falska positiva.** Elever som skriver formellt, andraspråkstalare och vissa neurodivergenta elever löper högre risk att felaktigt anklagas. Det är ett rättssäkerhetsproblem.
+2. **Lätt att kringgå.** Att låta AI skriva och sedan redigera lätt själv gör att de flesta detektorer faller.
+3. **Ingen rättslig status.** En detektor-rapport räcker inte för att fälla en elev, det krävs ytterligare bevisning.
+
+Slutsatsen i forskningen och hos Skolinspektionen är att AI-detektorer kan vara ett av flera underlag, men aldrig den enda grunden för en bedömning av fusk.
+
+## Rättviseaspekten: det här är på riktigt
+
+Här finns en strukturell fråga som förtjänar mer uppmärksamhet än den får. Elever har olika förutsättningar att använda AI klokt.
+
+### Tillgång till bra verktyg
+
+ChatGPT är gratis i sin baseversion, men plus-versionen och nya modeller kostar pengar. Elever från resursstarka hem har ofta tillgång till bättre versioner, vilket ger dem en fördel i hemarbetet. Vår genomgång av [ChatGPT på svenska](/guider/chatgpt-svenska-guide/) går igenom skillnaden mellan gratis och plus.
+
+### Hjälp att använda verktygen rätt
+
+En elev med föräldrar som själva använder AI får direkt eller indirekt hjälp att ställa bra frågor, kritiskt värdera svar och bygga bra arbetsflöden. Det är en stor osynlig fördel.
+
+### Hemspråk och formuleringsförmåga
+
+AI-verktyg fungerar bäst för elever som kan formulera bra prompts. Det gynnar elever med starkt svenskt språkbruk och kan missgynna nyanlända.
+
+Skolan har möjlighet att jämna ut dessa skillnader genom att aktivt undervisa AI som ämne, ge alla elever lika tillgång till verktygen under skoldagen och bygga undervisning som värderar processen och inte bara slutprodukten. Det är en av de starkaste argumenten för att skolan ska arbeta aktivt med AI snarare än ignorera det.
+
+<Callout type="tip" title="Lärarperspektiv">
+Lärare som arbetat aktivt med AI i klassrummet rapporterar konsekvent en sak: det tar tid att börja, men efter en termin sparar man tid jämfört med tidigare. Skapa exempelprompts, anpassade prov och differentierat material går snabbare. Bedömning tar längre, men resten av yrket går smidigare.
+</Callout>
+
+## Konkreta råd till skolor och föräldrar
+
+För skolor:
+
+1. Skriv en lokal AI-policy. Den behöver inte vara perfekt, men den måste finnas.
+2. Tillgängliggör samma verktyg för alla elever under skoldagen. Det är rättvisefråga.
+3. Utbilda lärarna. Det är inte rimligt att lärare ska lösa det här ensamma.
+4. Skifta bedömningsformer där det går: muntligt, processbaserat, on-site.
+5. Använd AI-detektorer som hjälpmedel, aldrig som ensamt bevis.
+
+För föräldrar:
+
+1. Prata med ditt barn om AI-verktyg utan att antingen panikslå eller idealisera.
+2. Visa hur man frågar bra och granska kritiskt. Det är en livskompetens.
+3. Var öppen med skolan om hur ni hanterar AI hemma.
+
+För elever:
+
+1. Använd AI för att lära, inte för att slippa lära. Skillnaden är som mellan att läsa en sammanfattning och läsa boken.
+2. Var transparent när du använt AI. Detektion blir bättre med tiden, och försök att gömma fusk blir oftare ett större problem än fusket självt.
+
+## Forskning att hålla ögonen på
+
+Tre studier eller projekt som rapporterar löpande och som är värda att följa.
+
+LiU:s WASP-forskning om AI i utbildning. Stockholms universitets longitudinella studier om generativ AI och skrivande. OECD:s Education at a Glance som har börjat inkludera AI-användning i sina mätningar från 2025.
+
+För den som vill se hur AI-användningen sprider sig utanför skolan, vår genomgång av [AI och jobben](/samhalle/ai-och-jobben/) ger en bredare bild av vilka kompetenser som värdesätts.
+
+## Vanliga frågor om AI i skolan
+
+<FAQ items={[
+  { q: "Är ChatGPT tillåtet i svenska skolor?", a: "Det beror på huvudman och rektor. Skolverket har inte förbjudit AI-verktyg, men varje skola har egna riktlinjer. Många skolor tillåter användning i hemarbete med transparens, men kräver att examinationer sker utan AI-stöd." },
+  { q: "Hur upptäcker lärare AI-fusk?", a: "Genom en kombination av detektorverktyg, jämförelse med elevens tidigare arbeten, muntlig uppföljning och processbaserad bedömning. Detektorer ensamt är inte tillräckligt, särskilt på svensk text." },
+  { q: "Fungerar AI-detektorer på svensk text?", a: "Sämre än på engelska. Falska positiva träffar är ett reellt problem, särskilt för formellt skrivande och andraspråkstalare. Detektorer kan ge en indikation men aldrig vara enda underlag för en fusk-anklagelse." },
+  { q: "Hjälper AI eleverna att lära sig bättre?", a: "Det beror på hur det används. Som handledare som förklarar och ger feedback ger AI tydliga inlärningseffekter. Som textproducent som gör jobbet åt eleven minskar lärandet. Skillnaden ligger i syftet och formen." },
+  { q: "Får lärare anklaga elever baserat på AI-detektor?", a: "Nej, inte enbart. Skolinspektionen och flera utbildningsjurister har pekat på att en detektor-rapport är ett underlag bland flera, men kräver ytterligare bevisning för att leda till åtgärd. Rättssäkerheten kräver omsorgsfull hantering." },
+  { q: "Hur ska skolor hantera elever utan tillgång till AI hemma?", a: "Genom att tillhandahålla samma verktyg på skolan, undervisa AI som ämne på lika villkor, och utforma uppgifter där tillgång hemma inte är avgörande. Rättviseaspekten är central när skolan formulerar sina riktlinjer." },
+]} />
+
+## Vad härnäst?
+
+AI i skolan kommer att förändras fortare än läroplaner och nationella riktlinjer hinner med. Det viktigaste just nu är att lärare och rektorer arbetar aktivt med frågan istället för att vänta på centrala besked.
+
+För dig som vill förstå själva verktygen är vår guide till [ChatGPT på svenska](/guider/chatgpt-svenska-guide/) en bra start. Och för att förstå rättvisefrågan i ett bredare sammanhang, läs vår genomgång av [ChatGPT-detektor på svenska](/integritet/chatgpt-detector-svenska/).

@@ -1,0 +1,174 @@
+---
+title: "AI-policy på arbetsplatsen, 7 punkter som måste finnas"
+excerpt: "De flesta organisationers AI-policy är antingen för luddig eller för restriktiv. Här är de sju punkter som måste finnas med och en svensk mall att utgå från."
+category: "jobb"
+publishDate: "2026-05-11"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+En AI-policy på arbetsplatsen är ingen formalitet. Det är dokumentet som avgör om dina medarbetare vågar använda AI alls, om de använder det på ett sätt som inte sprider företagshemligheter, och om ledningen kan visa tillsynsmyndigheterna att ni har koll. Trots det är de flesta svenska AI-policys 2026 antingen så luddiga att de inte ger någon vägledning, eller så restriktiva att de bara driver användningen under radarn.
+
+Den här guiden går igenom de sju punkterna som en seriös svensk AI-policy måste innehålla, plus en mall som täcker det viktigaste utan att bli 40 sidor. Den passar organisationer från 10 till 500 anställda. För större bolag krävs ytterligare detaljering, men strukturen är densamma.
+
+## Varför generiska AI-policys inte fungerar
+
+Många mallar man hittar online är översatta från amerikansk kontext eller skrivna så abstrakt att de inte täcker faktiska situationer. "Använd AI med försiktighet" är inte en policy, det är en åsikt. En faktisk policy svarar på frågor som: får jag klistra in en kundes mejl i ChatGPT för att få ett bättre svarsutkast? Får jag använda Claude för att sammanfatta interna dokument? Får jag dela AI-skrivet innehåll med kunder utan att märka upp det?
+
+Om policyn inte svarar på de frågorna är den värdelös. Medarbetarna kommer ändå använda AI, men gör det utan riktning, vilket är värsta utfallet.
+
+<Callout type="info" title="Två fel som syns i 80 procent av svenska AI-policys">
+  Det första är att förbjuda allt utan att förstå vad det praktiskt innebär. Det andra är att tillåta allt utan att specificera vad som faktiskt får hända med data. Båda leder till att policyn ignoreras eller fallerar vid första incident.
+</Callout>
+
+## De sju punkterna en AI-policy måste innehålla
+
+### 1. Definitioner och omfattning
+
+Vad räknas som AI i policyn? Det är inte trivialt. Räknas Microsoft 365 Copilot? Räknas autocomplete i e-postklienten? Räknas Grammarly? Skriv en kort men explicit definition. Vanligast: generativ AI som producerar text, bild, kod eller analys baserat på modeller från externa leverantörer. Stavningskontroll och tabellfunktioner i Excel räknas inte.
+
+### 2. Vilka verktyg som är godkända
+
+En lista över godkända verktyg per användningsfall. Inte en blanket "alla AI-verktyg får inte användas" och inte heller "alla får användas". Exempelvis:
+
+- Skrivassistans och e-post: ChatGPT Plus (betalt konto), Claude Pro, Microsoft Copilot.
+- Möten och transkribering: Microsoft Teams Copilot, Otter (med PUB-avtal).
+- Bildgenerering: ej tillåtet utan godkännande från kommunikationschef.
+- Kodassistans: GitHub Copilot, Cursor (med begränsningar för känslig kod).
+
+Listan ska kunna uppdateras varje kvartal. Sätt en namngiven ägare.
+
+### 3. Vilka datatyper som får och inte får matas in
+
+Det här är hjärtat i policyn. Tydlig kategorisering:
+
+- **Aldrig**: personnummer, hälsodata, lönedata, kundavtal, anställdas personuppgifter utöver namn och titel, affärshemligheter, opublicerade ekonomiska siffror.
+- **Med försiktighet**: kundkommunikation (personuppgifter ska anonymiseras), interna strategidokument.
+- **Fritt**: publik information, generella frågor, kodutkast som inte innehåller hemligheter.
+
+För djupare bakgrund, se vår genomgång av [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) och [dina data i AI-tjänster](/integritet/dina-data-i-ai/).
+
+### 4. Märkning av AI-genererat innehåll
+
+När ska AI-skrivet eller AI-genererat innehåll märkas? För internt bruk räcker en standardpolicy som "det är ok att låta AI utkast, men du som skickar ut innehållet ansvarar för det". För externt material gäller andra regler, särskilt enligt EU AI Act 2026 som kräver märkning av AI-genererat innehåll i vissa sammanhang.
+
+Skriv konkret: bilder som är AI-genererade ska märkas i bildtext eller på annat tydligt sätt. Texter där AI gjort mer än korrektur ska redaktionellt granskas av en namngiven person innan publicering.
+
+{/* INLINE-BILD: möte med policy-dokument på konferensbord, person markerar punkter */}
+
+### 5. Ansvar och eskalering
+
+Vem är ansvarig om något går fel? Tre roller minimum:
+
+- **AI-ansvarig** (oftast IT-chef eller informationssäkerhetsansvarig): övergripande policy, verktygslista, leverantörsavtal.
+- **Dataskyddsombud (DSO)**: GDPR-relaterade incidenter, dataskyddsanalyser.
+- **Närmaste chef**: dagligt ansvar, godkänner användning av nya verktyg lokalt.
+
+Eskaleringsväg: om en medarbetare oavsiktligt matar in känsliga uppgifter eller upptäcker en incident, kontakta DSO inom 24 timmar. Företaget har 72 timmar att rapportera personuppgiftsincident till IMY.
+
+### 6. Utbildning och stöd
+
+En policy som ingen läst är värdelös. Krav på obligatorisk genomgång vid nyanställning och årlig uppdatering för alla medarbetare. 30 till 60 minuter räcker långt om innehållet är konkret.
+
+Inkludera resurser: vart medarbetare vänder sig med frågor, vilka interna mallar och prompts som finns godkända, och en lista över [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) för deras roller.
+
+### 7. Loggning, audit och uppföljning
+
+Det här är det vanligaste hålet. Hur följs efterlevnad faktiskt upp? Företag som har kontroll över sin AI-användning gör tre saker:
+
+- **Loggar centralt** vilka AI-verktyg som är aktiva i organisationens nätverk (via Microsoft Defender for Cloud Apps eller liknande).
+- **Reviderar tillgångar varje halvår**: vilka verktyg används, av vem, till vad?
+- **Rapporterar incidenter och nästan-incidenter** transparent, så att policyn kan justeras.
+
+Utan loggning är policyn bara ord på papper.
+
+## Svensk AI-policy-mall (förkortad)
+
+Här är en grundstomme som du kan utgå från. Anpassa till din organisation.
+
+```
+AI-policy för [Företagets namn]
+Version 1.0, gäller från [datum]
+Ansvarig: [Namn], [Roll]
+
+1. Syfte och omfattning
+Den här policyn reglerar hur generativa AI-verktyg får användas
+inom [Företaget] av samtliga anställda, konsulter och uppdragstagare.
+
+2. Definition
+Med "AI-verktyg" avses generativ AI som producerar text, bild, kod
+eller analys baserat på externa språk- eller bildmodeller.
+Stavnings- och rättstavningsverktyg omfattas inte.
+
+3. Godkända verktyg
+[Lista per kategori, se ovan]
+Verktyg utanför listan kräver skriftligt godkännande från [Roll].
+
+4. Förbjudna datatyper
+Följande får aldrig matas in i AI-verktyg:
+- Personnummer
+- Hälsodata
+- Lönedata och anställningsavtal
+- Kundavtal och fakturadata med personuppgifter
+- Opublicerad ekonomisk information
+- Affärshemligheter (källkod, prisstrategier, M&A-information)
+
+5. Märkning
+Externt material där AI gjort mer än korrektur ska granskas av
+[Roll] innan publicering. AI-genererade bilder ska märkas.
+
+6. Ansvar
+- AI-ansvarig: [Namn/roll]
+- Dataskyddsombud: [Namn/roll]
+- Incidentanmälan: inom 24 timmar via [kanal]
+
+7. Utbildning
+Obligatorisk genomgång vid nyanställning. Årlig påminnelse.
+
+8. Uppföljning
+Halvårsvis audit av aktiva verktyg och användning.
+Incidentregister förs av [Roll].
+```
+
+För implementationsdetaljer per användningsfall, se våra guider om [AI för småföretag](/jobb/ai-for-smaforetag/) och [AI-mötesprotokoll](/jobb/ai-motesprotokoll/).
+
+## Vanliga misstag i AI-policys
+
+**Blanketförbud mot ChatGPT.** Det fungerar inte. Anställda kommer använda det ändå på privata enheter, vilket är värre. Bättre att tillåta betald version där träning är avstängd och tydliggöra vilken data som inte får matas in.
+
+**Inget ägarskap.** Policyn skrivs av HR eller compliance, sedan finns ingen som faktiskt äger den. Resultatet är att den inte uppdateras och inte tillämpas. Sätt en namngiven person och en kvartalsvis genomgång.
+
+**Otydlig relation till EU AI Act.** AI Act har börjat gälla stegvis sedan 2024 och flera krav är skarpa 2026. Policyn ska referera till lagen och visa hur företaget uppfyller den. För bredare bakgrund se vår analys av [AI och jobben](/samhalle/ai-och-jobben/) och hur regleringar påverkar svenska arbetsplatser.
+
+**Inget om leverantörsval.** Vilka avtal har ni med AI-leverantörerna? PUB-avtal, datalagring inom EU eller USA, träningssamtycke? Policyn behöver hänvisa till de avtal som faktiskt är signerade, inte allmänna principer.
+
+<Callout type="warning" title="EU AI Act-krav som påverkar policyn 2026">
+  Vissa AI-användningsfall klassas som hög risk och kräver extra dokumentation. Det gäller särskilt automatiserat beslutsfattande i HR-processer (rekrytering, prestationsbedömningar) och vissa kreditbeslut. Om din organisation gör något av detta måste policyn separat täcka logging, mänsklig översyn och förklaringsrätt enligt artikel 6 och 14.
+</Callout>
+
+## Hur ofta ska policyn uppdateras?
+
+Minst en gång om året, mer ofta när stora förändringar sker. Konkret triggar:
+
+- Ny AI-tjänst tas in i organisationen.
+- Ny EU- eller svensk lagstiftning träder i kraft.
+- Incident eller nästan-incident inträffar.
+- Större förändring i en av era nuvarande leverantörer (till exempel om OpenAI ändrar dataretentionspolicyn).
+
+För hjälp att navigera detaljerna i lagstiftningen, se [EU AI Act 2026](/samhalle/eu-ai-act-sverige/) och [GDPR och ChatGPT](/integritet/gdpr-chatgpt/).
+
+## Vanliga frågor om AI-policy på arbetsplatsen
+
+<FAQ items={[
+  { q: "Måste små företag ha en AI-policy?", a: "Inte juridiskt om ni inte hanterar känslig data, men starkt rekommenderat så fort fler än 3 till 4 personer använder AI-verktyg i arbetet. En sida räcker långt för ett 10-mannaföretag." },
+  { q: "Hur skiljer sig en AI-policy från en GDPR-policy?", a: "GDPR-policyn täcker hur personuppgifter får behandlas generellt. AI-policyn är mer specifik kring vilka verktyg som får användas, vilka datatyper som får matas in i AI och hur AI-genererat innehåll ska hanteras." },
+  { q: "Kan jag använda en mall från nätet?", a: "Som utgångspunkt ja. Men du måste anpassa den till din bransch, vilka verktyg ni faktiskt använder och era leverantörsavtal. En generisk policy som inte speglar verkligheten skapar mer förvirring än klarhet." },
+  { q: "Vad händer om en medarbetare bryter mot AI-policyn?", a: "Beroende på brottets karaktär. Mindre överträdelser hanteras genom samtal och påminnelse. Allvarliga incidenter (inläggning av känsliga uppgifter, brott mot upphovsrätt) kan leda till disciplinära åtgärder och kräver incidentanmälan till IMY om personuppgifter berörs." },
+  { q: "Behöver fackliga representanter konsulteras?", a: "Ja, om AI används för beslutsfattande som påverkar anställda (rekrytering, prestationsbedömning, schemaläggning). Medbestämmandelagen (MBL) kräver förhandling före införande av sådana system." },
+  { q: "Hur lång ska policyn vara?", a: "För småföretag 2 till 4 sidor. För medelstora 6 till 10 sidor. Bli inte längre än nödvändigt, varje extra sida sänker sannolikheten att den faktiskt läses." },
+]} />
+
+## Vad härnäst?
+
+Skicka inte ut policyn och tro att det är klart. Genomför en kort utbildning, samla in frågor och justera. Den första versionen är alltid bättre om den ses som ett utkast som ska iteras. För konkreta verktygsguider, se [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) och vår guide till [ChatGPT på svenska](/guider/chatgpt-svenska-guide/).

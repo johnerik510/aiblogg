@@ -1,0 +1,100 @@
+---
+title: "Skapa AI-bilder, guide från första prompten till färdig bild"
+excerpt: "Så skapar du AI-bilder från grunden. Vi går igenom prompt-struktur, val av verktyg, upplösning och de fem misstag nybörjare gör."
+category: "bild-och-video"
+publishDate: "2026-05-18"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Att skapa AI-bilder är inte svårare än att skriva en mening. Men att skapa en AI-bild som faktiskt ser ut som du tänkte dig, med rätt belysning, komposition och stil, är ett hantverk. Den här guiden tar dig från första prompten till färdig bild, oavsett om du sitter med Microsoft Designer, Midjourney eller Stable Diffusion lokalt.
+
+Jag har jobbat med AI-bildgenerering sedan Stable Diffusion 1.4 släpptes 2022 och har sett vad som faktiskt skiljer en hobbyanvändare från någon som producerar bilder i kommersiell kvalitet. Det är inte verktyget. Det är hur du tänker innan du trycker på generera.
+
+## Välj rätt verktyg innan du skriver första prompten
+
+Verktyget styr vad du kan göra. Vill du ha snabba illustrationer till en presentation räcker Microsoft Designer eller ChatGPT med inbyggd bildgeneration. Vill du producera fotorealistiska bilder för marknadsföring är Midjourney eller Imagen 3 starkare. Vill du ha full kontroll och inga filter ska du köra Stable Diffusion lokalt.
+
+För en översikt av alternativen, se vår genomgång av [AI-bilder gratis](/bild-och-video/ai-bilder-gratis/) som listar tio verktyg med exakta begränsningar per gratisnivå.
+
+<Callout type="tip" title="Tumregel för verktygsval">
+Snabbt och enkelt: Microsoft Designer eller Gemini. Konstnärlig stil och atmosfär: Midjourney. Realistiska människor och scener: Imagen 3 eller Flux. Text i bilden: Ideogram. Full kontroll utan filter: Stable Diffusion lokalt.
+</Callout>
+
+## Prompt-strukturen som ger bästa resultat
+
+En bra prompt har sex delar i ungefär följande ordning: motiv, handling, stil, miljö, ljus, tekniska detaljer. Här är ett konkret exempel:
+
+"En äldre svensk fiskare, lagar nät, fotorealistisk stil, vid en träbrygga i Bohuslän, mjukt morgonljus från sidan, 50mm objektiv, skarp fokus, grunt skärpedjup"
+
+Varje del bidrar med information. Motivet är vem eller vad. Handlingen är vad personen gör eller hur scenen är komponerad. Stilen styr om det är fotorealistiskt, oljemålning, anime eller skiss. Miljön placerar motivet i en kontext. Ljuset är det som faktiskt skiljer en platt bild från en bild som ser professionell ut. De tekniska detaljerna är kameraobjektiv, kameraparametrar och bildstil.
+
+Skriv inte allt på en gång första gången. Börja med motiv och stil, generera, justera, lägg till nästa lager. Du lär dig snabbare så.
+
+## Skriv på engelska om du vill ha exakt kontroll
+
+Alla större bildmodeller är primärt tränade på engelska bildbeskrivningar. Svenska prompts fungerar i Microsoft Designer, ChatGPT, Gemini och Adobe Firefly, men ger ofta sämre stilistisk precision. Engelska prompts har också längre och mer specifik vokabulär för konstnärliga referenser, ljustyper och fotografiska termer.
+
+Om du skriver "en man i regn" på svenska och förväntar dig en specifik stil får du oftast en standardiserad version. Skriver du "a weathered fisherman in heavy rain, dramatic chiaroscuro lighting, in the style of Roger Deakins cinematography" får du en helt annan bild.
+
+## Parametrar som faktiskt påverkar resultatet
+
+Olika verktyg har olika parametrar men några återkommer. Aspect ratio styr bildformatet, exempelvis 1:1 för Instagram, 16:9 för YouTube-thumbnails eller 9:16 för Reels och TikTok. Seed är ett slumpfrö som låter dig återskapa exakt samma bild igen, vilket är ovärderligt när du itererar.
+
+Stylize eller cfg-scale styr hur mycket modellen får ta ut svängarna mot prompten. Låga värden ger trogna men ibland tråkiga resultat. Höga värden ger stiliserade men ibland osammanhängande resultat. Mellanvärden brukar vara bäst startpunkt.
+
+Negative prompts, som finns i Stable Diffusion och Leonardo, låter dig säga vad du inte vill ha. "blurry, low quality, deformed hands, extra fingers" är klassiska startvärden.
+
+{/* INLINE-BILD: prompt med tillhörande genererad bild bredvid varandra för demonstration */}
+
+## Upplösning och hur du får bilder i tryckkvalitet
+
+De flesta moln-verktyg genererar i 1024 x 1024 eller liknande standardstorlek. För webb och sociala medier räcker det. För tryck behöver du minst 300 DPI vid den slutliga utskriftsstorleken, vilket innebär uppskalning.
+
+Två metoder fungerar. För det första, generera först i normal upplösning, skala sedan upp med ett separat verktyg som Topaz Gigapixel, Upscayl eller den inbyggda uppskalaren i Stable Diffusion. För det andra, generera direkt i högre upplösning om verktyget stödjer det. Midjourney v6 och v7 har en upscale-funktion direkt i Discord eller webbappen.
+
+För kommersiell produktion rekommenderar jag alltid uppskalning som separat steg snarare än att försöka generera stora bilder direkt. Du får mer kontroll och bättre detaljer.
+
+## De fem misstag nybörjare gör
+
+Det första misstaget är att skriva för långa prompts. När en prompt blir över 50 ord börjar modellen vikta orden mer eller mindre slumpmässigt. Bättre att hålla det tätt och iterera.
+
+Det andra är att inte iterera. En första generering är sällan slutprodukten. Räkna med fyra till åtta varv innan du har något du är nöjd med. Generera flera varianter, plocka den bästa, justera prompten, generera igen.
+
+Det tredje är att ignorera ljuset. "Morning light", "golden hour", "soft window light", "dramatic side light" är fraser som transformerar bilden mer än någon enskild stilreferens.
+
+Det fjärde är att förvänta sig perfekta händer på första försöket. AI har historiskt haft problem med händer, ögon och text. Nya modeller är bättre men inte felfria. Använd inpainting eller manuell efterredigering för dessa detaljer.
+
+Det femte är att blanda för många stilar i samma prompt. "Anime, photorealistic, oil painting, watercolor" ger en grötig medelväg. Välj en stil och stå kvar i den.
+
+## Efterbehandling som gör skillnad
+
+En AI-bild är sällan klar direkt ur modellen. Tre steg lyfter resultatet markant. Färgkorrigering i Lightroom eller GIMP balanserar kontrast och färgton. Inpainting fixar specifika delar som händer eller bakgrundsobjekt. Detaljförbättring via uppskalning ger skarphet utan att introducera artefakter.
+
+Tekniskt har du två val. Antingen jobbar du iterativt inom AI-verktyget, exempelvis med Photoshops generativa fyllning eller ComfyUI:s inpainting-noder. Eller så exporterar du och redigerar i ett klassiskt bildredigeringsprogram.
+
+## Spara dina bästa prompts
+
+Det här är råd som låter trivialt men sparar månader av jobb. När du landar i en prompt som funkar, spara den. Notera vilken modell, vilka parametrar och vilken seed. Bygg ett eget prompt-bibliotek. Efter sex månader har du ett verktyg som är mer värdefullt än vilket abonnemang som helst.
+
+Verktyg som [ChatGPT på svenska](/guider/chatgpt-svenska-guide/) kan hjälpa dig formulera om en prompt på engelska eller variera ett tema systematiskt. Det är ett av de undervärderade samspelet mellan språkmodeller och bildmodeller.
+
+## När du behöver text i bilden
+
+Text i AI-bilder var ett av de större problemen fram till 2024. Idag klarar Ideogram, Imagen 3 och Flux 1.1 Pro text rimligt bra. Midjourney v6 och v7 har också blivit acceptabla. För korta ord och rubriker fungerar de flesta moderna modeller. För längre stycken eller exakt typografi rekommenderas fortfarande att lägga texten manuellt efteråt.
+
+## Vanliga frågor om att skapa AI-bilder
+
+<FAQ items={[
+  { q: "Hur skapar jag AI-bilder gratis?", a: "Microsoft Designer Image Creator är enklast och helt gratis med ett Microsoft-konto. Det kör DALL-E 3 och ger fyra bildvarianter per prompt. För fler alternativ, se vår genomgång av tio gratis AI-bildverktyg." },
+  { q: "Vilken är den bästa prompt-strukturen för AI-bilder?", a: "Använd ordningen motiv, handling, stil, miljö, ljus, tekniska detaljer. Håll prompten under 50 ord och iterera flera gånger innan du har slutresultatet. Skriv på engelska om du vill ha maximal stilistisk kontroll." },
+  { q: "Varför ser min AI-bild platt och tråkig ut?", a: "Vanligaste orsaken är att prompten saknar information om ljus och stil. Lägg till termer som golden hour, dramatic side light, soft window light eller cinematic lighting. Specificera även stil, exempelvis fotorealistisk, oljemålning eller anime." },
+  { q: "Hur stor upplösning kan jag få på en AI-bild?", a: "Direkt ur modellen oftast 1024 x 1024 till 2048 x 2048. För tryckkvalitet skalar du upp med Topaz Gigapixel, Upscayl eller modellens inbyggda upscaler. Du kan nå 4K och 8K utan synliga artefakter med modern uppskalning." },
+  { q: "Får jag använda AI-bilder kommersiellt?", a: "Det beror på verktygets villkor. Adobe Firefly, Microsoft Designer och Midjourneys betalplaner tillåter kommersiell användning. EU AI Act kräver från augusti 2026 att AI-genererat innehåll märks som sådant i vissa sammanhang." },
+  { q: "Hur lång tid tar det att lära sig skapa bra AI-bilder?", a: "Grundläggande nivå nås på några dagar. Att skriva prompts som ger exakt det du tänker dig tar veckor av aktiv övning. Att bemästra avancerade workflows med ControlNet, LoRA och inpainting tar månader." },
+]} />
+
+## Vad härnäst
+
+Vill du gå djupare in på själva tekniken, läs vår förklaring av [AI-genererade bilder](/bild-och-video/ai-genererade-bilder/) och hur diffusionsmodeller faktiskt fungerar. Är du intresserad av specifika verktyg, se vår [midjourney svenska](/bild-och-video/midjourney-svenska/) guide för komplett genomgång av priser, parametrar och prompt-tekniker.

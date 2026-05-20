@@ -1,0 +1,28 @@
+---
+export interface QA { q: string; a: string; }
+export interface Props { items: QA[]; title?: string; }
+const { items, title = 'Vanliga frågor' } = Astro.props;
+---
+<section class="my-12">
+  <h2 class="text-2xl font-semibold tracking-tight mb-6">{title}</h2>
+  <div class="space-y-3">
+    {items.map(item => (
+      <details class="group rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] p-5 open:bg-[var(--color-bg-elevated)] transition-colors">
+        <summary class="cursor-pointer list-none flex items-start justify-between gap-4 font-medium text-[var(--color-text)]">
+          <span>{item.q}</span>
+          <span class="mono text-[var(--color-accent)] text-lg leading-none mt-0.5 group-open:rotate-45 transition-transform">+</span>
+        </summary>
+        <div class="mt-3 text-[var(--color-text-light)] leading-relaxed">{item.a}</div>
+      </details>
+    ))}
+  </div>
+</section>
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map(i => ({
+    '@type': 'Question',
+    name: i.q,
+    acceptedAnswer: { '@type': 'Answer', text: i.a },
+  })),
+})}></script>

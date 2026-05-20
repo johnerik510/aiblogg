@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+---
+<BaseLayout title="Cookies — aiblogg.se" description="Cookie-policy för aiblogg.se. Vilka cookies vi sätter och vad de används till." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Cookies' }]} />
+    <h1 class="display text-3xl md:text-4xl mb-6">Cookies</h1>
+    <div class="prose-article">
+      <p class="mono text-xs text-[var(--color-text-lighter)]">Senast uppdaterad: 2026-05-20</p>
+
+      <p>aiblogg.se sätter inga egna cookies. Vi använder ingen webbanalys, ingen reklamspårning och ingen personalisering som kräver cookies.</p>
+
+      <h2>Tredjepartstjänster</h2>
+      <p>Sidan hostas på Cloudflare Pages. Cloudflare kan i vissa fall sätta tekniska cookies för säkerhet och bot-skydd (till exempel <code>__cf_bm</code>). Dessa är nödvändiga för att tjänsten ska fungera och innehåller ingen identifierande information om dig.</p>
+
+      <h2>Webbtypsnitt</h2>
+      <p>Vi laddar typsnittet Geist från Google Fonts. Google kan logga IP-adresser i samband med fontleveransen, vilket ligger utanför vår kontroll. Om detta är ett problem för dig, blockera <code>fonts.googleapis.com</code> i din webbläsare så fortsätter sidan att fungera med systemtypsnitt.</p>
+
+      <h2>Kontakt</h2>
+      <p>Frågor om cookies eller integritet: se vår <a href="/integritetspolicy/">integritetspolicy</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

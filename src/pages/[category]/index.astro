@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { clusters, articlesByCluster } from '../../data/articles';
+import { site } from '../../data/site';
+
+export function getStaticPaths() {
+  return clusters.map(c => ({ params: { category: c.slug }, props: { cluster: c } }));
+}
+
+const { cluster } = Astro.props;
+const list = articlesByCluster(cluster.slug);
+---
+<BaseLayout
+  title={`${cluster.label} — ${site.name}`}
+  description={cluster.description}
+>
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-12">
+    <Breadcrumbs crumbs={[{ label: cluster.label }]} />
+    <div class="max-w-3xl mb-12">
+      <div class="label mb-3">Kategori</div>
+      <h1 class="display text-4xl md:text-5xl mb-4">{cluster.label}</h1>
+      <p class="text-lg text-[var(--color-text-light)] leading-relaxed">{cluster.intro}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {list.map(a => (
+        <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
+          <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
+            <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+          </a>
+          <div class="p-5">
+            <div class="flex items-center gap-2 mb-2">
+              <time class="mono text-xs text-[var(--color-text-lighter)]">{a.publishDate}</time>
+              <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
+              <span class="mono text-xs text-[var(--color-text-lighter)]">{a.readingTime} min</span>
+            </div>
+            <h2 class="font-semibold text-[1.05rem] leading-snug tracking-tight mb-2">
+              <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
+            </h2>
+            <p class="text-sm text-[var(--color-text-light)] line-clamp-2 leading-relaxed">{a.excerpt}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

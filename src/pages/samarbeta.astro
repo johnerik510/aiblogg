@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Samarbeta — ${site.name}`} description="Samarbets- och annonseringsmöjligheter med aiblogg.se." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Samarbeta' }]} />
+    <div class="label mb-3">Samarbeten</div>
+    <h1 class="display text-3xl md:text-4xl mb-6">Samarbeta med aiblogg.se</h1>
+    <div class="prose-article">
+      <p>aiblogg.se har en växande publik av tekniskt orienterade svenska läsare, beslutsfattare på företag och utvecklare som följer AI-utvecklingen. Vi tar emot förfrågningar om samarbeten enligt nedan.</p>
+
+      <h2>Vad vi gör</h2>
+      <ul>
+        <li><strong>Sponsrade artiklar och samarbeten</strong> som följer vår <a href="/sponsrat-innehall/">sponsringspolicy</a> och tydligt märks som sponsrade.</li>
+        <li><strong>Recensioner och tester</strong> av AI-verktyg. Du kan inte köpa ett positivt omdöme, men du kan föreslå att vi tittar på ett verktyg.</li>
+        <li><strong>Skräddarsydda guider</strong> kring specifika problem eller arbetsflöden, där en partner finansierar arbetet utan att styra slutsatserna.</li>
+      </ul>
+
+      <h2>Vad vi inte gör</h2>
+      <ul>
+        <li>Säljkopia förklädd till redaktionellt innehåll</li>
+        <li>"Top X best AI tools"-listor där rankingen säljs</li>
+        <li>Gästinlägg från PR-byråer eller länkfarmar</li>
+        <li>Bortta artiklar eller redigera omdömen efter klagomål utan saklig grund</li>
+      </ul>
+
+      <h2>Kontakt</h2>
+      <p>Mejla <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off--> med en kort beskrivning av vad du har i åtanke, vilken målgrupp som är relevant och vilken budget du tänker dig.</p>
+    </div>
+  </section>
+</BaseLayout>

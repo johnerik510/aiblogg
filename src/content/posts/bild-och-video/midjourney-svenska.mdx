@@ -1,0 +1,114 @@
+---
+title: "Midjourney på svenska, komplett guide för 2026"
+excerpt: "Midjourney är fortfarande tongivande för bildkvalitet. Vi går igenom prompt-struktur, parametrar, priser och de fem misstag nybörjare gör."
+category: "bild-och-video"
+publishDate: "2026-05-13"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Midjourney på svenska är fullt möjligt. Du kan skriva prompts på svenska och få bilder, men för att få ut maximalt av verktyget behöver du förstå både hur prompten ska struktureras och hur de specifika parametrarna fungerar. Den här guiden går igenom allt från registrering till avancerade tekniker, riktat mot svenska användare.
+
+Midjourney v7 är aktuell version sedan slutet av 2025 och är fortfarande en av de starkaste bildmodellerna när det gäller konstnärlig kvalitet, ljussättning och kompositorisk känsla. Den är inte gratis, men för den som tar AI-bilder på allvar är den ofta värd pengarna.
+
+## Discord eller webbappen, vilket ska du välja
+
+Midjourney började som en Discord-bot och under flera år var Discord enda vägen in. Sedan 2024 finns även en fullständig webbapp på midjourney.com som har blivit huvudgränssnittet för de flesta nya användare.
+
+Webbappen är enklare. Du har en chat-liknande prompt-ruta, sparade bilder i ett galleri, sökfunktion bland egna och andras publika bilder samt en explore-vy med inspiration. Funktioner som upscale, vary, remix och pan finns direkt under varje bild.
+
+Discord är fortfarande snabbare för power-users som vill jobba parallellt i flera tjänster och som föredrar kortkommandon. Den är också nödvändig om du vill skapa privata kanaler för specifika projekt.
+
+För nybörjare: börja med webbappen. För frilansare och designers som hanterar flera kunder: Discord ger mer kontroll över organisation.
+
+<Callout type="tip" title="Privat läge spelar roll">
+På standardabonnemang är alla bilder publika och syns i Midjourneys gallery. Vill du jobba privat behöver du Pro-planen eller dyrare. Detta är ofta avgörande för klientarbete där NDA gäller.
+</Callout>
+
+## Prompt-struktur som fungerar i Midjourney
+
+Midjourney tolkar prompten lite annorlunda än DALL-E 3 eller Imagen. Modellen är mer stil-driven och mindre fokuserad på exakt promptordning. Men en strukturerad prompt ger fortfarande bättre resultat.
+
+Använd ordningen motiv, miljö, stil, ljus, teknisk detalj, parametrar. Exempel:
+
+"a Swedish elderly fisherman mending nets, weathered wooden pier in Bohuslän, cinematic photorealism, dramatic side light from low morning sun, shot on 50mm lens with shallow depth of field --ar 16:9 --s 250 --v 7"
+
+Skriv på engelska. Midjourney förstår svenska prompts men ger systematiskt sämre stilistisk precision. Engelska har också ett vokabulär för fotografi, måleri och cinematografi som svenska saknar direkta motsvarigheter för.
+
+## De viktigaste parametrarna
+
+Parametrar läggs sist i prompten med två minustecken. Här är de viktigaste:
+
+**--ar** sätter bildens proportioner. Vanliga värden är --ar 1:1 för Instagram, --ar 16:9 för YouTube-thumbnails, --ar 9:16 för Reels och TikTok, --ar 3:2 för klassiskt kameraformat och --ar 21:9 för cinematiskt format.
+
+**--s** eller --stylize styr hur mycket Midjourneys "egen smak" får påverka bilden. Standardvärde är 100. Lägre värden, som --s 25, ger trogen återgivning av prompten utan mycket extra stilistisk pålägg. Högre värden, som --s 750, ger mer stiliserade och konstnärliga resultat men kan glida bort från exakt vad du beskrev.
+
+**--v** specificerar versionen. --v 7 är aktuell. Äldre versioner som --v 6 och --v 5.2 finns kvar och kan vara bättre för vissa stilar.
+
+**--chaos** styr variation mellan de fyra varianter du får per generering. Standard är 0. Högre värden, som --chaos 50, ger mer olika varianter och är bra när du vill utforska brett.
+
+**--no** tar bort element. "--no text, watermark, deformed hands" är klassiska startvärden.
+
+**--seed** låter dig återanvända samma slumpfrö för att få variationer av samma bild.
+
+## Priser och planer 2026
+
+Midjourney har fyra abonnemang. Basic kostar 10 dollar i månaden och ger 200 snabba bilder. Standard kostar 30 dollar och inkluderar 15 timmar snabb GPU samt obegränsade långsamma genereringar. Pro på 60 dollar lägger till privat läge och 30 timmar snabb GPU. Mega på 120 dollar är för stor-användare med 60 timmar snabb GPU.
+
+Det finns ingen permanent gratisnivå. Tidigare fanns en demo med några gratis genereringar men den togs bort 2023.
+
+För att komma över Midjourneys kvalitet utan att betala finns vissa gratisalternativ. Se vår genomgång av [AI-bilder gratis](/bild-och-video/ai-bilder-gratis/) för en lista över tio fullt fungerande alternativ.
+
+{/* INLINE-BILD: collage med fyra Midjourney-bilder genererade från samma prompt med olika --s-värden */}
+
+## Bildverktyg inom Midjourney som många missar
+
+**Vary Region** låter dig markera en del av en genererad bild och regenerera bara den delen. Bra för att fixa ett dåligt öga, en konstig hand eller en oönskad bakgrundsdetalj.
+
+**Pan** utökar bilden i en riktning. Du klickar pil upp, ner, vänster eller höger och Midjourney genererar fortsättning på bilden i den riktningen. Användbart för att skapa panoramor eller komponera bilder för specifika format efter generering.
+
+**Zoom Out** zoomar ut bilden så du ser mer av miljön runt motivet. Funktionen kan köras flera gånger och bygger på vad som logiskt skulle finnas utanför originalbilden.
+
+**Image prompts** låter dig ladda upp en referensbild som påverkar generering. Vikt på referensbilden styrs med --iw från 0 till 3. Bra för att överföra stil, komposition eller specifika visuella element.
+
+**Style Reference** med --sref följt av en URL till en bild låter dig replikera en bilds stil utan att kopiera dess innehåll.
+
+## För- och nackdelar med Midjourney
+
+Fördelarna är konstnärlig kvalitet i världsklass, stark community med inspiration, smidig vary-region och pan-funktionalitet, bra hantering av kompositoriska prompts samt utmärkt cinematisk ljussättning.
+
+Nackdelarna är inget gratisalternativ, alla bilder publika på lägre plan, sämre fotorealism för specifika ansikten jämfört med Imagen 3, sämre textrendering än Ideogram samt ingen lokal körning.
+
+För en bredare jämförelse av modeller, läs vår genomgång av [AI-genererade bilder](/bild-och-video/ai-genererade-bilder/) som ställer Midjourney mot DALL-E 3, Imagen 3 och Flux.
+
+## De fem misstag svenska användare gör i Midjourney
+
+Det första är att skriva prompten på svenska. Det fungerar tekniskt men ger sämre resultat. Skriv på engelska eller använd [ChatGPT på svenska](/guider/chatgpt-svenska-guide/) för att översätta och förfina prompts.
+
+Det andra är att hoppa över parametrar. --ar och --s gör enorm skillnad. Kör aldrig en prompt utan att medvetet välja aspect ratio.
+
+Det tredje är att inte iterera. Första generering är aldrig slutprodukt. Räkna med fem till tio varv. Använd Vary och Remix systematiskt.
+
+Det fjärde är att blanda för många stilreferenser. "Studio Ghibli meets Caravaggio with cyberpunk elements" ger en oklar bild. Välj en stil, eventuellt två som är besläktade, och stå kvar i den.
+
+Det femte är att glömma --no parametern. Lägg alltid till "--no text, watermark, deformed" för att slippa de vanligaste artefakterna.
+
+## Workflow för bra resultat på Midjourney
+
+Börja brett med en låg --s och --chaos för att se hur Midjourney tolkar grundprompten. Plocka den variant som ligger närmast din vision. Justera prompten, öka --s om du vill ha mer stil, generera igen. Använd Vary Region för att fixa specifika detaljer. Kör Upscale för slutlig version. Spara den prompt och seed som funkade i ett eget bibliotek.
+
+## Vanliga frågor om Midjourney på svenska
+
+<FAQ items={[
+  { q: "Kan jag skriva Midjourney-prompts på svenska?", a: "Ja, Midjourney förstår svenska prompts men ger genomgående sämre stilistisk precision än engelska. För maximal kontroll rekommenderas att översätta prompten till engelska, antingen själv eller med hjälp av ChatGPT." },
+  { q: "Vad kostar Midjourney 2026?", a: "Basic-planen kostar 10 dollar per månad och ger 200 snabba bilder. Standard kostar 30 dollar med 15 timmar snabb GPU och obegränsade långsamma genereringar. Pro på 60 dollar inkluderar privat läge. Det finns ingen gratisnivå." },
+  { q: "Vilken version av Midjourney är bäst?", a: "v7 är aktuell och starkast på fotorealism och cinematisk komposition. v6 finns kvar och föredras av vissa för specifika illustrativa stilar. Du väljer version i prompten med --v 7 eller i webbappens inställningar." },
+  { q: "Hur fungerar parametern --ar i Midjourney?", a: "--ar styr bildens proportioner. --ar 1:1 ger kvadratisk bild för Instagram. --ar 16:9 ger landskap för YouTube. --ar 9:16 ger porträtt för Reels och TikTok. Parametern läggs sist i prompten." },
+  { q: "Är mina bilder i Midjourney publika?", a: "På Basic och Standard-planerna är alla genererade bilder publika och syns i Midjourneys gallery. Privat läge är tillgängligt först på Pro-planen för 60 dollar i månaden. För klientarbete med NDA är detta ofta avgörande." },
+  { q: "Får jag använda Midjourney-bilder kommersiellt?", a: "Ja, alla betalplaner inkluderar kommersiella rättigheter till bilderna du genererar. Bolag med omsättning över 1 miljon dollar per år måste ha Pro-planen eller högre för kommersiell användning enligt aktuella villkor." },
+]} />
+
+## Vad härnäst
+
+Vill du komma igång med att skapa egna bilder, börja med [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/) som går igenom prompt-strukturen steg för steg. För video, se vår genomgång av [sora ai](/bild-och-video/sora-ai-video/) som täcker OpenAI:s videomodell.

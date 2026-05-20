@@ -1,0 +1,20 @@
+---
+export interface Heading { id: string; text: string; }
+export interface Props { headings: Heading[]; }
+const { headings } = Astro.props;
+---
+{headings.length > 0 && (
+  <aside class="mb-8 p-5 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+    <div class="label mb-3">Innehåll</div>
+    <ol class="space-y-1.5">
+      {headings.map((h, i) => (
+        <li class="text-sm">
+          <a href={`#${h.id}`} class="text-[var(--color-text-light)] hover:text-[var(--color-accent)] transition-colors flex gap-2">
+            <span class="mono text-[var(--color-text-dim)] tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+            <span>{h.text}</span>
+          </a>
+        </li>
+      ))}
+    </ol>
+  </aside>
+)}

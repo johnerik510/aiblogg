@@ -1,0 +1,143 @@
+---
+title: "Cursor AI, så blir du snabbare på att koda med AI"
+excerpt: "Cursor är AI-editorn som blivit standard hos utvecklare som verkligen använder LLM:er i sitt arbete. Vi går igenom tab-completion, agent-läget och hur det jämför med GitHub Copilot."
+category: "verktyg"
+publishDate: "2026-05-09"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Cursor AI har på två år gått från okänd uppstickare till det verktyg som de flesta professionella utvecklare jag pratar med använder dagligen. Editorn är en fork av Visual Studio Code med AI inbyggt på ett sätt som faktiskt fungerar i ett riktigt arbetsflöde, inte bara som autocomplete på enstaka rader. Den här genomgången förklarar vad Cursor är, varför så många bytt över från GitHub Copilot, och hur du faktiskt får ut värde av tab-completion och agent-läget.
+
+Vi har använt Cursor som primär editor hela 2025 och 2026 hittills, både för Astro-siter, Python-skript och TypeScript-projekt. Den här artikeln baseras på den dagliga erfarenheten, inte på marknadsföringsmaterial.
+
+## Vad är Cursor AI?
+
+Cursor är en kod-editor byggd av Anysphere. Tekniskt är det en fork av Visual Studio Code, vilket betyder att den ser ut och fungerar nästan exakt som VS Code, har samma plugin-ekosystem och stödjer samma keybindings. Skillnaden är att Cursor har integrerad AI på flera nivåer: snabb tab-completion i koden, en chatt som kan refaktorera över flera filer, och ett agent-läge där AI:n självständigt utför uppgifter åt dig.
+
+Cursor använder under huven både OpenAI:s och Anthropic:s modeller. Du kan välja vilken modell du vill ha per uppgift, eller låta Cursor välja automatiskt. För de tunga uppgifterna används oftast Claude Opus eller GPT-5.
+
+## Tab-completion som faktiskt förstår ditt projekt
+
+Det första du märker när du börjar med Cursor är att tab-completion fungerar märkbart annorlunda än i andra editorer. Den föreslår inte bara nästa rad, utan ofta hela block med relevanta ändringar baserat på vad du precis ändrat. Den läser också andra filer i ditt projekt och förstår sammanhang.
+
+Konkret exempel: om du lägger till ett nytt fält i en TypeScript-interface, börjar Cursor automatiskt föreslå hur du ska uppdatera alla platser där den interfacen används. Du trycker tab, tab, tab och flyttar dig genom ändringarna utan att skriva en rad själv.
+
+Det här är en av de funktioner som tar några timmar att vänja sig vid och sedan känns det otänkbart att gå tillbaka.
+
+<Callout type="tip" title="Acceptera bara förslag du faktiskt skulle skrivit själv">
+  Cursor förslår ofta mer än du vill. Vanan är att läsa förslaget och bara acceptera om det matchar din intention. Annars trycker du escape och fortsätter skriva. Tab-completion är ett verktyg, inte ett orakel.
+</Callout>
+
+## Chatt-läget för refaktorering och frågor
+
+Cursor har en chattruta du öppnar med Cmd+L (Mac) eller Ctrl+L (Windows). Där kan du ställa frågor om din kodbas, be om förklaringar eller ge instruktioner som "döp om alla referenser till variabel X till Y i hela projektet".
+
+Chatten har två viktiga inställningar. Med @-kommandon kan du peka ut specifika filer, mappar eller dokumentationssidor som kontext. Med "Apply"-knappen kan du applicera förslagna ändringar direkt i koden utan att kopiera fram och tillbaka.
+
+För större refaktoreringar är chatten överlägsen att försöka göra ändringar manuellt. För enskilda buggar eller frågor om syntax är tab-completion ofta snabbare.
+
+{/* INLINE-BILD: Cursor-editorn med AI-chattruta öppen och tab-completion-förslag synliga i koden */}
+
+## Agent-läget, för uppgifter över flera filer
+
+Det här är funktionen som tagit Cursor från "trevligt verktyg" till "varför betalar någon Copilot 20 dollar i månaden". I agent-läget beskriver du en uppgift på naturligt språk, och Cursor planerar, kör och verifierar ändringarna självständigt.
+
+Exempel på uppgifter agent-läget hanterar bra:
+- "Lägg till dark mode-stöd i hela appen, med toggle i settings-sidan"
+- "Migrera alla console.log-anrop till en strukturerad logger"
+- "Skapa enhetstester för alla funktioner i utils-mappen som saknar tester"
+
+Agent-läget körs lokalt på din maskin, ser dina filer och kan köra kommandon i terminalen. Du godkänner varje viktig ändring eller sätter det till auto-godkänn för enklare operationer.
+
+Begränsningen är att agent-läget kostar mer i kreditförbrukning än vanlig chatt. För komplexa uppgifter kan en session äta upp en del av månadens kvot.
+
+## Cursor jämfört med GitHub Copilot
+
+Den vanligaste frågan från utvecklare som funderar på att byta: vad är skillnaden mot Copilot?
+
+**Tab-completion:** Cursor är märkbart smartare. Den ser mer kontext, föreslår större ändringar och förstår projektstruktur bättre. Copilot har förbättrats men ligger fortfarande efter.
+
+**Chatt och refaktorering:** Cursor vinner. Möjligheten att applicera ändringar direkt och chatta med flera filer som kontext är överlägsen Copilots chatt-funktion.
+
+**Agent-läget:** Cursor är år före. Copilot Workspace finns men är begränsat jämfört med Cursors agent.
+
+**Modellval:** Cursor låter dig välja mellan flera toppmodeller. Copilot är låst till en uppsättning OpenAI-modeller.
+
+**Pris:** Båda kostar 20 dollar per månad för Pro. Cursors gratisversion är mer användbar för utvärdering än Copilots.
+
+**Integration:** Copilot finns inbyggt i fler editorer (VS Code, Neovim, JetBrains). Cursor är en dedikerad editor, vilket är både en styrka och en begränsning.
+
+Sammantaget: för utvecklare som vill ha det starkaste AI-stödet är Cursor förstaval i 2026. För team som är låsta vid en specifik editor eller IDE där Cursor inte finns är Copilot bättre.
+
+## Pris och prisvärde
+
+Cursor har tre nivåer.
+
+**Cursor (gratis)** ger begränsad tab-completion och några chatt-meddelanden per månad. Bra för utvärdering, för litet för dagligt arbete.
+
+**Pro** kostar 20 dollar per månad och ger generösa kvoter på alla funktioner. Det här är planen som passar de flesta professionella utvecklare.
+
+**Business** kostar 40 dollar per användare och månad och inkluderar SSO, datasekretess-garantier och bättre administration. För team som hanterar känslig kod.
+
+För en utvecklare som tjänar pengar på att skriva kod betalar Cursor Pro sig på första timmen sparad per månad. Det är ett av de mest självklara abonnemangen att teckna i AI-eran.
+
+## Lär dig några grundläggande genvägar
+
+Cursor är som mest produktiv när du kan några viktiga keybindings utantill.
+
+**Cmd+K (Mac) / Ctrl+K (Windows)** öppnar inline-AI-redigering direkt på markerad kod. Snabbaste sättet att göra fokuserade ändringar.
+
+**Cmd+L / Ctrl+L** öppnar chattrutan.
+
+**Cmd+I / Ctrl+I** startar en composer-session för större ändringar över flera filer.
+
+**Tab** accepterar förslag. **Escape** avvisar det.
+
+**@-symbol** i chatten låter dig peka på filer, mappar, dokumentationssidor eller webbsidor.
+
+De här fem är 90 procent av vad du behöver.
+
+<Callout type="info" title="Cursor blir bättre ju mer struktur ditt projekt har">
+  AI-stödet i Cursor hänger ihop med hur lättförståelig din kodbas är. Tydliga filnamn, beskrivande variabler och bra mappstruktur gör att tab-completion förstår sammanhanget bättre. AI är en multiplikator på koddisciplin, inte en ersättare för den.
+</Callout>
+
+## Vem passar Cursor för?
+
+Cursor passar bäst för:
+
+**Professionella utvecklare** som skriver kod minst några timmar om dagen. ROI:n är märkbar inom en vecka.
+
+**Indie-utvecklare och småföretagare** som bygger produkter och vill röra sig snabbare än traditionella metoder tillåter.
+
+**Tekniska skribenter och DevOps-ingenjörer** som arbetar med kod, konfiguration och dokumentation regelbundet.
+
+**Studenter och lärare** för utbildning, även om gratisversionen kan vara för begränsad för krävande kurser.
+
+Mindre lämplig för: utvecklare som arbetar i sektorer där koden inte får skickas till externa AI-tjänster utan separata avtal (försvar, vissa finansiella institutioner), eller där företagets IT-policy förbjuder AI-assisterad kodning.
+
+## Säkerhet och dataskydd
+
+Cursor har olika datainställningar beroende på plan.
+
+**Privacy Mode** kan aktiveras i Pro-planen och betyder att din kod inte lagras eller används för träning. Det här är det normala läget för professionella utvecklare.
+
+**Business-planen** inkluderar mer omfattande datasekretess-garantier inklusive SOC 2-certifiering.
+
+För känslig kod, som proprietär affärslogik eller säkerhetskritiska system, är Business-planen den enda rimliga vägen. För personliga projekt eller open source-arbete räcker Pro med Privacy Mode aktiverat.
+
+## Vanliga frågor om Cursor AI
+
+<FAQ items={[
+  { q: "Är Cursor bättre än GitHub Copilot?", a: "På de flesta dimensioner ja, i 2026. Tab-completion är smartare, chatt-funktionen är överlägsen och agent-läget är år före Copilot. Båda kostar lika mycket per månad." },
+  { q: "Kan jag använda mina VS Code-extensions i Cursor?", a: "Ja. Cursor är en fork av VS Code och stödjer i stort sett alla extensions från VS Code Marketplace. Du kan importera dina inställningar direkt vid första uppstart." },
+  { q: "Vad kostar Cursor?", a: "Det finns en gratisversion för utvärdering. Pro kostar 20 dollar per månad. Business kostar 40 dollar per användare och månad och inkluderar datasekretess-garantier för företag." },
+  { q: "Vilka programmeringsspråk stödjer Cursor?", a: "Alla som VS Code stödjer, vilket är i praktiken alla mainstream-språk. Cursor fungerar bäst på JavaScript, TypeScript, Python och Go, men hanterar Rust, C++, Java och de flesta andra utan problem." },
+  { q: "Skickas min kod till AI-leverantörer?", a: "Som standard ja, men i Privacy Mode lagras eller används den inte för träning. Business-planen har mer omfattande dataavtal. För känslig kod, läs Cursors säkerhetspolicy noga innan du börjar." },
+  { q: "Behöver jag kunna programmera för att använda Cursor?", a: "Agent-läget gör det möjligt att komma igång med mindre programmeringskunskap, men för produktiv användning bör du kunna grunderna i det språk du arbetar i. AI:n är ett verktyg, inte en ersättare för förståelse." },
+]} />
+
+## Vad härnäst?
+
+Ladda ner Cursor gratis och kör det parallellt med din nuvarande editor i en vecka. För de flesta utvecklare är beslutet uppenbart efter några dagars seriöst arbete. Om du vill se hur Cursor passar in i ett bredare AI-arbetsflöde, läs [ChatGPT vs Claude](/verktyg/chatgpt-vs-claude/) för att förstå modellerna som driver editorn, eller helhetsgenomgången [bästa AI-verktyg svenska](/verktyg/basta-ai-verktyg-svenska/).

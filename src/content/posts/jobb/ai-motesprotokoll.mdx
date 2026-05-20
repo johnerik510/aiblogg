@@ -1,0 +1,113 @@
+---
+title: "AI-mötesprotokoll: 5 verktyg och GDPR-fallgroparna"
+excerpt: "Otter, Fireflies, MS Teams Copilot och Read.ai gör mötesprotokoll automatiskt. Vi går igenom kvalitet, integritetsrisk och GDPR-fallgropar."
+category: "jobb"
+publishDate: "2026-05-17"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI-mötesprotokoll har gått från experiment till standard på ett par år. Otter, Fireflies, Microsoft Teams Copilot och Read.ai transkriberar, sammanfattar och pekar ut beslut och actionpunkter automatiskt. För en konsult eller projektledare med 8 möten i veckan handlar tidsbesparingen om 3 till 6 timmar, plus att du faktiskt får protokoll som annars hade hoppats över.
+
+Den här guiden går igenom vilka verktyg som fungerar bäst på svenska 2026, GDPR-fallgroparna de flesta missar, och hur du sätter upp ett arbetsflöde som inte spränger din organisations dataskyddsavtal.
+
+## Vad ett AI-mötesprotokoll faktiskt levererar
+
+Ett AI-mötesprotokoll består av tre delar. Först en full transkription av allt som sägs. Sedan en sammanfattning på 200 till 500 ord. Slutligen en lista över actionpunkter, beslut och ofta även frågor som ställdes utan tydligt svar.
+
+Kvalitet på svenska har förbättrats markant under 2025. Transkriberingsnoggrannheten ligger runt 92 till 96 procent för bra ljud, lägre om talare avbryter varandra eller har stark dialekt. Sammanfattningarna är bättre än de flesta manuellt skrivna protokoll, eftersom de är konsekventa och inte påverkas av att protokollföraren tappar fokus efter 40 minuter.
+
+<Callout type="info" title="Vad mäter vi när vi jämför verktyg?">
+  Tre saker. Transkriberingskvalitet på svenska (mätt på samma 30-minutersinspelning), sammanfattningskvalitet (matchar den faktiska beslut och actions?) och var datan lagras (EU eller USA, träning av eller på).
+</Callout>
+
+## De fem viktigaste verktygen för svenska användare
+
+### Microsoft Teams Copilot
+
+För organisationer som redan kör Microsoft 365 är Teams Copilot förstaval. Det är integrerat i Teams, sparar i din egen tenant och faller under ditt befintliga personuppgiftsbiträdesavtal med Microsoft. Kvaliteten på svensk transkribering är bra, sammanfattningarna är konkreta och utan flum.
+
+Kostnad: 280 kronor per användare och månad utöver Microsoft 365. Det är inte billigt, men för organisationer med befintliga Microsoft-avtal är det den lägsta administrativa friktionen.
+
+### Otter.ai
+
+Otter är den vanligaste fristående tjänsten. Den fungerar med Zoom, Google Meet och Teams, plus att den har en mobilapp som spelar in fysiska möten. Transkriberingen på svenska är förbättrad sedan 2024 men ligger fortfarande något under Teams Copilot. Sammanfattningarna är bra, action items är pricksäkra.
+
+Kostnad: 95 kronor per användare och månad för Pro, högre för Business. Datalagring i USA, vilket är en GDPR-flagga för många svenska organisationer.
+
+### Fireflies.ai
+
+Fireflies är populärare i tech- och säljmiljöer. Den har starka integrationer mot CRM-system som Pipedrive, HubSpot och Salesforce. Transkriberingskvalitet jämförbar med Otter, men sammanfattningarna är ofta mer säljorienterade vilket passar säljmöten bättre än interna diskussioner.
+
+Kostnad: liknande Otter. Servrar i USA, vilket gäller samma GDPR-frågor.
+
+### Read.ai
+
+Read.ai sticker ut genom att också analysera mötets dynamik, vem som talade hur länge, energinivå och engagemang. Det är intressant data för möteskvalitet men kontroversiellt ur arbetsrätts- och integritetssynpunkt. Transkriberingen är ok, sammanfattningar är hyfsade.
+
+Kostnad: gratis-tier med begränsningar, betald från cirka 130 kronor per månad.
+
+### Google Meet med Gemini
+
+Om organisationen kör Google Workspace är Gemini i Meet det enklaste valet. Transkribering och sammanfattning sker direkt i Meet, lagras i Workspace, faller under ditt befintliga avtal. Kvaliteten på svenska har förbättrats men ligger bakom Teams Copilot i interna tester.
+
+Kostnad: ingår i Gemini for Workspace, från cirka 220 kronor per användare och månad.
+
+{/* INLINE-BILD: skärm med AI-genererat mötesprotokoll och transkription bredvid en videomötesvy */}
+
+## GDPR och AI-mötesprotokoll: var fallgroparna ligger
+
+Det här är den del som de flesta organisationer missar. Att spela in och transkribera ett möte innebär personuppgiftsbehandling. Den lagliga grunden måste vara på plats innan mötet börjar, inte efter.
+
+### Tre vanliga GDPR-fel
+
+**Du informerar inte mötesdeltagare.** Ett AI-verktyg som spelar in måste informera alla deltagare innan inspelningen börjar. Externa parter, kunder, kandidater i rekryteringsmöten har rätt att invända.
+
+**Datan lagras utanför EU.** Otter och Fireflies har servrar i USA. För svenska företag som hanterar personuppgifter krävs då Standard Contractual Clauses (SCC) och en transferimpact-bedömning. Teams Copilot och Gemini i Workspace lagrar inom EU om din tenant är konfigurerad så, vilket är enklare juridiskt.
+
+**Du har inget personuppgiftsbiträdesavtal.** Verktygen kräver ett PUB-avtal. De flesta tillhandahåller standardavtal, men de måste signeras och dokumenteras. Att bara klicka "I agree" i ett gratis-konto räcker inte.
+
+Mer om de bredare frågorna i vår genomgång av [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) och [dina data i AI-tjänster](/integritet/dina-data-i-ai/).
+
+<Callout type="warning" title="Möten med kandidater och personuppgifter">
+  Anställningsintervjuer, medarbetarsamtal och möten där hälsodata diskuteras kräver extra eftertanke. För känsliga personuppgifter (artikel 9 GDPR) räcker det inte med samtycke som rättslig grund i många fall, och du måste kunna radera transkriptionen vid begäran. Standardpraxis: AI-protokoll PÅ för operativa möten, AV för HR-relaterade möten.
+</Callout>
+
+## Hur en svensk organisation sätter upp det här rätt
+
+Workflow som fungerar för de flesta organisationer 2026:
+
+1. **Välj ett verktyg, inte fem.** Mixar du verktyg blir både kostnad och GDPR-compliance svårare. Kör organisationen Microsoft 365? Använd Teams Copilot. Google Workspace? Gemini. Inget av delarna? Otter eller Fireflies plus PUB-avtal.
+2. **Skriv en mötespolicy.** En sida med när AI-protokoll är på (operativa, projekt), när det är av (HR, känsliga ämnen), hur deltagare informeras, hur länge transkriptioner sparas.
+3. **Sätt automatisk radering.** De flesta verktyg sparar transkriptioner i evighet om du inte säger något. Konfigurera 90 eller 180 dagar som standard.
+4. **Informera deltagare före varje möte.** En enkel mening i kalenderinbjudan räcker: "Mötet transkriberas med [verktyg] för protokollssyften. Du kan begära att inspelning stängs av."
+
+## Vad AI-protokoll fortfarande är dåliga på
+
+AI:n hör inte alltid hela kontexten. Om någon visar en skärm och säger "den här siffran är problemet" kommer protokollet bara säga "den här siffran är problemet" utan att veta vilken siffran var. Skärmdelning som inte är dialog fångas inte.
+
+Den missar också sarkasm och underliggande spänningar. Ett beslut som togs motvilligt kommer beskrivas som "beslut: X" utan flagga. För en mötesledare är det fortfarande värdefullt att läsa mellan raderna manuellt.
+
+Slutligen, transkribering av flera samtidiga talare är fortfarande svagt. Spontana diskussioner med fyra deltagare som avbryter varandra blir ofta otydliga i transkriptionen, även om sammanfattningen ändå brukar fånga essensen.
+
+## Räknar AI-protokoll hem sig ekonomiskt?
+
+För en konsult med 8 möten i veckan och timpenning 1200 kronor: 4 timmar sparad protokollskrivning per vecka motsvarar 4800 kronor. Mot en kostnad på 200 till 300 kronor i månaden för ett verktyg är det en ROI som inte ens behöver räknas på.
+
+För en intern medarbetare som ändå inte fakturerar är räkningen mer komplex. Tidsbesparingen finns, men flyttar bara mot annat arbete. Värdet ligger då i att protokoll faktiskt blir gjorda, att besluten finns dokumenterade och att uppföljning blir lättare. För en bredare ROI-analys av AI på arbetsplatsen, se vår genomgång av [AI för småföretag](/jobb/ai-for-smaforetag/).
+
+## Vanliga frågor om AI-mötesprotokoll
+
+<FAQ items={[
+  { q: "Vilket AI-mötesprotokoll är bäst på svenska?", a: "Microsoft Teams Copilot leder i interna tester för 2026 både på transkriberingsnoggrannhet och sammanfattningskvalitet på svenska. Otter och Fireflies ligger nära men har servrar i USA, vilket är en GDPR-fråga." },
+  { q: "Är det lagligt att spela in möten med AI?", a: "Ja, om alla deltagare informeras innan inspelningen börjar, du har rättslig grund för behandlingen och ett personuppgiftsbiträdesavtal är på plats. För arbetsplatsmöten räcker oftast berättigat intresse plus information." },
+  { q: "Kan jag använda gratis-Otter?", a: "Tekniskt ja, juridiskt nej för affärsbruk. Utan PUB-avtal behandlar du personuppgifter olagligt så fort en mötesdeltagare omfattas av GDPR. Använd betalda planer med signerat avtal." },
+  { q: "Hur länge ska transkriptioner sparas?", a: "Beror på syfte. För projektminnen 6 till 12 månader. För strategiska beslut längre. För känsliga möten så kort tid som möjligt. Sätt en standardpolicy och konfigurera automatisk radering." },
+  { q: "Hör AI-protokollet skillnad på olika talare?", a: "Ja, de flesta verktyg identifierar enskilda talare när ljudet är bra. För kallinspelade möten eller fysiska möten med en mikrofon i mitten blir talaridentifikationen mer skakig." },
+  { q: "Vad händer om en extern deltagare invänder?", a: "Då stänger du av AI-inspelningen för det mötet. Du kan fortfarande föra manuella anteckningar. För återkommande möten med samma motpart, klargör i avtalet eller projektplanen vilka spelregler som gäller." },
+]} />
+
+## Vad härnäst?
+
+Börja inte med flera verktyg. Välj det som passar din organisations Microsoft- eller Google-infrastruktur, sätt upp PUB-avtal och kör tre veckor. Mät vad protokollskvaliteten faktiskt blir. För resten av AI-stacken, se vår genomgång av [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) och vår guide om [AI-policy](/jobb/ai-policy-arbetsplats/) som ramar in användningen.

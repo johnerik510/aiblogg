@@ -1,0 +1,24 @@
+---
+export interface Props {
+  type?: 'tip' | 'warning' | 'info' | 'fact';
+  title?: string;
+}
+const { type = 'info', title } = Astro.props;
+
+const styles: Record<string, { bg: string; border: string; label: string; icon: string }> = {
+  tip:     { bg: 'rgba(34, 197, 94, 0.06)',  border: 'rgba(34, 197, 94, 0.4)',  label: 'Tips',    icon: '◆' },
+  warning: { bg: 'rgba(245, 158, 11, 0.07)', border: 'rgba(245, 158, 11, 0.45)', label: 'Varning', icon: '▲' },
+  info:    { bg: 'rgba(0, 229, 255, 0.06)',  border: 'rgba(0, 229, 255, 0.45)',  label: 'Info',    icon: '●' },
+  fact:    { bg: 'rgba(139, 92, 246, 0.07)', border: 'rgba(139, 92, 246, 0.45)', label: 'Fakta',   icon: '◇' },
+};
+const s = styles[type];
+---
+<aside class="my-7 rounded-lg border p-5" style={`background:${s.bg};border-color:${s.border}`}>
+  <div class="flex items-baseline gap-2 mb-2">
+    <span class="text-[var(--color-text)]" style={`color:${s.border}`}>{s.icon}</span>
+    <span class="label">{title || s.label}</span>
+  </div>
+  <div class="text-[0.97rem] leading-relaxed text-[var(--color-text)]">
+    <slot />
+  </div>
+</aside>

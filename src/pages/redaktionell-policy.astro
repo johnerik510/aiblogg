@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Redaktionell policy — ${site.name}`} description="Hur aiblogg.se arbetar redaktionellt. Källhantering, oberoende, korrigering och kvalitetsstandarder." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Redaktionell policy' }]} />
+    <div class="label mb-3">Redaktionell policy</div>
+    <h1 class="display text-3xl md:text-4xl mb-6">Hur vi arbetar</h1>
+    <div class="prose-article">
+      <h2>Oberoende</h2>
+      <p>aiblogg.se är oberoende. Vi tar inte emot betalt för positiva omdömen, vi har inga ägarintressen i AI-leverantörer och vi anpassar inte innehåll efter pressmeddelanden. Sponsrat innehåll markeras alltid tydligt enligt vår <a href="/sponsrat-innehall/">sponsringspolicy</a>.</p>
+
+      <h2>Källor och fakta</h2>
+      <p>Påståenden om regleringar, marknadsdata, prestanda eller statistik styrks med primärkällor när sådana finns. Vi citerar studier, lagtexter, leverantörers tekniska dokumentation och officiell statistik. Sekundärkällor (nyhetsartiklar, bloggar) används bara som komplement.</p>
+
+      <h2>Hands-on-tester</h2>
+      <p>När vi recenserar ett verktyg har vi använt det själva, i flera dagar, på riktiga uppgifter. Vi citerar inte funktionslistor från leverantörens marknadsföringssida som "test". Om vi inte hunnit testa något fullt ut markerar vi det.</p>
+
+      <h2>Korrigering</h2>
+      <p>Hittar du ett faktafel? Skicka det till <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off--> så rättar vi. Större korrigeringar markeras synligt i toppen av artikeln med datum och beskrivning av vad som rättats.</p>
+
+      <h2>AI och innehåll</h2>
+      <p>Vi använder AI-verktyg som hjälp i research, redigering och faktagranskning. Inget innehåll publiceras dock som ren AI-output utan mänsklig genomgång, redigering och faktaverifiering. Alla artiklar är granskade och godkända av en mänsklig redaktör.</p>
+
+      <h2>Ansvarig utgivare</h2>
+      <p>{site.author.name}, chefredaktör för aiblogg.se.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Kontakt — ${site.name}`} description="Kontakta aiblogg.se redaktion. Mailadress för frågor, samarbeten, källkritik och felrättning." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Kontakt' }]} />
+    <div class="label mb-3">Kontakt</div>
+    <h1 class="display text-4xl md:text-5xl mb-6">Hör av dig</h1>
+    <div class="prose-article">
+      <p>Frågor, samarbeten, tips, källkritik eller felrättning, kontakta oss på:</p>
+      <p><!--email_off--><a href={`mailto:${site.contactEmail}`} class="text-[var(--color-accent)]">{site.contactEmail}</a><!--/email_off--></p>
+
+      <h2>Vad vi vill ha</h2>
+      <ul>
+        <li>Tips om svenska företag som använder AI på intressanta sätt</li>
+        <li>Felrättningar och källkritik på det vi publicerat</li>
+        <li>Förslag på verktyg eller ämnen vi borde täcka</li>
+        <li>Förfrågningar om samarbeten (se <a href="/samarbeta/">samarbeta-sidan</a>)</li>
+      </ul>
+
+      <h2>Vad vi inte gör</h2>
+      <ul>
+        <li>Skriver press- eller säljkopia mot betalning utan tydlig sponsringsmarkering</li>
+        <li>Publicerar gästinlägg från PR-byråer eller affiliate-nätverk</li>
+        <li>Tar bort artiklar eller positiva omdömen baserat på påtryckningar</li>
+      </ul>
+
+      <h2>Ansvarig utgivare</h2>
+      <p>{site.author.name}, chefredaktör.</p>
+    </div>
+  </section>
+</BaseLayout>

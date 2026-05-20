@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { site } from '../data/site';
+---
+<BaseLayout title={`Om aiblogg.se — ${site.tagline}`} description="aiblogg.se är en oberoende svensk redaktion som täcker AI-verktyg, utveckling och samhällseffekter utan techbolagshype.">
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <Breadcrumbs crumbs={[{ label: 'Om aiblogg.se' }]} />
+    <div class="label mb-3">Om sajten</div>
+    <h1 class="display text-4xl md:text-5xl mb-6">Om aiblogg.se</h1>
+    <div class="prose-article">
+      <p>aiblogg.se är en oberoende svensk redaktion som täcker AI-utvecklingen utan techbolagens marknadsföringsspråk. Vi gör hands-on-tester av verktyg, skriver praktiska guider och analyserar vad utvecklingen faktiskt betyder för svenska användare och företag.</p>
+
+      <h2>Varför den här sajten finns</h2>
+      <p>Det mesta som skrivs om AI på svenska är antingen översatta pressmeddelanden, hype-artiklar utan teknisk substans, eller domedagsanalyser utan grund. Det finns en plats för seriös, tekniskt grundad svenskspråkig täckning som inte är bunden till en arbetsgivare eller en sponsor. Det är vad vi försöker bygga.</p>
+
+      <h2>Hur vi arbetar</h2>
+      <p>Varje verktyg som recenseras har vi använt själva, på riktiga uppgifter, under flera dagar. Vi kör inte testsessioner på 30 minuter och drar slutsatser. Jämförelser görs på samma prompter och samma uppgifter, så att du kan se de faktiska skillnaderna sida vid sida.</p>
+
+      <p>När vi skriver om regleringar, marknadsdata eller statistik citerar vi alltid primärkällan. Påståenden som inte kan beläggas tas inte med.</p>
+
+      <h2>Oberoende</h2>
+      <p>aiblogg.se är inte sponsrad av någon AI-leverantör. Vi tar inte emot betalt för positiva recensioner. Om en artikel innehåller affiliatelänkar eller är ett sponsrat samarbete kommer det att framgå tydligt i toppen av den artikeln. Se vår <a href="/redaktionell-policy/">redaktionella policy</a> och <a href="/sponsrat-innehall/">policy för sponsrat innehåll</a> för detaljer.</p>
+
+      <h2>Kontakta oss</h2>
+      <p>Frågor, tips eller felrättning: <!--email_off--><a href={`mailto:${site.contactEmail}`}>{site.contactEmail}</a><!--/email_off-->. Mer på <a href="/kontakt/">kontaktsidan</a>.</p>
+    </div>
+  </section>
+</BaseLayout>

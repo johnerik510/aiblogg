@@ -1,0 +1,114 @@
+---
+title: "AI-bilder gratis, 10 verktyg som skapar bilder utan att kosta något"
+excerpt: "Vi har testat 10 helt gratis AI-bildverktyg på svenska. Här är de bästa, vad du får utan att betala och vilka begränsningar som gäller."
+category: "bild-och-video"
+publishDate: "2026-05-20"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Det finns idag fler sätt att skapa AI-bilder gratis än någonsin tidigare. Du behöver inget kreditkort, inget abonnemang och ingen kraftfull grafikkort hemma, så länge du vet vilka verktyg som faktiskt levererar och vilka som bara erbjuder en smal tre-bilders-demo innan betalvägg.
+
+Jag har testat tio AI-bildverktyg som har en seriös gratisnivå under maj 2026. Genomgången listar exakt vad du får utan att betala, var begränsningarna går och vilken typ av bilder respektive verktyg producerar bäst. Inga affiliatelänkar, inga sponsringar, bara faktisk hands-on-utvärdering.
+
+## Vad räknas som gratis när det gäller AI-bilder
+
+Ett gratis AI-bildverktyg är inte alltid helt gratis. Tre vanliga modeller dyker upp: helt fri användning med rate limit per dag, gratisnivå med vattenstämpel eller låg upplösning, eller open source som är gratis men kräver att du kör modellen själv. Jag har inkluderat alla tre kategorierna nedan men taggar dem tydligt.
+
+Det som diskvalificerar ett verktyg från listan är när "gratis" i praktiken betyder fem bilder totalt och sedan kreditkort. Det är en demo, inte en gratisnivå.
+
+<Callout type="tip" title="Snabbaste vägen igång">
+Om du aldrig har testat AI-bildgenerering: börja med Microsoft Designer (Image Creator). Det kräver bara ett Microsoft-konto, ger dig 15 boostade snabbgenereringar per dag och kör DALL-E 3 under huven. Helt gratis, ingen vattenstämpel, kommersiellt användbart.
+</Callout>
+
+## Microsoft Designer Image Creator (DALL-E 3)
+
+Microsoft Designer, tidigare Bing Image Creator, är den enklaste vägen till bilder av hög kvalitet utan att betala. Logga in med ett Microsoft-konto, skriv prompten på svenska eller engelska, och du får fyra bildvarianter per generering. Modellen är OpenAI:s DALL-E 3, samma som ChatGPT Plus använder.
+
+Du har 15 "boostade" genereringar per dag som är snabba (cirka 10 sekunder). När de tar slut fungerar verktyget fortfarande men varje generering tar några minuter istället. Upplösning är 1024 x 1024 pixlar. Kommersiell användning är tillåten enligt Microsofts villkor.
+
+Begränsningar: filtret är hårt, namn på kändisar och vissa varumärken blockeras. Realism med människor är medioker jämfört med Midjourney eller Imagen.
+
+## Google ImageFX och Gemini
+
+Google har två gratis vägar in i sin bildgeneration. ImageFX på labs.google ger dig direktåtkomst till Imagen 3, den modell som ligger bakom Googles kommersiella bildgenerering. Du loggar in med ett Google-konto och får generera utan strikt daglig kvot, men hastigheten reduceras vid hög belastning.
+
+Gemini-appen och chat.google.com ger också tillgång till Imagen-genererade bilder genom enkel prompt. Realismen på människor och scener är bland det bästa du kan få gratis. Begränsningen är att Google blockerar hårdare än konkurrenterna kring kända personer, politiska figurer och stilreferenser.
+
+## Adobe Firefly gratisnivå
+
+Adobe Firefly har en gratisnivå som ger dig 25 generativa krediter per månad. Varje bildgenerering kostar en kredit och du får fyra varianter. Adobe tränade Firefly endast på Adobe Stock och public domain-bilder, vilket gör den till det säkraste valet om du behöver bilder för kommersiellt bruk där upphovsrätt är känsligt.
+
+Kvaliteten är jämn men inte i toppklass jämfört med Imagen eller DALL-E 3. Där Firefly verkligen skiner är text-i-bild och stilreferenser. Du kan ladda upp en referensbild för stil utan att behöva träna en LoRA.
+
+## Leonardo AI gratisnivå
+
+Leonardo ger dig 150 fasta tokens per dag, vilket motsvarar ungefär 30 bilder beroende på modell och upplösning. Du väljer mellan flera modeller, inklusive deras egen Phoenix-modell och olika Stable Diffusion-varianter. Plattformen har bra prompt-hjälp och bildhistorik.
+
+Kommersiell användning kräver betald plan, men för personliga projekt, mockups och prototypbilder fungerar gratisnivån.
+
+{/* INLINE-BILD: collage av AI-genererade bilder från flera verktyg, sida vid sida */}
+
+## Ideogram gratisnivå
+
+Ideogram är det bästa gratisalternativet om du behöver text i bilden. Logotyper, affischer, citat med tydlig och korrekt stavad text klarar Ideogram bättre än de flesta. Gratisnivån ger dig 10 "långsamma" genereringar per dag och du får fyra varianter per prompt.
+
+Bilderna är publika på gratisnivån, vilket innebär att andra användare kan se dem i flödet. För personligt bruk spelar det sällan roll, men för klientarbete är det en faktor.
+
+## Krea gratisnivå
+
+Krea har specialiserat sig på realtidsgenerering där du ser bilden växa fram medan du justerar prompten. Gratisnivån ger dig några dagliga krediter och tillgång till deras realtidsläge. Verktyget används mycket av designers som behöver iterera snabbt på en idé snarare än att vänta 30 sekunder per försök.
+
+Bildkvaliteten är solid men inte i absoluta toppen. Krea är mer ett iterations-verktyg än en slutproduktion.
+
+## Pollinations
+
+Pollinations är en open source-front mot flera bildmodeller. Helt gratis, inget konto krävs, ingen kvot. Du anropar antingen via webbgränssnittet eller direkt via en URL-baserad API. Bilderna saknar vattenstämpel.
+
+Begränsningen är att modellerna ofta är äldre eller mindre varianter, så bildkvaliteten är inte i nivå med DALL-E 3 eller Imagen. Pollinations passar bra för automatiseringar, scripting och experimentering där du vill iterera över hundratals bilder utan att tänka på kvot.
+
+## Stable Diffusion lokalt
+
+Om du har en dator med ett modernt grafikkort, helst med 8 GB VRAM eller mer, kan du köra Stable Diffusion lokalt. Det är helt gratis i drift, ingen kvot, inget filter, full kontroll över parametrar och stilar. Du installerar antingen Automatic1111, ComfyUI eller Forge UI.
+
+Lärtröskeln är högre än för moln-verktygen. Du behöver förstå begrepp som sampler, cfg-scale, LoRA och VAE. Men har du gått igenom inlärningskurvan får du en kapacitet som överstiger det mesta i molnet, inklusive obegränsade bilder, inpainting, outpainting och egna tränade modeller.
+
+## Playground AI
+
+Playground har en gratisnivå på 50 dagliga bilder. Du kan välja mellan deras egen Playground v3-modell och flera Stable Diffusion-varianter. Användargränssnittet ligger mellan Leonardos och Kreas, med bra prompt-hjälp och en canvas-vy för komposition.
+
+Kommersiell användning är tillåten på gratisnivån, vilket är ovanligt generöst.
+
+## NightCafe
+
+NightCafe använder en kredit-modell där du får fem dagliga krediter och kan tjäna fler genom att rösta på andras bilder i communityn. Plattformen kör Stable Diffusion, SDXL och äldre varianter. Den passar bra om du gillar communityaspekten och stilfokuserade utmaningar.
+
+Bildkvaliteten är solid för digital art och illustration, mindre stark för fotorealism.
+
+## Vad du faktiskt får gratis sammanfattat
+
+För fotorealism och produktbilder: Microsoft Designer och Google ImageFX. För text i bilden: Ideogram. För kommersiellt säker användning: Adobe Firefly. För obegränsade experiment: Pollinations eller lokalt Stable Diffusion. För iteration i realtid: Krea.
+
+Vill du veta mer om hur prompts faktiskt fungerar och varför vissa formuleringar ger bättre bilder än andra rekommenderar jag vår genomgång av [vad är en prompt inom AI](/guider/vad-ar-en-prompt/). För en bredare jämförelse av plattformar, se [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) på svenska.
+
+## Får man använda AI-bilder kommersiellt
+
+Det här är den fråga som dyker upp oftast. Svaret beror på två saker: verktygets villkor och innehållet i bilden. Microsoft Designer, Adobe Firefly och Playground AI tillåter kommersiell användning även på gratisnivån. Ideogram och Leonardo kräver betald plan för kommersiell rätt. Stable Diffusion lokalt har du full kontroll över, men de tränade modellerna kan ha egna licenser.
+
+EU AI Act trädde i kraft 2024 och från augusti 2026 gäller transparensregler för AI-genererat innehåll. Läs mer om [EU AI Act](/samhalle/eu-ai-act-sverige/) och vad det betyder för dig som publicerar AI-bilder i Sverige.
+
+## Vanliga frågor om AI-bilder gratis
+
+<FAQ items={[
+  { q: "Vilket är det bästa gratis AI-bildverktyget 2026?", a: "För nybörjare: Microsoft Designer Image Creator. Det kör DALL-E 3, kräver bara ett Microsoft-konto och ger 15 dagliga snabba genereringar. För text i bilden: Ideogram. För kommersiellt säker användning: Adobe Firefly." },
+  { q: "Får jag använda AI-bilder gratis i kommersiella projekt?", a: "Det beror på verktyget. Microsoft Designer, Adobe Firefly och Playground AI tillåter kommersiell användning på gratisnivå. Leonardo och Ideogram kräver betald plan. Kontrollera alltid det aktuella verktygets användarvillkor innan publicering." },
+  { q: "Kan jag skapa AI-bilder utan konto?", a: "Pollinations är det enda större verktyget som låter dig generera bilder helt anonymt utan konto. Stable Diffusion lokalt kräver inget konto men kräver en dator med tillräcklig grafikkraft." },
+  { q: "Varför ser AI-bilder ibland konstiga ut, särskilt händer?", a: "Diffusionsmodeller tränas på pixelmönster, inte på anatomi. Komplexa strukturer som händer, öron och text har historiskt varit svåra. Nyare modeller som Imagen 3, Flux och DALL-E 3 har förbättrats markant men misstag förekommer fortfarande." },
+  { q: "Vilket gratisverktyg är bäst på svenska prompts?", a: "Microsoft Designer och Google ImageFX hanterar svenska prompts utan problem. Adobe Firefly och Leonardo fungerar också men ger ibland bättre resultat på engelska. För mycket specifika resultat rekommenderas alltid engelska prompts oavsett verktyg." },
+  { q: "Hur lång tid tar det att lära sig skapa bra AI-bilder?", a: "Grunderna lär du dig på en eftermiddag. Att skriva prompts som ger exakt det du tänker dig tar veckor av aktiv övning. Att bemästra avancerade tekniker som ControlNet, LoRA och multistage-workflows tar månader." },
+]} />
+
+## Vad härnäst
+
+Har du valt ett verktyg från listan, fortsätt med vår steg-för-steg-guide i [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/). För djupare förståelse av hur tekniken bakom faktiskt fungerar, se [AI-genererade bilder](/bild-och-video/ai-genererade-bilder/).

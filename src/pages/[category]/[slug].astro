@@ -1,0 +1,30 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import Callout from '../../components/Callout.astro';
+import FAQ from '../../components/FAQ.astro';
+import { getCollection, render } from 'astro:content';
+import { articles } from '../../data/articles';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => {
+    // post.id is like "verktyg/basta-ai-verktyg-svenska"
+    const meta = articles.find(a => `${a.category}/${a.slug}` === post.id);
+    if (!meta) return null;
+    return {
+      params: { category: meta.category, slug: meta.slug },
+      props: { post, meta },
+    };
+  }).filter(Boolean);
+}
+
+const { post, meta } = Astro.props;
+const { Content, headings } = await render(post);
+
+const tocHeadings = headings
+  .filter((h: any) => h.depth === 2)
+  .map((h: any) => ({ id: h.slug, text: h.text }));
+---
+<ArticleLayout article={meta} headings={tocHeadings}>
+  <Content components={{ Callout, FAQ }} />
+</ArticleLayout>

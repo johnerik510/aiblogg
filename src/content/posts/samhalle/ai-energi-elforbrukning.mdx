@@ -1,0 +1,127 @@
+---
+title: "AI och elförbrukning, hur mycket energi drar en ChatGPT-prompt?"
+excerpt: "Påståenden om att en ChatGPT-prompt motsvarar tio googlingar i energi cirkulerar friskt. Vi kollar källorna och vad som faktiskt stämmer för svenska siffror."
+category: "samhalle"
+publishDate: "2026-05-08"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI och energi har blivit en av de mest upprepade siffrorna i debatten om AI:s klimatpåverkan. Påståendet att en ChatGPT-prompt drar tio gånger så mycket el som en Google-sökning har levt vidare i medier i två år. Men siffran kommer från en uppskattning av Alphabets ordförande 2024 och har aldrig stötts av en transparent metodisk källa.
+
+Den här artikeln går igenom vad vi faktiskt vet om energiåtgång per prompt, vad svenska datacenter drar och vad IEA:s rapporter säger om AI:s totala påverkan på elsystemet. Vi använder försiktiga siffror och pekar ut vad som är gissningar.
+
+## Hur mycket el drar en ChatGPT-prompt egentligen?
+
+Det enkla svaret: ingen utomstående vet exakt. OpenAI, Anthropic och Google publicerar inte hur mycket energi en specifik fråga konsumerar. Det vi har är beräkningar baserade på modellstorlek, hårdvarans effektivitet och rimliga antaganden om hur många tokens som genereras per fråga.
+
+De mest citerade uppskattningarna ligger i intervallet 0,5 till 3 Wh per prompt för en standardmodell som GPT-4-klass. Det kan jämföras med en Google-sökning som uppskattas dra omkring 0,3 Wh. Så grovt räknat ligger en AI-prompt 2 till 10 gånger högre än en googling, men spridningen är stor och de tunga frågorna (lång kontext, resonemang, bildgenerering) drar betydligt mer.
+
+För perspektiv: 1 Wh är ungefär lika mycket som ett LED-lyspärs förbrukning under en minut. En enskild prompt är energimässigt försumbar för en individ. Det är summan över hundratals miljoner användare och miljarder prompts per dag som börjar synas på elnätet.
+
+<Callout type="info" title="Skilj på träning och inferens">
+Träning av en stor språkmodell är en engångskostnad på tiotals till hundratals miljoner kWh. Det är dramatiskt mycket, men det görs en gång per modell. Inferens (när du faktiskt frågar modellen) är mycket mindre per fråga men händer kontinuerligt. Den totala inferensförbrukningen har nu passerat träningens.
+</Callout>
+
+## Vad säger IEA-rapporten?
+
+IEA (International Energy Agency) publicerade i januari 2025 rapporten Energy and AI som är den mest auktoritativa genomgången hittills. Några huvudpoänger för svensk del.
+
+### Datacenter står för en växande andel av elförbrukningen
+
+Globalt drog datacenter omkring 1,5 procent av all elektricitet 2024. IEA prognostiserar en fördubbling till 2030, drivet i huvudsak av AI-arbetsbelastning. För EU specifikt landar prognoserna någonstans mellan 4 och 6 procent av elförbrukningen vid 2030.
+
+### AI är en del av problemet, inte hela
+
+IEA:s modellering visar att AI ensamt står för ungefär hälften av tillväxten i datacenterförbrukning. Resten kommer från streaming, molntjänster, kryptovaluta och allmän digitalisering. AI är drivkraften framåt, men inte den enda förklaringen.
+
+### Geografisk koncentration
+
+Datacentren byggs där elen är billig, klimatet svalt och nätet stabilt. Det gynnar Norden. Sverige, Norge, Finland och Island har sett kraftig tillväxt av datacenter de senaste åren, och prognosen är att den fortsätter.
+
+## Svenska datacenter: vad händer i Sverige?
+
+Sverige har naturliga förutsättningar för datacenter. Sval temperatur ger låga kylkostnader. Fossilfri och relativt billig el. Stabilt och välutbyggt elnät. Det här har lett till en kraftig tillväxt av datacenterkapacitet sedan 2015.
+
+### Var datacentren ligger
+
+Facebook (Meta) byggde tidigt sitt stora datacenter i Luleå. Microsoft har anläggningar i Sandviken och Gävle. Amazon Web Services har anläggningar i Mälardalen. Mindre operatörer som EcoDataCenter, Bahnhof och flera fastighetsbolag bygger ut på olika platser.
+
+### Hur mycket el drar de?
+
+Svensk Energi-statistik och nätbolagens prognoser för 2025 pekar på att datacentersektorn drar omkring 2-3 procent av total svensk elförbrukning. Det är mer än två gånger så mycket som 2018. Vid 2030 räknar Svenska kraftnät med att andelen kan landa på 5-8 procent beroende på vilken utbyggnadsplan som genomförs.
+
+### Spänningen kring nätkapacitet
+
+Här finns en konkret konflikt. Sverige har gott om fossilfri el i norr, men nätet i söder är hårt belastat. Datacenter som vill etablera sig i Skåne eller Stockholmsområdet möter nu väntetider på flera år för att få nätanslutning. Det är samma flaskhals som drabbar svensk industri (Northvolt, H2 Green Steel) och elbilsladdning.
+
+{/* INLINE-BILD: karta över de största datacentren i Sverige med årlig elförbrukning */}
+
+## Klimatpåverkan: hur ser ekvationen ut?
+
+Klimatpåverkan av AI beror på två saker: hur mycket el som konsumeras och hur den elen produceras. Här är Sverige i en relativt bra position.
+
+### Svensk el är bland Europas renaste
+
+Svensk elproduktion är till stor del fossilfri: vattenkraft, kärnkraft och vindkraft tillsammans utgör över 95 procent av produktionen 2025. Det betyder att en svensk ChatGPT-fråga som råkar köras på ett svenskt datacenter har dramatiskt lägre klimatutsläpp än samma fråga körd i Texas eller Irland.
+
+### Men inferens går till närmaste datacenter
+
+Användare i Sverige har ingen kontroll över vilket datacenter som hanterar deras prompt. OpenAI driver datacenter i USA och Asien, Anthropic i USA, Google i flera regioner. Svensk användning av amerikanska AI-tjänster drar amerikansk el med amerikansk mix av produktionsslag.
+
+### Effekten i andra änden: AI kan minska klimatpåverkan
+
+IEA påpekar att AI även kan ge klimatvinster: bättre energiprognoser, optimering av smarta nät, snabbare materialutveckling för batterier och solceller. Modellen säger att vid 2035 kan AI:s positiva klimateffekter överstiga dess negativa, men det förutsätter att tekniken faktiskt används till de här ändamålen och inte bara till underhållning.
+
+## De stora frågorna framåt
+
+Tre frågor som kommer att avgöra hur AI:s elförbrukning utvecklas under nästa decennium.
+
+### Hur snabbt blir modellerna effektivare?
+
+Mellan 2020 och 2025 förbättrades effektiviteten per token i ledande modeller med en faktor 10 eller mer. Den trenden fortsätter. Om kvalitet per kWh fortsätter dubblas vartannat år kan vi få mer AI för samma energimängd, men efterfrågan kan växa snabbare och äta upp vinsterna (Jevons paradox).
+
+### Var byggs nästa generations datacenter?
+
+Sverige konkurrerar med Norge, Finland, Irland, Tyskland och flera amerikanska delstater om att husera AI-infrastruktur. För svensk del kan det innebära både industriintäkter, jobb och klimatvinster (att amerikansk AI-användning sker på svensk el är bättre för klimatet än alternativen).
+
+### Hur mycket vatten drar AI?
+
+Kylning kräver vatten, antingen direkt eller indirekt via elproduktion. Det är en mindre fråga i Sverige än i exempelvis Spanien eller Arizona, men det är inte ovidkommande. EcoDataCenter och flera nya svenska anläggningar har valt slutna kylsystem för att minimera vattenförbrukningen.
+
+## Vad detta betyder för dig
+
+Tre saker värda att hålla i huvudet.
+
+### En enskild prompt är inte ett klimatproblem
+
+Att använda ChatGPT eller [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) i ditt arbete är inte en betydande klimatfråga för dig som individ. Bilkörning, flyg och mat drar storleksordningar mer energi än din AI-användning. Det är systemnivån som spelar roll.
+
+### Sektorns påverkan är reell
+
+Den samlade förbrukningen från datacenter är något att ta på allvar. Sveriges elsystem behöver byggas ut för att klara både datacenter, elektrifiering av industri och fordonsflotta. Det handlar inte om att begränsa AI utan att producera tillräckligt med fossilfri el.
+
+### Var medveten om var dina data hamnar
+
+Om klimatpåverkan är viktigt för dig finns det leverantörer som specificerar var deras inferens sker. Mistral driver sina modeller huvudsakligen i Frankrike (fossilfri kärnkraft). Anthropic, OpenAI och Google har ofta mindre transparens om geografin. För svenska företag som tar [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) på allvar är detta också en relevant fråga.
+
+<Callout type="tip" title="Vad du faktiskt kan göra">
+Vill du minska AI-relaterad energiförbrukning utan att sluta använda verktygen: använd kortare prompts, undvik bildgenerering när text räcker, välj mindre modeller för enkla uppgifter och stäng av bildgenerering i auto-läge. De konkreta besparingarna per individ är små men summan över organisationen kan bli kännbar.
+</Callout>
+
+## Vanliga frågor om AI och energi
+
+<FAQ items={[
+  { q: "Hur mycket el drar en ChatGPT-fråga?", a: "Olika studier ger spridda siffror, men ett rimligt intervall är 0,5 till 3 Wh per prompt för en standardmodell. Tunga frågor med lång kontext eller bildgenerering kan dra mer. Det motsvarar 2 till 10 gånger en Google-sökning, men spridningen är stor." },
+  { q: "Är AI dåligt för klimatet?", a: "Frågan är felställd. AI:s klimatpåverkan beror på hur mycket den används, var elen produceras och om AI samtidigt skapar klimatvinster i andra delar av samhället. I Sverige är klimatpåverkan per fråga låg eftersom elproduktionen är fossilfri." },
+  { q: "Hur mycket el drar svenska datacenter?", a: "Cirka 2-3 procent av Sveriges totala elförbrukning 2025, en fördubbling sedan 2018. Svenska kraftnät räknar med 5-8 procent vid 2030 beroende på utbyggnadstakt." },
+  { q: "Varför byggs så många datacenter i Sverige?", a: "Sverige har sval temperatur (låga kylkostnader), fossilfri och relativt billig el, samt stabilt elnät. Norra Sverige har dessutom överskott på el. Det här gör Sverige attraktivt jämfört med många europeiska alternativ." },
+  { q: "Hjälper det att skriva kortare prompts?", a: "Marginellt. Token-antal påverkar energiåtgång linjärt, så halverad prompt-längd halverar förbrukningen för den specifika frågan. Men effekten per individ är liten. Den största hävstången ligger i hur modellerna designas och var de körs." },
+]} />
+
+## Vad härnäst?
+
+AI och energi är en fråga som kommer att växa i betydelse under hela 2026-2030. För svensk del är det både en möjlighet (datacenter ger industri och fossilfri export) och en utmaning (nätkapacitet i söder). Att vara informerad om de faktiska siffrorna gör det lättare att avgöra vad som är realistisk oro och vad som är retorik.
+
+För dig som vill förstå den politiska ramen, vår genomgång av [Sveriges AI-strategi](/samhalle/ai-sverige-strategi/) går igenom hur regeringen tänker kring infrastrukturen. Och [EU AI Act](/samhalle/eu-ai-act-sverige/) påverkar inte energiåtgången direkt, men formar branschen som drar elen.

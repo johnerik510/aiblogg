@@ -1,0 +1,100 @@
+---
+title: "Sora AI-video, så fungerar OpenAI:s videomodell"
+excerpt: "Sora 2 öppnade upp för bredare publik 2026. Genomgång av styrkor, svagheter, prismodell och var den fortfarande kraschar i praktiken."
+category: "bild-och-video"
+publishDate: "2026-05-10"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Sora AI är OpenAI:s videomodell som först demonstrerades i februari 2024 och öppnades upp för bredare publik genom Sora 2 under slutet av 2025. Modellen genererar videoklipp upp till en minut långa från textprompts, bilder eller en kombination, och kvaliteten är på en nivå där den används i kommersiell produktion av filmare och annonsbyråer.
+
+Den här genomgången täcker vad Sora kan, vad den fortfarande inte klarar, vad den kostar och hur du kommer åt den från Sverige. Inga affiliatelänkar, inga sponsringar, bara faktiskt utvärdering efter hands-on-användning.
+
+## Vad Sora faktiskt är
+
+Sora är en text-till-video-modell baserad på en diffusion transformer-arkitektur, vilket innebär att den kombinerar tekniken bakom moderna bildmodeller som DALL-E och Stable Diffusion med transformer-strukturen från språkmodeller som GPT. Resultatet är en modell som inte bara genererar enskilda bilder utan håller koherens över tid.
+
+Du beskriver en scen i text, exempelvis "en svensk kvinna i röd kappa går genom snöfall på en gammal stockholmsgata i kvällsljus", och Sora producerar ett videoklipp som matchar beskrivningen. Klippen är typiskt 5 till 20 sekunder långa i konsument-versionen, upp till en minut i pro-versionen.
+
+<Callout type="info" title="Sora 1 vs Sora 2">
+Sora 1 demonstrerades 2024 men hade begränsad tillgång. Sora 2 är den allmänna versionen som finns idag, lanserad december 2025. Den är snabbare, har bättre fysisk koherens och kan generera längre klipp. Förväxla inte med Sora 3 som ryktas men inte är offentlig per maj 2026.
+</Callout>
+
+## Vad Sora klarar bra
+
+Sora är stark på cinematiska kameraåkningar, naturliga miljöbeskrivningar och atmosfärisk ljussättning. Modellen förstår filmiska grepp som följa-skott, panoreringar, dolly-rörelser och håller dem konsekvent över hela klippet.
+
+Den är också stark på naturmiljöer, urbana scener utan specifika kända platser, stiliserade animationsstilar och produktdemonstrationer av enkla objekt. För b-roll, mood-content och konceptvideo är Sora idag användbar i produktion.
+
+Människor i halv- eller helbild är acceptabla, särskilt utan stora ansikts-närbilder. Klädval, hår och rörelse är förvånansvärt naturliga. Modellen har också förstått grundläggande fysik som ljusinfall, skuggor och materialegenskaper.
+
+## Var Sora fortfarande kraschar
+
+Komplex fysik mellan flera objekt är fortfarande problematiskt. En person som plockar upp och hanterar ett föremål blir ofta logiskt fel, med händer som glider igenom objektet eller objektet som ändrar form.
+
+Långa narrativa sekvenser med konsekvent karaktär är svårt. Sora kan generera en bra fem-sekunders shot men att få samma karaktär att se likadan ut över flera klipp är fortfarande en utmaning. Tekniker som character reference finns men är inte robusta.
+
+Specifik text i video, exempelvis skyltar, böcker eller telefonskärmar, blir ofta osammanhängande. Närbilder på händer har förbättrats men är inte felfria. Komplex koreografi som dans eller kampsport blir frekvent fysikaliskt orealistiska.
+
+## Pris och tillgänglighet 2026
+
+Sora ingår i ChatGPT-prenumerationer. ChatGPT Plus, som kostar 20 dollar i månaden, inkluderar Sora i begränsad form: cirka 50 videogenereringar per månad i lägre upplösning, max 5 sekunder per klipp, ingen kommersiell rättighet på vissa innehållstyper.
+
+ChatGPT Pro på 200 dollar i månaden ger 500 videogenereringar per månad, upp till 1080p upplösning, upp till 20 sekunders klipp, kommersiell rättighet och tillgång till Sora 2 Turbo som är snabbare men något lägre kvalitet.
+
+Det finns en separat Sora-portal på sora.com där du loggar in med ditt OpenAI-konto. Här hittar du även communityns publika genereringar för inspiration.
+
+Sverige har full tillgång till Sora från och med våren 2025 efter att OpenAI utvidgade utrullningen till EU. Tidigare fanns geografiska begränsningar.
+
+{/* INLINE-BILD: skärmdump av Sora-portalen med genererat videoklipp och tillhörande prompt */}
+
+## Prompt-struktur för Sora
+
+Sora följer ungefär samma princip som bildmodeller, med tillägget att rörelse, kameraåkning och tidsdimension också ska beskrivas. En komplett prompt har sex delar:
+
+Motiv, miljö, kamerarörelse, ljus, stilreferens och varaktighet. Exempel:
+
+"A young Swedish woman with red hair walks slowly down a snowy Stockholm street at dusk, camera tracks her from behind in a slow follow shot, soft warm light from streetlamps casting long shadows, cinematic film grain in style of Roger Deakins, 10 second shot"
+
+Kamerarörelser har särskild vokabulär: tracking shot, dolly in, dolly out, pan left, pan right, crane shot, handheld, locked off. Specificera tempot: slow, medium, fast.
+
+För stilreferenser fungerar både fotografiska och filmiska termer. "Shot on 35mm film, golden hour, anamorphic lens" ger en filmisk look. "Shot on iPhone, vertical 9:16, natural light" ger en TikTok-look.
+
+## Sora och konkurrensen
+
+Sora är inte ensam. Runway Gen-4 och Gen-3 har varit ledande sedan 2024 och är fortfarande konkurrenskraftiga på vissa kategorier. Google Veo 2 lanserades 2024 och är stark på fotorealism och längre klipp. Kling AI från Kuaishou är en kinesisk modell som ofta är förvånansvärt bra och har en gratisnivå.
+
+Vad Sora har som andra inte har är direkt integration med ChatGPT, vilket innebär att du kan iterera prompts samtidigt som du genererar och få förslag från GPT-4 eller GPT-5 om hur du ska förfina dem.
+
+För en bredare bild av AI-modeller i video och bild, läs vår genomgång av [AI-genererade bilder](/bild-och-video/ai-genererade-bilder/) och [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) på svenska.
+
+## Juridik och transparens
+
+EU AI Act som börjar gälla stegvis fram till augusti 2026 ställer transparenskrav på AI-genererat videoinnehåll. Innehåll som visar verkliga personer, efterliknar verklig journalistik eller har politiskt syfte måste märkas som AI-genererat. Sora lägger automatiskt på metadata och en synlig vattenstämpel på gratisnivå.
+
+Pro-användare kan ta bort den synliga vattenstämpeln men metadatan kvarstår. Läs mer om vad detta innebär för svensk användning i vår genomgång av [EU AI Act](/samhalle/eu-ai-act-sverige/).
+
+OpenAI har infört strikta filter mot deepfakes och politiskt känsliga personer. Försök att generera Joe Biden, Donald Trump eller Greta Thunberg som karaktär blockeras. Anonyma personer fungerar.
+
+## Vad du bör testa Sora för
+
+Sora passar bra för: konceptbilder och animatiks i film- och reklamproduktion, b-roll för videoinnehåll på YouTube och sociala medier, produktvisualiseringar utan komplex interaktion, mood-videos för pitch-presentationer, animation och stiliserat innehåll, korta abstrakta klipp för bakgrundsanvändning.
+
+Sora passar inte för: längre narrativa sekvenser med samma karaktär, produktdemos med komplex handhantering, exakt produktreproduktion där design måste vara felfri, innehåll med specifika kända personer, situationer där full kontroll över varje frame krävs.
+
+## Vanliga frågor om Sora AI
+
+<FAQ items={[
+  { q: "Vad är Sora AI och vad gör den?", a: "Sora är OpenAI:s text-till-video-modell som genererar videoklipp på 5 till 60 sekunder från textbeskrivningar. Den lanserades brett som Sora 2 under slutet av 2025 och används idag i kommersiell produktion av filmare och annonsbyråer." },
+  { q: "Vad kostar Sora 2026?", a: "Sora ingår i ChatGPT-prenumerationer. ChatGPT Plus på 20 dollar i månaden ger cirka 50 genereringar i lägre upplösning. ChatGPT Pro på 200 dollar i månaden ger 500 genereringar, full upplösning och kommersiella rättigheter." },
+  { q: "Kan jag använda Sora från Sverige?", a: "Ja, Sora har full tillgång i Sverige sedan våren 2025. Du behöver ett ChatGPT-konto med Plus- eller Pro-prenumeration och loggar in via sora.com eller direkt i ChatGPT-gränssnittet." },
+  { q: "Hur lång video kan Sora generera?", a: "På ChatGPT Plus är maxlängden 5 sekunder per klipp. På ChatGPT Pro kan du generera upp till 20 sekunder per klipp i webbappen och längre via API. Klipp kan sedan kedjas ihop för längre sekvenser." },
+  { q: "Vilka är Soras största svagheter?", a: "Komplex fysik mellan objekt, exakt textrendering i video, konsekvent karaktär över flera klipp, närbilder på händer och koreografi som dans. Modellen är stark på cinematiska shots men svag på narrativ kontinuitet." },
+  { q: "Får jag använda Sora-video kommersiellt?", a: "Ja, på ChatGPT Pro-planen inkluderas kommersiella rättigheter. På ChatGPT Plus är användningen begränsad till privat och icke-kommersiellt bruk för vissa innehållstyper. EU AI Act ställer transparenskrav på AI-video från augusti 2026." },
+]} />
+
+## Vad härnäst
+
+Vill du lära dig grunderna i AI-bilder och prompt-skrivande som ligger till grund även för videoarbete, läs [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/) eller [vad är en prompt inom AI](/guider/vad-ar-en-prompt/). För en jämförelse av bildmodeller som ligger nära Soras visuella stil, se [midjourney svenska](/bild-och-video/midjourney-svenska/).

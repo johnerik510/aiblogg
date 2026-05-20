@@ -1,0 +1,41 @@
+---
+import { clusters } from '../data/articles';
+import { site } from '../data/site';
+---
+<header class="sticky top-0 z-40 backdrop-blur-xl bg-[var(--color-bg)]/80 border-b border-[var(--color-border)]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center gap-2 group">
+        <span class="relative">
+          <span class="block w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)] opacity-90 group-hover:opacity-100 transition-opacity"></span>
+          <span class="absolute inset-0 w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)] blur-md opacity-40"></span>
+        </span>
+        <span class="font-semibold text-[1.05rem] tracking-tight">{site.name}</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-1" aria-label="Huvudnavigering">
+        {clusters.map(c => (
+          <a href={c.url} class="px-3 py-1.5 text-sm text-[var(--color-text-light)] hover:text-[var(--color-text)] rounded-md hover:bg-[var(--color-bg-elevated)] transition-colors">
+            {c.shortLabel}
+          </a>
+        ))}
+        <a href="/om/" class="px-3 py-1.5 text-sm text-[var(--color-text-light)] hover:text-[var(--color-text)] rounded-md hover:bg-[var(--color-bg-elevated)] transition-colors">Om</a>
+      </nav>
+
+      <div class="md:hidden">
+        <details class="relative">
+          <summary class="list-none p-2 cursor-pointer text-[var(--color-text)]" aria-label="Öppna meny">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+          </summary>
+          <div class="absolute right-0 mt-2 w-56 bg-[var(--color-bg-card)] border border-[var(--color-border)] rounded-lg shadow-2xl p-2">
+            {clusters.map(c => (
+              <a href={c.url} class="block px-3 py-2 text-sm text-[var(--color-text-light)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)] rounded">{c.label}</a>
+            ))}
+            <a href="/om/" class="block px-3 py-2 text-sm text-[var(--color-text-light)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)] rounded">Om</a>
+            <a href="/kontakt/" class="block px-3 py-2 text-sm text-[var(--color-text-light)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-elevated)] rounded">Kontakt</a>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</header>

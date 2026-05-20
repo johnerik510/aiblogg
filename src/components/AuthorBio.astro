@@ -1,0 +1,15 @@
+---
+import { site } from '../data/site';
+const a = site.author;
+---
+<aside class="my-12 p-6 rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)]">
+  <div class="flex gap-5 items-start">
+    <img src={a.image} alt={`Porträtt av ${a.name}`} width="72" height="72" loading="lazy" class="rounded-full w-[72px] h-[72px] object-cover border border-[var(--color-border-bright)] flex-shrink-0" />
+    <div>
+      <div class="label mb-1">Skribent</div>
+      <div class="font-semibold text-[var(--color-text)]">{a.name}</div>
+      <div class="text-sm text-[var(--color-text-lighter)] mb-2">{a.role}</div>
+      <p class="text-[0.95rem] text-[var(--color-text-light)] leading-relaxed">{a.bio}</p>
+    </div>
+  </div>
+</aside>

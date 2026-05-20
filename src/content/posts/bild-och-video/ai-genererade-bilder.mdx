@@ -1,0 +1,102 @@
+---
+title: "AI-genererade bilder, så fungerar de och vilka verktyg är bäst"
+excerpt: "AI-genererade bilder har gått från experiment till mainstream på två år. Vi förklarar tekniken, jämför de fyra stora modellerna och visar konkreta bildresultat."
+category: "bild-och-video"
+publishDate: "2026-05-16"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI-genererade bilder är inte längre en kuriosa. De finns i reklamkampanjer från storbolag, på bokomslag, i konceptkonst för spelproduktion och i nyhetsillustrationer på morgontidningar. Den här artikeln förklarar hur tekniken bakom faktiskt fungerar och jämför de fyra modeller som dominerar marknaden 2026: Midjourney v7, DALL-E 3, Imagen 3 och Flux.
+
+Jag förklarar diffusionsmodeller utan att fastna i matematiken, men tillräckligt djupt för att du ska förstå varför vissa prompts ger vissa typer av resultat. Och varför vissa modeller är bättre på vissa motiv.
+
+## Vad menas med en AI-genererad bild
+
+En AI-genererad bild är en bild som skapats helt från text eller en grov skiss av en maskininlärningsmodell, utan att någon befintlig bild har använts som direkt källa. Modellen har tränats på miljarder bild-text-par och har lärt sig mönster för hur bildelement ser ut och kombineras.
+
+Det skiljer sig från bildmanipulation, där en befintlig bild ändras, och från klassisk generativ konst, där en programmerare definierar reglerna för hur en bild byggs upp. Här bestämmer modellen själv hur en katt ser ut, baserat på vad den sett under träningen.
+
+## Diffusionsmodeller förklarat enkelt
+
+De flesta AI-bildmodeller idag är diffusionsmodeller. Tekniken bygger på en motsatsprincip: under träning lär sig modellen hur en bild förfaller till brus när man stegvis lägger till slumpmässig brusinformation. När den tränats klart kan den göra det omvända, alltså ta brus och stegvis rensa det till en meningsfull bild.
+
+Tänk det så här. Du har en bild av en katt. Du lägger på lite brus, sedan mer, sedan ännu mer, tills bilden är ren slumpmässig brusdata. Modellen lär sig vad varje steg ser ut. Vid generering startar den med rent brus och tar tjugo till femtio steg åt andra hållet, styrd av din prompt, tills en bild emergerar.
+
+Prompten styr riktningen via en encoder, ofta en variant av CLIP eller T5, som kopplar textbeskrivningar till visuella koncept i modellens latenta rum. Det är därför specifika ord ger specifika effekter, och varför mindre vanliga termer ofta ger oförutsägbara resultat.
+
+<Callout type="fact" title="Latent space vs pixel space">
+Moderna modeller arbetar inte direkt i pixlar utan i ett komprimerat latent rum. En bild komprimeras först ner till en liten matris av siffror, modellen jobbar där, och sedan dekomprimeras resultatet tillbaka till pixlar. Detta sparar enormt mycket beräkning och är skälet till att Stable Diffusion kan köras på en vanlig grafikkort hemma.
+</Callout>
+
+## Midjourney v7, bildkvalitet och stil
+
+Midjourney v7 släpptes senare under 2025 och är fortfarande tongivande för konstnärlig stil och atmosfär. Modellen är speciellt stark på cinematisk komposition, ljussättning och stilreferenser. Den är inte alltid den bästa på fotorealism av människor men oöverträffad när det kommer till artistiska visuella uttryck.
+
+Användargränssnittet finns både i Discord, som var ursprunget, och i webbappen som lanserades 2024. Prompten har sina egna konventioner med parametrar som --ar för aspect ratio, --s för stylize och --chaos för variation.
+
+Begränsningar: Midjourney kräver abonnemang, ingen gratisnivå finns längre. Realism med specifika ansikten och text i bild är svagare än konkurrenter.
+
+## DALL-E 3 från OpenAI
+
+DALL-E 3 är OpenAI:s aktuella bildmodell och kör under huven både i ChatGPT, Microsoft Designer och Bing. Styrkan är promptförståelse: DALL-E 3 förstår komplexa sammansatta prompts med flera objekt, deras position och relation till varandra bättre än de flesta konkurrenter.
+
+Modellen är solid på illustration, infografik och stiliserade scener. Text i bilden fungerar acceptabelt för korta ord och rubriker. Fotorealism med människor är medioker jämfört med Imagen 3.
+
+Tillgång: gratis via Microsoft Designer eller ChatGPT Plus.
+
+## Google Imagen 3
+
+Imagen 3 är Googles bildmodell och nås via ImageFX på labs.google, Gemini-appen och Google AI Studio. Den är den starkaste av storaktörerna när det kommer till fotorealism, naturliga ansikten och fysisk korrekthet i scener.
+
+Imagen tränades med mer fokus på faktisk fotografisk kvalitet och har bättre förståelse för objektiv, brännvidd och skärpedjup än konkurrenterna. Den är även stark på text i bilden från och med version 3.
+
+Begränsningar: Google filtrerar hårdast av alla, vilket innebär att många typer av prompts blockeras som hade fungerat hos OpenAI eller Black Forest Labs.
+
+## Flux från Black Forest Labs
+
+Flux är den intressantaste open-source-modellen sedan Stable Diffusion. Den utvecklades av samma team som låg bakom Stable Diffusion innan de lämnade Stability AI. Det finns tre varianter: Flux Pro (kommersiell), Flux Dev (open source för icke-kommersiell användning) och Flux Schnell (snabb, kommersiellt fri).
+
+Flux 1.1 Pro är en av de starkaste modellerna 2026 vad gäller fotorealism och prompt-trohet. Den kan köras lokalt på en kraftfull grafikkort, vilket Midjourney, DALL-E och Imagen inte kan.
+
+{/* INLINE-BILD: jämförelse-collage av samma prompt körd genom Midjourney, DALL-E 3, Imagen 3 och Flux */}
+
+## Hur modellerna skiljer sig i praktiken
+
+Samma prompt ger olika bilder beroende på modell. "A photorealistic portrait of a Swedish elderly fisherman, mending nets, soft morning light, 50mm lens" ger följande karaktäristiska resultat.
+
+Midjourney v7 levererar en stiliserad, nästan filmisk bild med dramatisk komposition och atmosfäriskt ljus, men ansiktet kan se aningen idealiserat ut. DALL-E 3 ger en bild som matchar prompten exakt rad för rad men har lite mer plastig ytstruktur. Imagen 3 producerar det mest fotorealistiska resultatet med trovärdiga hudtoner och äkta kameralook. Flux 1.1 Pro ligger nära Imagen i realism men med mer kreativ frihet i komposition.
+
+För konceptkonst, illustration och annat där stil viktar tyngst: Midjourney. För exakt promptförståelse: DALL-E 3. För fotorealism: Imagen 3 eller Flux. För kontroll och customisering: Stable Diffusion eller Flux lokalt.
+
+## Vad AI-genererade bilder klarar idag
+
+Områden där tekniken är moget för produktion 2026: produktbilder och produktvisualiseringar, redaktionella illustrationer, koncept- och moodboard-bilder, sociala medie-content, stockfoto-ersättning, infografik och diagram, marknadsföringsbilder utan specifika personer.
+
+Områden där tekniken fortfarande har problem: exakt återgivning av specifika personer, komplex anatomi som händer, fötter och tänder, korrekt textrendering i längre stycken, fysiskt komplexa interaktioner mellan flera objekt, konsekvens mellan flera bilder i en serie utan särskilda tekniker.
+
+För nybörjare som vill komma igång rekommenderar jag vår [skapa AI-bilder](/bild-och-video/skapa-ai-bilder/) guide som går igenom prompt-strukturen steg för steg. Vill du bara experimentera utan att betala, se vår lista över [AI-bilder gratis](/bild-och-video/ai-bilder-gratis/) verktyg.
+
+## Juridik och upphovsrätt på AI-genererade bilder
+
+Rättsläget är fortfarande ojämnt. I USA har domstolar slagit fast att rena AI-bilder inte kan upphovsrättsskyddas eftersom det inte finns en mänsklig upphovsperson. I EU är läget oklarare men trenden är liknande.
+
+EU AI Act som börjar gälla i flera steg fram till 2026 kräver transparens kring AI-genererat innehåll. Innehåll som visar verkliga personer eller efterliknar verklig journalistik måste märkas. Läs mer om [EU AI Act](/samhalle/eu-ai-act-sverige/) och konsekvenser för svenska användare och företag.
+
+Verktygens villkor varierar. Adobe Firefly är tränad uteslutande på licensierat material och erbjuder kommersiell ansvarsförsäkring. Midjourney och OpenAI har också kommersiella rättigheter på betalplaner. Stable Diffusion lokalt har du själv ansvar för.
+
+## Vanliga frågor om AI-genererade bilder
+
+<FAQ items={[
+  { q: "Hur fungerar AI-genererade bilder tekniskt?", a: "De flesta använder diffusionsmodeller som lärt sig hur bilder förfaller till brus. Vid generering startar modellen med slumpmässigt brus och rensar det stegvis till en meningsfull bild styrd av din textprompt." },
+  { q: "Vilken är den bästa modellen för AI-genererade bilder 2026?", a: "Det beror på syftet. Midjourney v7 för konstnärlig stil och atmosfär, DALL-E 3 för promptförståelse, Imagen 3 för fotorealism och Flux för open source-användning med kommersiella möjligheter." },
+  { q: "Kan jag se skillnad på en AI-genererad bild och ett foto?", a: "Allt svårare. Imagen 3 och Flux 1.1 Pro producerar bilder som ofta passerar som äkta foton vid första anblicken. Tecken att leta efter är fortfarande oregelbundenheter i händer, text, smycken och bakgrundsdetaljer." },
+  { q: "Får man använda AI-genererade bilder kommersiellt?", a: "Ja, om verktygets villkor tillåter det. Adobe Firefly, Midjourney på betalplan, OpenAI:s betalplaner och Flux Pro tillåter kommersiell användning. EU AI Act ställer transparenskrav på vissa typer av innehåll från 2026." },
+  { q: "Vad kostar det att generera AI-bilder?", a: "Allt från gratis till några hundra kronor i månaden. Microsoft Designer och Google ImageFX är gratis. Midjourney börjar runt 10 dollar i månaden. För professionell användning med många bilder hamnar månadskostnaden ofta i intervallet 200 till 600 kronor." },
+  { q: "Varför har AI-bilder ibland sex fingrar eller konstiga händer?", a: "Diffusionsmodeller har historiskt tränats på pixelmönster snarare än anatomisk struktur. Händer är komplexa och små i förhållande till hela bilden, vilket gör dem svåra. Nyare modeller har förbättrats men felen försvinner inte helt." },
+]} />
+
+## Vad härnäst
+
+Vill du veta mer om hur du faktiskt skriver bra prompts, se [vad är en prompt inom AI](/guider/vad-ar-en-prompt/). För en djupdykning i en specifik modell, läs vår genomgång av [midjourney svenska](/bild-och-video/midjourney-svenska/) med parametrar och prompt-tekniker.

@@ -1,0 +1,128 @@
+---
+title: "Dina data i AI-tjänster, så hanterar OpenAI, Anthropic och Google dem"
+excerpt: "OpenAI, Anthropic, Google, Microsoft, Meta och Mistral lagrar och tränar på dina inputs olika mycket. Vi går igenom skillnaderna i klartext."
+category: "integritet"
+publishDate: "2026-05-14"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+AI-dataskydd är inte ett enhetligt område. Sex stora AI-leverantörer hanterar dina inputs på sex olika sätt, och skillnaden mellan en gratisplan och en företagsplan hos samma leverantör kan vara större än skillnaden mellan två leverantörer.
+
+Den här artikeln går igenom OpenAI, Anthropic, Google, Microsoft, Meta och Mistral i klartext: vad sparas, vad tränas det på, hur länge ligger det kvar och vilka avtal går att teckna. Källorna är leverantörernas egna villkor från maj 2026.
+
+## Den enkla regeln innan vi börjar
+
+Gratisversionen av en konsumentprodukt finansieras av träningsdata. Företagsplanen finansieras av abonnemang. Det är ramen att hålla i huvudet när du läser resten.
+
+<Callout type="warning" title="Standardinställning spelar roll">
+  De flesta leverantörer låter dig stänga av träning, men det kräver att du aktivt går in i inställningarna. Är du administratör för en organisation: gå genom inställningarna en gång, inte tio gånger för olika konton." 
+</Callout>
+
+## OpenAI (ChatGPT, GPT-4o, API)
+
+**Konsument (gratis, Plus, Pro):** OpenAI tränar på din input som default. Du kan stänga av det under Settings → Data Controls → "Improve the model for everyone". Inputen sparas i 30 dagar för abuse monitoring även när träning är avslagen.
+
+**Team:** Ingen träning på input som default. Retention 30 dagar för abuse. DPA finns för företagsanvändning.
+
+**Enterprise:** Ingen träning, SOC 2 Type 2, SSO, möjlighet att teckna **Zero Data Retention** som tar bort lagringen helt efter att svaret returnerats.
+
+**API:** Ingen träning på input som default sedan mars 2023. Standard retention 30 dagar, ZDR möjligt för kvalificerade kunder.
+
+## Anthropic (Claude)
+
+**Konsument (Free, Pro, Max):** Ingen träning på input om du inte aktivt opt-in. Det här är en tydlig skillnad mot OpenAI. Retention upp till 30 dagar, eller längre om du själv sparar konversationer.
+
+**Team och Enterprise:** Ingen träning, DPA, SOC 2 Type 2. Audit logs och SSO i Enterprise.
+
+**API:** Ingen träning som default. Standard retention 30 dagar för säkerhetsmonitorering. Zero retention möjligt för kunder via avtal.
+
+Anthropic har generellt strängare dataskydd i defaultläget än OpenAI, vilket har gjort dem populära hos juridik och hälsa.
+
+{/* INLINE-BILD: Sammanställning av AI-leverantörer och deras datapolicy i en jämförelsetabell */}
+
+## Google (Gemini, Vertex AI)
+
+**Gemini gratis och Advanced:** Google sparar konversationer i 18 månader som default och kan använda dem för att förbättra Google-produkter. Du kan slå av Gemini Apps Activity i Activity Controls. Men även när det är av sparas data i 72 timmar för säkerhet och feedback.
+
+**Google Workspace med Gemini:** Företagsanvändning skyddas av Workspace-villkoren. Google tränar inte på Workspace-data, vilket inkluderar Gemini-användning kopplad till företagskontot.
+
+**Vertex AI:** Den molnbaserade utvecklarprodukten. Ingen träning på input. DPA, EU-regioner, retention konfigurerbar.
+
+Skillnaden mellan Gemini-konsument och Vertex AI är extremt stor när det gäller dataskydd. Använder du Gemini privat med gmail-konto är du i samma annonsekosystem som Google Search. Använder du Vertex AI är du en molnkund med vanliga företagsskyddet.
+
+## Microsoft (Copilot, Azure OpenAI)
+
+**Copilot (gratis och Pro):** Konsumentprodukt. Microsoft kan använda input för produktförbättring om du inte slår av i inställningarna. Liknar Gemini i grunduppsättning.
+
+**Microsoft 365 Copilot:** Företagsversionen integrerad i Word, Excel, Teams. Ingen träning på företagets data. Data stannar inom Microsoft 365-tenant och täcks av Microsofts standardavtal med DPA.
+
+**Azure OpenAI Service:** Hostade OpenAI-modeller i Azure-infrastruktur. Ingen träning, val av EU-region, full kontroll över retention. Det här är ofta det säkraste valet för svenska företag som redan kör Microsoft.
+
+## Meta (Meta AI, Llama API, WhatsApp AI)
+
+**Meta AI och WhatsApp AI:** Meta har varit tydliga med att de tränar på publika inlägg och interaktioner med Meta AI för att förbättra modellerna. För EU-användare finns en opt-out-formulär att fylla i, men det kräver aktiv handling. Inom EU har Meta tillfälligt pausat träning på EU-användarnas data efter tillsynspress 2024-2025, men situationen är instabil.
+
+**Llama (open weights):** När du kör Llama lokalt eller via en hostingleverantör skickar du inget till Meta alls. Det här är den enda riktigt privata vägen i listan, om du är teknisk nog att hantera det.
+
+## Mistral (Le Chat, La Plateforme)
+
+**Le Chat gratis:** Mistral tränar inte på input som default. Konversationer sparas för funktionalitet men inte träning. Le Chat Pro följer samma princip.
+
+**La Plateforme (API):** Ingen träning, EU-hostat (Frankrike), DPA. Mistral marknadsför sig aktivt som GDPR-kompatibelt alternativ, vilket är legitimt utifrån villkoren.
+
+**Mistral Enterprise:** Lokal deployment möjlig för stora kunder, vilket ger full kontroll.
+
+Mistral är intressant för svenska organisationer som vill ha en EU-aktör med rimliga modeller och tydlig dataskyddsprofil. Du kan jämföra med [bästa AI-verktygen](/verktyg/basta-ai-verktyg-svenska/) för funktionalitet, men ur dataskyddssynpunkt är Mistral ofta enklare att försvara i en DPIA.
+
+## Sammanställning: vem skyddar vad
+
+| Leverantör | Tränar på konsumentinput default | Företagsplan utan träning | EU-region | ZDR möjligt |
+|---|---|---|---|---|
+| OpenAI | Ja | Ja (Team, Enterprise) | Via Azure | Ja, Enterprise |
+| Anthropic | Nej | Ja | Via AWS Bedrock | Ja, via avtal |
+| Google | Ja | Ja (Workspace, Vertex) | Ja, Vertex | Ja, Vertex |
+| Microsoft | Delvis | Ja (M365 Copilot, Azure OpenAI) | Ja | Ja, Azure |
+| Meta | Ja (publika data) | Llama lokalt | Lokal | Bara lokalt |
+| Mistral | Nej | Ja | Ja (Frankrike) | Ja |
+
+## Praktiskt beslut för ditt företag
+
+För svenska företag som vill ha minsta möjliga juridiska komplikation är ordningen ungefär:
+
+1. **Azure OpenAI** om ni redan har Microsoft 365
+2. **Mistral La Plateforme** om ni vill ha EU-aktör
+3. **Anthropic Claude via API** om ni vill ha stark default-skydd och inte är låst till Microsoft
+4. **OpenAI Enterprise med ZDR** om ChatGPT-funktionerna är avgörande
+
+Vad du absolut inte ska göra är att låta personalen använda konsumentversioner på sina privata konton för företagsdata. Det är det vanligaste GDPR-felet just nu, och täcks i detalj under [GDPR och ChatGPT](/integritet/gdpr-chatgpt/).
+
+<Callout type="tip" title="Tre frågor att ställa innan ni väljer">
+  1. Tränar leverantören på vår input i den här planen? 2. Finns DPA? 3. Var lagras datan geografiskt? Om svaret inte är glasklart på alla tre, välj en annan leverantör eller plan.
+</Callout>
+
+## Vad EU AI Act lägger på ovanpå
+
+[EU AI Act](/samhalle/eu-ai-act-sverige/) lägger på en extra lager utöver GDPR. För högrisksystem (vilket många företagsanvändningar inte är) kommer krav på dokumentation, riskbedömning och transparens. För general purpose AI-modeller finns specifika krav på leverantörerna, vilket är en orsak att välja en leverantör som tar EU-marknaden på allvar.
+
+## Hur ofta ändras detta?
+
+Dataskyddspolicies hos AI-leverantörer ändras snabbt. OpenAI har ändrat sina villkor sex gånger under 2023-2025. Google har separerat och konsoliderat Gemini och Bard flera gånger. Mistral är yngst och uppdaterar oftast.
+
+Praktiskt råd: gör en årlig översyn av leverantörsavtalet, inte mer sällan. Skriv in i upphandlingsprocessen att DPA ska ses över om villkoren ändras väsentligt.
+
+## Vanliga frågor om AI-dataskydd
+
+<FAQ items={[
+  { q: "Vilken AI-tjänst skyddar mina data bäst som default?", a: "Anthropic Claude och Mistral har båda starkast default-skydd, eftersom de inte tränar på input ens i konsumentversionerna. OpenAI, Google och Meta tränar som default i sina konsumentprodukter och kräver att du aktivt slår av det." },
+  { q: "Räcker det att slå av träning i ChatGPT-inställningarna?", a: "Det stoppar träning, men din input sparas fortfarande i 30 dagar för abuse monitoring. För komplett retention-kontroll krävs ChatGPT Enterprise med Zero Data Retention eller Azure OpenAI." },
+  { q: "Vad är skillnaden mellan Gemini och Vertex AI?", a: "Gemini är konsumentprodukten som loggar konversationer i 18 månader och kan använda dem för Google-produkter. Vertex AI är molntjänsten med samma modeller men företagsskydd, ingen träning, EU-regioner och DPA." },
+  { q: "Är Mistral säkrare än OpenAI ur GDPR-synpunkt?", a: "Mistral har fördelar: franskt företag, EU-hostat, default ingen träning och tydlig GDPR-positionering. För svenska företag är det ofta enklare att försvara i en DPIA än OpenAI. Funktionellt är OpenAI fortfarande mer kapabelt på flera områden." },
+  { q: "Vad innebär Zero Data Retention?", a: "ZDR är ett avtal där din input och output inte sparas alls efter att svaret returnerats. Inga loggar, ingen träningsanvändning, inget abuse-monitoring-fönster. Tillgängligt hos OpenAI Enterprise, Anthropic via avtal, Google Vertex och Azure OpenAI." },
+  { q: "Tränar Meta fortfarande på EU-användardata?", a: "Meta pausade träning på EU-användardata i juni 2024 efter tillsynspress. Situationen är instabil och de har signalerat avsikt att återuppta. Använd opt-out-formuläret och bevaka utvecklingen om du använder Meta AI eller WhatsApp AI." },
+]} />
+
+## Vad härnäst?
+
+Dataskydd är grunden, men det praktiska arbetet med policy och utbildning är minst lika viktigt. Läs vidare om [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) för juridiken, och om [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/) för hur ni omsätter det till regler personalen faktiskt följer.

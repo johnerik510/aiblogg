@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="404 — sidan finns inte" description="Sidan du letar efter finns inte." noindex={true}>
+  <section class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+    <div class="label mb-4">Felkod 404</div>
+    <h1 class="display text-5xl md:text-6xl mb-4"><span class="gradient-text">404</span></h1>
+    <p class="text-lg text-[var(--color-text-light)] mb-8">Sidan du letar efter finns inte, eller har flyttat.</p>
+    <a href="/" class="inline-flex items-center gap-2 px-5 py-3 bg-[var(--color-accent)] text-[var(--color-bg)] rounded-lg font-medium glow-cta">Tillbaka till startsidan →</a>
+  </section>
+</BaseLayout>

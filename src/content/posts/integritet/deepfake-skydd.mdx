@@ -1,0 +1,122 @@
+---
+title: "Deepfake 2026, så skyddar du dig och företaget"
+excerpt: "AI-genererad röst och video används i bedrägerier mot svenska företag varje vecka. Genomgång av tekniken, vanliga upplägg och konkret skydd."
+category: "integritet"
+publishDate: "2026-05-12"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+Deepfake har gått från forskningsexperiment till operativt bedrägeriverktyg på fyra år. Svenska polisens nationella bedrägericentrum hanterar nu deepfake-relaterade ärenden veckovis, och flera svenska företag har förlorat miljonbelopp på röstklonade VD-bedrägerier under 2024 och 2025.
+
+Den här artikeln går igenom tekniken bakom deepfakes, de konkreta uppläggen som drabbat svenska företag, och vad du gör för att skydda dig själv och organisationen. BankID-aspekten täcks separat eftersom den är den vanligaste oron just nu.
+
+## Vad en deepfake faktiskt är
+
+En deepfake är AI-genererad media (röst, video eller bild) som efterliknar en specifik verklig person. Tekniken bygger på generativa modeller (GAN, diffusion eller transformerbaserade) som tränas på existerande material av målpersonen för att lära sig deras drag, röstläge och manér.
+
+Tre kategorier är aktuella 2026:
+
+**Röstklonade samtal.** Behöver bara 10-30 sekunder ljud för att skapa en övertygande röst. Verktyg som ElevenLabs, Resemble AI och flera open source-projekt gör detta tillgängligt för någon med grundläggande tekniskt intresse.
+
+**Videodeepfakes.** Kräver mer material och datorkraft men har blivit hanterbart. Live-deepfake i Zoom eller Teams är nu möjligt med konsumenthårdvara och färdiga pipelines.
+
+**Bilddeepfakes.** Det enklaste och äldsta området. Verktyg som Midjourney och Stable Diffusion kan skapa fotorealistiska bilder av specifika personer från offentligt material.
+
+<Callout type="warning" title="Detta är inte science fiction längre">
+  De flesta deepfake-bedrägerier mot svenska företag 2024-2025 utfördes med konsumentverktyg som kostade under 1000 kronor i månaden. Tröskeln är låg och fallande.
+</Callout>
+
+## De svenska bedrägerifallen
+
+Tre upplägg dominerar enligt Polisens nationella bedrägericentrum:
+
+**CEO-bedrägeri med röstkloning.** Ekonomichefen får ett samtal från "VD" som låter exakt som vanligt. Frågar om en brådskande betalning till en ny leverantör. Vill helst inte gå via vanliga rutiner eftersom det är konfidentiellt. Flera svenska företag har förlorat 500 000 till 4 miljoner kronor på enskilda transaktioner i denna typ av upplägg.
+
+**Barnbarnsbedrägeri 2.0.** Den klassiska "ring från en olycka och behöver pengar" har uppgraderats med röstklonad barnbarnsröst. Pensionerade svenska föräldrar har förlorat sparpengar efter samtal från vad de trodde var deras gråtande barnbarn.
+
+**Investeringsbedrägeri med deepfake-video.** Falska videor med kända personer (Carolina Klüft, Magdalena Andersson, Skavlan) marknadsför påstådda investeringsplattformar. Sprids på Facebook och YouTube. Offren förlorar oftast i intervallet 50 000 till 1 miljon kronor.
+
+{/* INLINE-BILD: Mörk bild av en mobiltelefon med ett inkommande "VD"-samtal och en illustration av en ljudvågform */}
+
+## Varför svenska företag är extra utsatta
+
+Svenska företag har två sårbarheter som utländska bedragare exploaterar:
+
+1. **Platt organisationsstruktur.** Ekonomiavdelningen har ofta direktkontakt med ledningen och högt förtroende, vilket gör CEO-fraud effektivt.
+2. **LinkedIn-transparens.** Svensk företagskultur är generös med jobbtitlar, ansvarsområden och organisationsstruktur på LinkedIn, vilket ger bedragare exakt social karta.
+
+Lägg därtill att stora delar av kommunikationen sker över telefon och chatt utan formell verifiering, och du har en miljö där ett röstklonat samtal från "VD" kan slinka igenom utan att någon frågar.
+
+## BankID och deepfakes, vad du behöver veta
+
+BankID har varit en återkommande oro: kan en deepfake video lura BankID:s ansiktsverifiering? Det korta svaret är att BankID inte använder ansiktsigenkänning. Du loggar in med PIN-kod på din egen telefon, och biometrin (Face ID eller fingeravtryck) sker lokalt på enheten via Apples eller Googles säkerhetschip.
+
+Det innebär att en deepfake-video av dig inte kan logga in med ditt BankID. Bedragaren behöver fysisk tillgång till din telefon plus din PIN-kod, eller använda social engineering för att få dig att själv autentisera mot en bluffsida.
+
+**Den faktiska BankID-risken med AI är social engineering.** Deepfake-samtal från "banken" eller "polisen" som ber dig BankID-verifiera dig "för att stoppa ett pågående bedrägeri" är det vanligaste upplägget. BankID:s teknik är intakt, mänskligt beteende är attackvektorn.
+
+## Konkret skydd för individen
+
+För privatpersoner är de viktigaste åtgärderna:
+
+- **Etablera en kodfras** med nära familj som ska användas vid alla oväntade pengabegäran. En enkel fråga som "vad hette vår första hund" stoppar nästan alla röstklonade barnbarn.
+- **Lägg på vid oväntade samtal** från bank, polis eller Skatteverket och ring upp på det officiella numret. Ingen seriös aktör kräver omedelbart agerande utan möjlighet att ringa tillbaka.
+- **Verifiera BankID-prompts noga.** Läs alltid texten i BankID-appen innan du knappar in din kod. Om texten ber dig "verifiera identitet hos Telia" och du inte initierat det, är det ett bedrägeri.
+- **Höj sekretessen på sociala medier.** Färre ljudklipp och videor offentligt ger mindre träningsmaterial för bedragare.
+
+## Konkret skydd för företaget
+
+Företaget behöver tekniska och organisatoriska kontroller:
+
+- **Tvåpersonsprincip för betalningar över en viss gräns.** Aldrig en enskild person som godkänner stora transaktioner, oavsett vem som ringt.
+- **Verifieringssamtal till känt nummer.** Vid varje "brådskande" begäran från ledning eller leverantör, ring upp på det nummer ni har i systemen, inte det nummer som ringt in eller stått i mejlet.
+- **Kodord internt för känsliga ärenden.** Som kompletterande verifiering vid telefonsamtal.
+- **Utbildning med konkreta exempel.** Generella säkerhetsutbildningar är bortglömda inom en vecka. Spela upp en faktisk röstklonad inspelning på personalmötet.
+- **Begränsa offentlig information om organisationsstruktur.** Det är en avvägning mot transparens, men särskilt ekonomi och inköp bör vara mindre exponerade på LinkedIn.
+
+En del av detta hör hemma i en formell [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/), men de operativa rutinerna runt betalningar är minst lika viktiga som vad som står i policyn.
+
+## Tekniska detektionsverktyg
+
+Det finns deepfake-detektorer men de är inte tillräckligt pålitliga för operativt skydd. Microsoft Video Authenticator, Intel FakeCatcher och flera akademiska projekt har träffsäkerhet i intervallet 75-90 procent på testdata, men sjunker kraftigt på nyare modeller och i realtid.
+
+Verktyg som Reality Defender och Pindrop används av banker och callcenters för automatisk röstanalys i realtid. De är dyra och inte tillgängliga för enskilda företag, men ger en signal som kan kombineras med rutinkontroller.
+
+För enskilda är det viktigare att veta att tekniska detektorer **inte är ett pålitligt skydd**. Det är rutiner och verifiering som stoppar deepfake-bedrägerier, inte AI-verktyg som spårar AI-verktyg.
+
+## Vad lagstiftningen säger
+
+[EU AI Act](/samhalle/eu-ai-act-sverige/) klassar deepfake som transparenspliktigt material. Den som publicerar en deepfake måste märka den som AI-genererad. Brott mot detta kan ge sanktioner från och med februari 2026.
+
+Svensk strafflag täcker redan bedrägerier oavsett om de utförs med deepfake-teknik eller utan, men utredningsmöjligheterna är begränsade eftersom förövare ofta sitter utomlands. Polisen har under 2024-2025 byggt upp specialistkompetens inom området, men resurserna är fortfarande pressade.
+
+<Callout type="tip" title="Anmäl alltid">
+  Även om återbetalning är osannolik vid utländska bedragare hjälper anmälningar polisen att kartlägga mönster och varna andra. Bedrägericentrum på 114 14 tar emot anmälningar dygnet runt." 
+</Callout>
+
+## Var deepfake-tekniken är på väg
+
+Tre trender är värda att hålla koll på under 2026-2027:
+
+**Realtids-video-deepfake** har blivit tillgängligt på konsumenthårdvara. Det innebär att en bedragare kan starta ett Zoom-möte som vem som helst, med både röst och ansikte. Företagsmöten med okända deltagare bör därför behandlas med samma misstänksamhet som telefonsamtal.
+
+**Personliga deepfakes** där bedragaren tränar modellen på offentligt material från specifik person blir snabbare och billigare. Det som krävde 100 bilder och flera timmar 2023 kräver 10 bilder och några minuter 2026.
+
+**Defense in depth** blir den dominerande strategin. Ingen enskild kontroll räcker. Det är kombinationen av tekniska kontroller, rutiner, utbildning och kultur som skyddar.
+
+## Vanliga frågor om deepfake
+
+<FAQ items={[
+  { q: "Kan en deepfake lura BankID?", a: "Nej, inte tekniskt. BankID använder inte ansiktsigenkänning, utan PIN-kod och lokal biometri på din egen enhet. Den faktiska risken är social engineering där deepfake-samtal övertalar dig att själv BankID-verifiera mot en bluffsida." },
+  { q: "Hur mycket ljud krävs för att klona min röst?", a: "Moderna verktyg som ElevenLabs och Resemble AI behöver bara 10-30 sekunder rent ljud för en övertygande klon. Längre material ger bättre resultat, men tröskeln är låg." },
+  { q: "Vilka deepfake-bedrägerier är vanligast i Sverige?", a: "Polisens nationella bedrägericentrum rapporterar tre dominerande upplägg: CEO-bedrägeri med röstklonad VD som beordrar brådskande betalning, barnbarnsbedrägeri med klonad ungdomsröst, och investeringsbluffar med deepfake-video av kända svenskar." },
+  { q: "Fungerar deepfake-detektorer?", a: "Tekniska detektorer har 75-90 procent träffsäkerhet på testdata men presterar sämre på nyare modeller och i realtid. De ger en signal, inte ett skydd. Rutiner och verifiering stoppar deepfake-bedrägerier, inte AI-verktyg." },
+  { q: "Vad gör jag om jag har blivit utsatt för deepfake-bedrägeri?", a: "Anmäl direkt till polisen via 114 14 eller polisen.se. Kontakta banken om pengar har överförts. Spara all kommunikation som bevis. Återbetalning är ofta svår eftersom bedragare sitter utomlands, men anmälan hjälper polisen att kartlägga mönster." },
+  { q: "Är det olagligt att skapa deepfakes?", a: "Att skapa deepfake för bedrägeri, ärekränkning eller barnpornografi är brottsligt i Sverige. EU AI Act lägger till transparensplikt: deepfakes som publiceras måste märkas som AI-genererade. Att skapa en deepfake av sig själv eller med samtycke är inte i sig olagligt." },
+]} />
+
+## Vad härnäst?
+
+Deepfake är bara en del av en bredare AI-bedrägerivåg. Läs vidare om [AI-bedrägerier i Sverige](/integritet/ai-bedragerier-sverige/) för en genomgång av övriga upplägg, och om [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/) för hur organisationer bygger in skyddet operativt.
