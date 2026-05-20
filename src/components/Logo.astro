@@ -1,0 +1,54 @@
+---
+export interface Props {
+  size?: number;
+  withText?: boolean;
+  class?: string;
+}
+const { size = 28, withText = true, class: cls = '' } = Astro.props;
+---
+<span class={`inline-flex items-center gap-2 ${cls}`}>
+  <span class="relative inline-flex" style={`width:${size}px;height:${size}px`}>
+    <svg
+      viewBox="0 0 32 32"
+      width={size}
+      height={size}
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      class="relative z-10"
+    >
+      <defs>
+        <linearGradient id="aiblogg-logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00E5FF" />
+          <stop offset="60%" stop-color="#5BC2FF" />
+          <stop offset="100%" stop-color="#8B5CF6" />
+        </linearGradient>
+        <linearGradient id="aiblogg-logo-grad-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.7" />
+          <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.7" />
+        </linearGradient>
+      </defs>
+      <!-- Yttre 4-poäng spark (huvudform) -->
+      <path
+        d="M16 1.5 L18.5 13.5 L30.5 16 L18.5 18.5 L16 30.5 L13.5 18.5 L1.5 16 L13.5 13.5 Z"
+        fill="url(#aiblogg-logo-grad)"
+      />
+      <!-- Inre mindre spark (diagonal) -->
+      <path
+        d="M22 6 L23 10 L27 11 L23 12 L22 16 L21 12 L17 11 L21 10 Z"
+        fill="url(#aiblogg-logo-grad-glow)"
+        opacity="0.85"
+      />
+      <!-- Centrum-punkt -->
+      <circle cx="16" cy="16" r="1.6" fill="#0A0A0B" />
+      <circle cx="16" cy="16" r="0.7" fill="#00E5FF" />
+    </svg>
+    <!-- Glow-halo bakom -->
+    <span
+      class="absolute inset-0 rounded-full blur-md opacity-50 pointer-events-none"
+      style="background: radial-gradient(circle, rgba(0,229,255,0.6) 0%, rgba(139,92,246,0.4) 50%, transparent 80%);"
+    ></span>
+  </span>
+  {withText && (
+    <span class="font-semibold tracking-tight">aiblogg<span class="text-[var(--color-text-lighter)] font-normal">.se</span></span>
+  )}
+</span>

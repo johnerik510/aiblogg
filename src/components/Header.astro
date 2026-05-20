@@ -1,16 +1,12 @@
 ---
 import { clusters } from '../data/articles';
-import { site } from '../data/site';
+import Logo from './Logo.astro';
 ---
 <header class="sticky top-0 z-40 backdrop-blur-xl bg-[var(--color-bg)]/80 border-b border-[var(--color-border)]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2 group">
-        <span class="relative">
-          <span class="block w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)] opacity-90 group-hover:opacity-100 transition-opacity"></span>
-          <span class="absolute inset-0 w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)] blur-md opacity-40"></span>
-        </span>
-        <span class="font-semibold text-[1.05rem] tracking-tight">{site.name}</span>
+      <a href="/" class="group" aria-label="aiblogg.se startsida">
+        <Logo size={30} class="text-[1.05rem] group-hover:opacity-90 transition-opacity" />
       </a>
 
       <nav class="hidden md:flex items-center gap-1" aria-label="Huvudnavigering">

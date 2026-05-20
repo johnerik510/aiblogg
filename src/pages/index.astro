@@ -20,11 +20,11 @@ const sideArticles = recent.slice(1, 5);
       <div>
         <div class="label mb-3 flex items-center gap-2">
           <span class="inline-block w-1.5 h-1.5 rounded-full bg-[var(--color-accent)] shadow-[0_0_8px_var(--color-accent)]"></span>
-          AI på svenska
+          AI-nyheter på svenska, 2026
         </div>
         <h1 class="display text-4xl sm:text-5xl md:text-6xl max-w-3xl">
           AI utan <span class="gradient-text">hype</span>.<br/>
-          Nyheter, guider och verktyg.
+          AI-nyheter, guider och verktyg på svenska.
         </h1>
       </div>
       <p class="text-[var(--color-text-light)] max-w-md text-base leading-relaxed">AI-nyheter, jämförelser av AI-verktyg och praktiska guider på svenska. Oberoende redaktion utan techbolagshype, sedan 2026.</p>
@@ -72,8 +72,8 @@ const sideArticles = recent.slice(1, 5);
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
       <div class="flex items-end justify-between mb-8">
         <div>
-          <div class="label mb-2">Redaktionens utvalda</div>
-          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Att börja med</h2>
+          <div class="label mb-2">Cornerstone-guider</div>
+          <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Bästa AI-guiderna på svenska att börja med</h2>
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -102,7 +102,7 @@ const sideArticles = recent.slice(1, 5);
     <div class="flex items-end justify-between mb-8">
       <div>
         <div class="label mb-2">Bläddra efter ämne</div>
-        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Kategorier</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">AI-kategorier: verktyg, guider, jobb, säkerhet</h2>
       </div>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -130,7 +130,7 @@ const sideArticles = recent.slice(1, 5);
     <div class="flex items-end justify-between mb-8">
       <div>
         <div class="label mb-2">Senaste från redaktionen</div>
-        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Nyligen publicerat</h2>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight">Senaste AI-nyheter och guider på svenska</h2>
       </div>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -158,14 +158,14 @@ const sideArticles = recent.slice(1, 5);
   <!-- Editor / E-E-A-T-signal -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-[var(--color-border)]">
     <div class="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-8 items-start max-w-4xl">
-      <img src={site.author.image} alt={`Porträtt av ${site.author.name}`} width="200" height="200" loading="lazy" class="rounded-xl w-full max-w-[200px] aspect-square object-cover border border-[var(--color-border)]" />
+      <img src={site.author.image} alt={`Porträtt av AI-skribenten ${site.author.name}`} width="200" height="200" loading="lazy" class="rounded-xl w-full max-w-[200px] aspect-square object-cover border border-[var(--color-border)]" />
       <div>
-        <div class="label mb-2">Bakom redaktionen</div>
-        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">{site.author.name}</h2>
-        <div class="text-[var(--color-text-lighter)] mb-4 mono text-sm">{site.author.role}</div>
+        <div class="label mb-2">Skribenten bakom aiblogg.se</div>
+        <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-2">{site.author.name}, {site.author.role}</h2>
+        <div class="text-[var(--color-text-lighter)] mb-4 mono text-sm">Civilingenjör KTH, 8 år maskininlärning</div>
         <p class="text-[var(--color-text-light)] leading-relaxed mb-5">{site.author.bio}</p>
-        <a href="/redaktionen/" class="inline-flex items-center gap-2 text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors">
-          Läs hela redaktionssidan <span aria-hidden="true">→</span>
+        <a href="/redaktionen/adrian-hellstrom/" class="inline-flex items-center gap-2 text-sm text-[var(--color-accent)] hover:text-[var(--color-text)] transition-colors">
+          Adrians skribentsida <span aria-hidden="true">→</span>
         </a>
       </div>
     </div>

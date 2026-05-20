@@ -1,6 +1,7 @@
 ---
 import { clusters, recentArticles } from '../data/articles';
 import { site } from '../data/site';
+import Logo from './Logo.astro';
 const year = new Date().getFullYear();
 const recent = recentArticles(4);
 ---
@@ -8,12 +9,8 @@ const recent = recentArticles(4);
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-10">
     <div class="grid grid-cols-2 md:grid-cols-12 gap-8 mb-12">
       <div class="col-span-2 md:col-span-4">
-        <div class="flex items-center gap-2 mb-4">
-          <span class="relative">
-            <span class="block w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)]"></span>
-            <span class="absolute inset-0 w-7 h-7 rounded-md bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-violet)] blur-md opacity-40"></span>
-          </span>
-          <span class="font-semibold tracking-tight text-[1.05rem]">{site.name}</span>
+        <div class="mb-4">
+          <Logo size={30} class="text-[1.05rem]" />
         </div>
         <p class="text-sm text-[var(--color-text-light)] max-w-md mb-5 leading-relaxed">{site.description}</p>
         <p class="text-xs text-[var(--color-text-lighter)] mb-1">

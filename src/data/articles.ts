@@ -3,6 +3,8 @@ export interface Cluster {
   url: string;
   label: string;
   shortLabel: string;
+  /** Synlig H1 på kategorisidan (innehåller primärsökord) */
+  h1: string;
   /** SEO title för meta-tag (35-65 tecken, innehåller primärsökord) */
   seoTitle: string;
   /** Meta description (120-160 tecken, innehåller primärsökord) */
@@ -42,9 +44,10 @@ export const clusters: Cluster[] = [
     url: '/verktyg/',
     label: 'AI-verktyg',
     shortLabel: 'Verktyg',
+    h1: 'AI-verktyg på svenska 2026',
     seoTitle: 'AI-verktyg på svenska 2026: alla recensioner och jämförelser',
     seoDescription: 'Genomgångar av de bästa AI-verktygen på svenska 2026. ChatGPT, Claude, Gemini, Perplexity, Cursor och Midjourney testade hands-on av oberoende redaktion.',
-    intro: 'Här samlar vi genomgångar och jämförelser av de AI-verktyg som svenska användare faktiskt har nytta av. Vi testar verktygen hands-on på riktiga uppgifter och förklarar vad som skiljer dem åt, så du slipper läsa marknadsföringssidor.',
+    intro: 'Här samlar vi genomgångar och jämförelser av AI-verktyg på svenska, för svenska användare som faktiskt vill få jobb gjort. Vi testar varje verktyg hands-on på riktiga uppgifter, jämför mot konkurrenter och förklarar var de är bäst och var de havererar.',
     accent: 'cyan',
   },
   {
@@ -52,9 +55,10 @@ export const clusters: Cluster[] = [
     url: '/guider/',
     label: 'AI-guider',
     shortLabel: 'Guider',
+    h1: 'AI-guider på svenska 2026',
     seoTitle: 'AI-guider på svenska 2026: praktiska steg-för-steg-genomgångar',
     seoDescription: 'Praktiska AI-guider på svenska. Prompting, ChatGPT-funktioner, AI i Excel, sammanfatta dokument och bygga AI-arbetsflöden steg för steg.',
-    intro: 'AI-verktyg är bara värdefulla när du vet hur du faktiskt använder dem. Här samlar vi steg-för-steg-guider som tar dig från registrering till resultat, oavsett om det gäller ChatGPT, Copilot eller andra tjänster.',
+    intro: 'AI-guider på svenska som tar dig från registrering till färdigt resultat. Steg för steg, med konkreta promptar och verktygsval, oavsett om det gäller ChatGPT, Copilot, Gemini eller någon annan tjänst.',
     accent: 'cyan',
   },
   {
@@ -62,9 +66,10 @@ export const clusters: Cluster[] = [
     url: '/jobb/',
     label: 'AI jobb och företag',
     shortLabel: 'Jobb',
+    h1: 'AI jobb och företag: så används AI på svenska arbetsplatser',
     seoTitle: 'AI jobb och företag: så används AI på svenska arbetsplatser 2026',
     seoDescription: 'AI jobb, småföretag, mötesprotokoll, automation och kundtjänst. Hur AI faktiskt används på svenska arbetsplatser, vad som fungerar och AI-policy.',
-    intro: 'AI används redan på de flesta arbetsplatser, men sällan strukturerat. Här tittar vi på AI jobb och företagsanvändning, vad som fungerar, vad som inte fungerar, och vad ledningen borde tänka på innan de skalar upp.',
+    intro: 'AI jobb och företagsanvändning förändrar svenska arbetsplatser snabbare än policydokumenten hänger med. Här tittar vi på vad som faktiskt fungerar i praktiken, vad som inte fungerar, och vad ledningen behöver veta innan de skalar AI-verktyg över hela organisationen.',
     accent: 'violet',
   },
   {
@@ -72,9 +77,10 @@ export const clusters: Cluster[] = [
     url: '/integritet/',
     label: 'AI-säkerhet och integritet',
     shortLabel: 'Säkerhet',
+    h1: 'AI-säkerhet och integritet 2026',
     seoTitle: 'AI-säkerhet och integritet 2026: GDPR, dataskydd och deepfakes',
     seoDescription: 'AI-säkerhet, GDPR och ChatGPT, deepfakes och AI-bedrägerier. Vad du måste veta om AI och dataskydd 2026 innan du klistrar in företagets uppgifter.',
-    intro: 'AI-tjänster läser, lagrar och tränar ofta på det du skickar in. Här går vi igenom AI-säkerhet och integritet konkret: vad GDPR säger om ChatGPT, hur deepfakes används i bedrägerier och hur du skyddar dig och företaget.',
+    intro: 'AI-säkerhet och integritet är 2026 ett verkligt företagsproblem, inte ett teoretiskt sådant. AI-tjänster läser, lagrar och tränar ofta på det du skickar in. Här går vi igenom riskerna konkret: vad GDPR säger om ChatGPT, hur deepfakes används i bedrägerier mot svenska företag, och hur du skyddar dig.',
     accent: 'violet',
   },
   {
@@ -82,9 +88,10 @@ export const clusters: Cluster[] = [
     url: '/bild-och-video/',
     label: 'AI-bilder & video',
     shortLabel: 'Bild & video',
+    h1: 'AI-bilder och AI-video på svenska 2026',
     seoTitle: 'AI-bilder och video på svenska 2026: alla guider och verktyg',
     seoDescription: 'Skapa AI-bilder och AI-video på svenska. Midjourney, DALL-E, Sora, Runway och AI-bilder gratis. Alla våra guider och verktygsjämförelser.',
-    intro: 'Generativ bild och video har gått från experiment till verktygslåda på två år. Vi visar vilka verktyg som faktiskt fungerar, hur du skapar bra AI-bilder gratis, och hur juridiken kring AI-genererat innehåll ser ut i Sverige.',
+    intro: 'AI-bilder och AI-video har gått från experiment till verktygslåda på två år. Vi visar hur du skapar AI-bilder gratis, vilka generatorer som faktiskt levererar, och hur juridiken kring AI-genererat innehåll fungerar i Sverige.',
     accent: 'cyan',
   },
   {
@@ -92,9 +99,10 @@ export const clusters: Cluster[] = [
     url: '/samhalle/',
     label: 'AI och samhälle',
     shortLabel: 'Samhälle',
+    h1: 'AI och samhälle 2026: EU AI Act, jobben och Sverige',
     seoTitle: 'AI och samhälle 2026: EU AI Act, jobben och svensk politik',
     seoDescription: 'AI och samhället: EU AI Act, svensk AI-strategi, AI och jobben, AI i skolan och energiåtgång. Nykter analys av AI-utvecklingen i Sverige.',
-    intro: 'AI förändrar arbetsmarknaden, lagstiftningen och energisystemet samtidigt. Vi följer utvecklingen i Sverige och EU och försöker skilja på reella effekter och hypeartiklar.',
+    intro: 'AI och samhället förändras parallellt. EU AI Act, svensk AI-strategi, arbetsmarknadens omställning, AI i skolan och datacenterns elförbrukning är alla delar av samma utveckling. Vi följer det som faktiskt händer i Sverige och Europa, och försöker skilja på reella effekter och hypeartiklar.',
     accent: 'violet',
   },
 ];
