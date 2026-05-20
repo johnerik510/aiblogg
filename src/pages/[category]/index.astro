@@ -10,7 +10,7 @@ export function getStaticPaths() {
 }
 
 const { cluster } = Astro.props;
-const all = articlesByCluster(cluster.slug);
+const all = articlesByCluster(cluster.slug).sort((a, b) => b.publishDate.localeCompare(a.publishDate));
 const cornerstones = all.filter(a => a.cornerstone);
 const others = all.filter(a => !a.cornerstone);
 
@@ -57,65 +57,55 @@ const isViolet = cluster.accent === 'violet';
     </div>
 
     {cornerstones.length > 0 && (
-      <section class="mb-14">
-        <div class="flex items-end justify-between mb-6">
-          <div>
-            <div class="label mb-2">Börja här</div>
-            <h2 class="text-xl font-semibold tracking-tight">Cornerstone-guider</h2>
-          </div>
-        </div>
-        <div class={`grid grid-cols-1 ${cornerstones.length > 1 ? 'md:grid-cols-2' : ''} gap-5`}>
-          {cornerstones.map(a => (
-            <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
-              <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-                <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
-              </a>
-              <div class="p-6">
-                <div class="flex items-center gap-2 mb-2">
-                  <span class="label text-[var(--color-accent)]">Cornerstone</span>
-                  <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                  <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
-                  <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                  <span class="mono text-xs text-[var(--color-text-lighter)]">{a.readingTime} min</span>
+      <section class="mb-12">
+        <div class="label mb-5">Börja här, cornerstone-guider</div>
+        <ol class="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
+          {cornerstones.map((a, i) => (
+            <li class="group">
+              <a href={a.url} class="grid grid-cols-[40px_1fr_auto] sm:grid-cols-[60px_1fr_180px] gap-4 sm:gap-8 items-baseline py-5 hover:bg-[var(--color-bg-card)] transition-colors px-2 -mx-2 rounded-md">
+                <span class="mono text-sm text-[var(--color-violet)] tabular-nums pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+                <div class="min-w-0">
+                  <div class="flex flex-wrap items-center gap-x-3 mb-1.5">
+                    <span class="label text-[var(--color-violet)]">Cornerstone</span>
+                    <span class="mono text-xs text-[var(--color-text-dim)] sm:hidden">·</span>
+                    <time class="mono text-xs text-[var(--color-text-lighter)] sm:hidden">{formatDate(a.publishDate)}</time>
+                  </div>
+                  <h2 class="font-semibold text-lg md:text-xl leading-snug tracking-tight text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors mb-1">{a.title}</h2>
+                  <p class="text-sm text-[var(--color-text-light)] leading-relaxed line-clamp-2 sm:line-clamp-1">{a.excerpt}</p>
                 </div>
-                <h3 class="font-semibold text-xl md:text-2xl leading-snug tracking-tight mb-2">
-                  <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
-                </h3>
-                <p class="text-sm text-[var(--color-text-light)] leading-relaxed">{a.excerpt}</p>
-              </div>
-            </article>
+                <div class="hidden sm:block text-right">
+                  <time class="mono text-xs text-[var(--color-text-lighter)] block">{formatDate(a.publishDate)}</time>
+                  <span class="mono text-xs text-[var(--color-text-dim)] block mt-0.5">{a.readingTime} min läsning</span>
+                </div>
+              </a>
+            </li>
           ))}
-        </div>
+        </ol>
       </section>
     )}
 
     <section>
-      <div class="flex items-end justify-between mb-6">
-        <div>
-          <div class="label mb-2">Alla artiklar i {cluster.shortLabel.toLowerCase()}</div>
-          <h2 class="text-xl font-semibold tracking-tight">{all.length} artiklar</h2>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {(cornerstones.length > 0 ? others : all).map(a => (
-          <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
-            <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-              <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </a>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2">
-                <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
-                <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                <span class="mono text-xs text-[var(--color-text-lighter)]">{a.readingTime} min</span>
+      <div class="label mb-5">{cornerstones.length > 0 ? `Fler artiklar i ${cluster.shortLabel.toLowerCase()}` : `Alla artiklar i ${cluster.shortLabel.toLowerCase()}`}</div>
+      <ol class="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
+        {(cornerstones.length > 0 ? others : all).map((a, i) => (
+          <li class="group">
+            <a href={a.url} class="grid grid-cols-[40px_1fr_auto] sm:grid-cols-[60px_1fr_180px] gap-4 sm:gap-8 items-baseline py-5 hover:bg-[var(--color-bg-card)] transition-colors px-2 -mx-2 rounded-md">
+              <span class="mono text-sm text-[var(--color-text-dim)] tabular-nums pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+              <div class="min-w-0">
+                <div class="flex flex-wrap items-center gap-x-3 mb-1.5 sm:hidden">
+                  <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(a.publishDate)}</time>
+                </div>
+                <h2 class="font-semibold text-lg md:text-xl leading-snug tracking-tight text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors mb-1">{a.title}</h2>
+                <p class="text-sm text-[var(--color-text-light)] leading-relaxed line-clamp-2 sm:line-clamp-1">{a.excerpt}</p>
               </div>
-              <h3 class="font-semibold text-[1.05rem] leading-snug tracking-tight mb-2">
-                <a href={a.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{a.title}</a>
-              </h3>
-              <p class="text-sm text-[var(--color-text-light)] line-clamp-2 leading-relaxed">{a.excerpt}</p>
-            </div>
-          </article>
+              <div class="hidden sm:block text-right">
+                <time class="mono text-xs text-[var(--color-text-lighter)] block">{formatDate(a.publishDate)}</time>
+                <span class="mono text-xs text-[var(--color-text-dim)] block mt-0.5">{a.readingTime} min läsning</span>
+              </div>
+            </a>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   </section>
 </BaseLayout>

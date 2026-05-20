@@ -61,26 +61,23 @@ const written = publishedArticles
 
     <section class="mt-12 pt-10 border-t border-[var(--color-border)]">
       <div class="label mb-3">Senast publicerat av {a.name}</div>
-      <h2 class="text-2xl font-semibold tracking-tight mb-8">Artiklar</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {written.map(art => (
-          <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
-            <a href={art.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-              <img src={art.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            </a>
-            <div class="p-5">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="label text-[var(--color-accent)]">{art.categoryLabel}</span>
-                <span class="mono text-xs text-[var(--color-text-dim)]">·</span>
-                <time class="mono text-xs text-[var(--color-text-lighter)]">{formatDate(art.publishDate)}</time>
+      <h2 class="text-2xl font-semibold tracking-tight mb-6">Artiklar</h2>
+      <ol class="divide-y divide-[var(--color-border)] border-y border-[var(--color-border)]">
+        {written.map((art, i) => (
+          <li class="group">
+            <a href={art.url} class="grid grid-cols-[40px_1fr_auto] sm:grid-cols-[60px_1fr_140px] gap-4 sm:gap-8 items-baseline py-5 hover:bg-[var(--color-bg-card)] transition-colors px-2 -mx-2 rounded-md">
+              <span class="mono text-sm text-[var(--color-text-dim)] tabular-nums pt-0.5">{String(i + 1).padStart(2, '0')}</span>
+              <div class="min-w-0">
+                <div class="flex items-center gap-3 mb-1.5">
+                  <span class="label text-[var(--color-accent)]">{art.categoryLabel}</span>
+                </div>
+                <h3 class="font-semibold text-base md:text-lg leading-snug tracking-tight text-[var(--color-text)] group-hover:text-[var(--color-accent)] transition-colors">{art.title}</h3>
               </div>
-              <h3 class="font-semibold text-[1.02rem] leading-snug tracking-tight">
-                <a href={art.url} class="text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">{art.title}</a>
-              </h3>
-            </div>
-          </article>
+              <time class="mono text-xs text-[var(--color-text-lighter)] hidden sm:block text-right">{formatDate(art.publishDate)}</time>
+            </a>
+          </li>
         ))}
-      </div>
+      </ol>
     </section>
   </section>
 </BaseLayout>
