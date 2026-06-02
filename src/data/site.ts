@@ -16,8 +16,8 @@ export const site = {
   author: {
     name: 'Adrian Hellström',
     role: 'Chefredaktör & AI-skribent',
-    short: 'Civilingenjör i datateknik (KTH), 8 år med maskininlärning.',
-    bio: 'Adrian Hellström har arbetat med maskininlärning sedan 2017, från rekommendationssystem till språkmodeller och retrieval-pipelines. Han startade aiblogg.se för att svenska läsare ska få tillgång till nyktra, tekniskt grundade genomgångar av AI-verktyg och fältets utveckling, utan techbolagens marknadsföringsspråk.',
+    short: 'Skribent som bevakar AI-verktyg och maskininlärning för svenska läsare.',
+    bio: 'Adrian Hellström startade aiblogg.se för att svenska läsare ska få tillgång till nyktra, faktabaserade genomgångar av AI-verktyg och fältets utveckling, utan techbolagens marknadsföringsspråk. Han bevakar allt från praktiska verktyg till modellnyheter och regulatoriska frågor som påverkar svenska användare.',
     image: '/images/authors/adrian.webp',
     expertise: [
       'Naturlig språkbehandling (NLP)',
