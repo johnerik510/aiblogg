@@ -109,6 +109,19 @@ export const clusters: Cluster[] = [
 
 // 30 artiklar, slugs och titlar SEO-optimerade mot riktiga sökord (Ahrefs Sweden, maj 2026)
 export const articles: Article[] = [
+  // JOBB
+  {
+    slug: 'ai-agenter',
+    url: '/jobb/ai-agenter/',
+    title: 'AI-agenter 2026: vad agentisk AI är och vad den faktiskt klarar',
+    excerpt: 'AI-agenter utför uppgifter på egen hand i stället för att bara svara. Vi förklarar vad agentisk AI är, vad den klarar 2026 och var den fortfarande fallerar på svenska arbetsplatser.',
+    category: 'jobb', categoryLabel: 'AI jobb och företag', categoryUrl: '/jobb/',
+    hero: '/images/inline/ai-agenter.webp',
+    heroAlt: 'Robotassistent som arbetar vid ett skrivbord med datorskärmar',
+    publishDate: '2026-06-15', readingTime: 11, cornerstone: true, published: true,
+    primaryKeyword: 'ai agenter', searchVolume: 300, kd: 6,
+    tags: ['ai-agenter', 'agentisk ai', 'automation'],
+  },
   // VERKTYG (6)
   {
     slug: 'basta-ai-verktyg-svenska',

@@ -1,8 +1,8 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-05-20T13:37:35.754Z
+Genererad: 2026-06-15T08:57:32.329Z
 
-Totalt 30 artiklar. Sorterat efter sämst score först.
+Totalt 31 artiklar. Sorterat efter sämst score först.
 
 ## Översikt
 
@@ -19,11 +19,12 @@ Totalt 30 artiklar. Sorterat efter sämst score först.
 | ai-sverige-strategi | 11/15 | sverige ai strategi | 30 | 4 | 65 | 148 | 1226 | 10 | 7 | 5 | 4 |
 | deepfake-skydd | 12/15 | deepfake | 4500 | 72 | 46 | 140 | 1156 | 11 | 4 | 6 | 3 |
 | ai-bilder-gratis | 12/15 | ai bilder gratis | 1200 | 1 | 55 | 156 | 1154 | 15 | 5 | 6 | 3 |
+| basta-ai-verktyg-svenska | 12/15 | ai verktyg | 900 | 1 | 50 | 183 | 1597 | 15 | 12 | 6 | 3 |
 | perplexity-svenska | 12/15 | perplexity ai | 350 | 8 | 50 | 159 | 1256 | 11 | 4 | 6 | 2 |
 | ai-i-skolan | 12/15 | ai i skolan | 110 | 7 | 64 | 133 | 1346 | 10 | 6 | 6 | 2 |
-| ai-kundtjanst | 12/15 | ai kundtjänst | 90 | 8 | 64 | 149 | 1469 | 11 | 6 | 6 | 2 |
+| ai-kundtjanst | 12/15 | ai kundtjänst | 90 | 8 | 64 | 149 | 1493 | 11 | 6 | 6 | 2 |
 | midjourney-svenska | 12/15 | midjourney svenska | 90 | 2 | 46 | 138 | 1104 | 10 | 5 | 6 | 3 |
-| ai-och-jobben | 12/15 | ai och jobben | 70 | 6 | 56 | 135 | 1315 | 8 | 6 | 6 | 2 |
+| ai-och-jobben | 12/15 | ai och jobben | 70 | 6 | 56 | 135 | 1338 | 8 | 7 | 6 | 2 |
 | dina-data-i-ai | 12/15 | ai dataskydd | 40 | 3 | 60 | 159 | 1114 | 13 | 5 | 6 | 3 |
 | chatgpt-svenska-guide | 13/15 | chatgpt svenska | 27000 | 0 | 55 | 135 | 1798 | 13 | 13 | 8 | 2 |
 | ai-genererade-bilder | 13/15 | ai genererade bilder | 1500 | 0 | 61 | 149 | 1120 | 11 | 5 | 6 | 2 |
@@ -31,13 +32,13 @@ Totalt 30 artiklar. Sorterat efter sämst score först.
 | chatgpt-vs-claude | 13/15 | chatgpt vs claude | 250 | 5 | 56 | 154 | 1221 | 12 | 8 | 6 | 2 |
 | ai-verktyg-gratis | 13/15 | ai verktyg gratis | 200 | 0 | 59 | 151 | 1279 | 18 | 7 | 6 | 2 |
 | vad-ar-chatgpt | 13/15 | vad är chatgpt | 90 | 2 | 48 | 148 | 1284 | 12 | 8 | 5 | 2 |
-| ai-for-smaforetag | 13/15 | ai för småföretag | 80 | 4 | 57 | 158 | 1275 | 12 | 10 | 6 | 2 |
+| ai-for-smaforetag | 13/15 | ai för småföretag | 80 | 4 | 57 | 158 | 1299 | 12 | 11 | 6 | 2 |
 | ai-bedragerier-sverige | 13/15 | ai bedrägeri | 50 | 6 | 50 | 146 | 1296 | 11 | 4 | 6 | 2 |
 | eu-ai-act-sverige | 14/15 | eu ai act | 250 | 12 | 41 | 145 | 1319 | 10 | 6 | 6 | 1 |
 | cursor-ai-svenska | 14/15 | cursor ai | 150 | 4 | 54 | 154 | 1269 | 11 | 4 | 6 | 1 |
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
 | gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1321 | 12 | 6 | 6 | 1 |
-| ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1259 | 7 | 10 | 6 | 1 |
+| ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1294 | 7 | 11 | 6 | 1 |
 
 ## Per artikel: åtgärder
 
@@ -168,6 +169,17 @@ Totalt 30 artiklar. Sorterat efter sämst score först.
 - H2: justera antal till 5-12 (nu 15)
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 - CONTENT: utöka till min 1200 ord (nu 1154)
+
+### basta-ai-verktyg-svenska (score 12/15, vol 900, KD 1)
+
+- **PrimÃ¤rsÃ¶kord:** `ai verktyg`
+- **Titel:** Bästa AI-verktygen 2026, komplett lista på svenska
+- **Meta:** Genomgång av de bästa AI-verktygen för svenska användare. ChatGPT, Claude, Gemini, Perplexity, Cursor, Midjourney och fler, vad de gör, vad de kostar och vilket du ska välja till vad.
+
+Åtgärder:
+- META: justera längd 120-160 tecken (nu 183)
+- H2: justera antal till 5-12 (nu 15)
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
 ### perplexity-svenska (score 12/15, vol 350, KD 8)
 
