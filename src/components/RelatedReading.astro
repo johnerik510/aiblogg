@@ -10,7 +10,7 @@ const { items, title = 'Mer från aiblogg' } = Astro.props;
       {items.map(a => (
         <article class="group rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
           <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-            <img src={a.hero} alt="" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src={a.hero} alt="" width="1600" height="900" loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
           <div class="p-5">
             <div class="flex items-center gap-3 mb-2.5">

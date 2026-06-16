@@ -34,7 +34,7 @@ const sideArticles = recent.slice(1, 5);
       <!-- Lead article -->
       <article class="lg:col-span-8 group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
         <a href={leadArticle.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-          <img src={leadArticle.hero} alt="" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
+          <img src={leadArticle.hero} alt="" width="1600" height="900" loading="eager" fetchpriority="high" class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500" />
         </a>
         <div class="p-6 md:p-8">
           <div class="flex items-center gap-3 mb-3">
@@ -80,7 +80,7 @@ const sideArticles = recent.slice(1, 5);
         {featured.map(a => (
           <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
             <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-              <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src={a.hero} alt="" width="1600" height="900" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
             </a>
             <div class="p-5">
               <div class="flex items-center gap-2 mb-2">
@@ -137,7 +137,7 @@ const sideArticles = recent.slice(1, 5);
       {recent.slice(0, 6).map(a => (
         <article class="group rounded-xl border border-[var(--color-border)] bg-[var(--color-bg-card)] overflow-hidden card-hover">
           <a href={a.url} aria-hidden="true" tabindex="-1" class="block aspect-[16/9] overflow-hidden bg-[var(--color-bg-elevated)]">
-            <img src={a.hero} alt="" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <img src={a.hero} alt="" width="1600" height="900" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           </a>
           <div class="p-5">
             <div class="flex items-center gap-2 mb-2">
