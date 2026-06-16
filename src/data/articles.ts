@@ -113,7 +113,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-agenter',
     url: '/jobb/ai-agenter/',
-    title: 'AI-agenter 2026: vad agentisk AI är och vad den faktiskt klarar',
+    title: 'AI-agenter 2026: vad de faktiskt klarar',
     excerpt: 'AI-agenter utför uppgifter på egen hand i stället för att bara svara. Vi förklarar vad agentisk AI är, vad den klarar 2026 och var den fallerar.',
     category: 'jobb', categoryLabel: 'AI jobb och företag', categoryUrl: '/jobb/',
     hero: '/images/inline/ai-agenter.webp',
@@ -138,7 +138,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-verktyg-gratis',
     url: '/verktyg/ai-verktyg-gratis/',
-    title: 'AI-verktyg gratis 2026: 12 alternativ som faktiskt fungerar',
+    title: 'AI-verktyg gratis 2026: 12 som funkar',
     excerpt: 'Vilka AI-verktyg är gratis utan att vara värdelösa? Vi går igenom 12 gratis AI-tjänster för text, bild, kod och sammanfattning, och var fällorna finns.',
     category: 'verktyg', categoryLabel: 'AI-verktyg', categoryUrl: '/verktyg/',
     hero: '/images/inline/ai-verktyg-gratis.webp',
@@ -200,7 +200,7 @@ export const articles: Article[] = [
   {
     slug: 'chatgpt-svenska-guide',
     url: '/guider/chatgpt-svenska-guide/',
-    title: 'ChatGPT på svenska 2026: komplett guide (gratis & Plus)',
+    title: 'ChatGPT på svenska: komplett guide 2026',
     excerpt: 'Allt du behöver veta om ChatGPT på svenska 2026. Skillnad gratis vs Plus, prompt-tips på svenska, säkerhet och vad du kan göra med det.',
     category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
     hero: '/images/inline/chatgpt-svenska-guide.webp',
@@ -212,7 +212,7 @@ export const articles: Article[] = [
   {
     slug: 'chatgpt-gratis-svenska',
     url: '/guider/chatgpt-gratis-svenska/',
-    title: 'ChatGPT gratis på svenska 2026: så funkar det utan att betala',
+    title: 'ChatGPT gratis på svenska: så funkar det',
     excerpt: 'Du kan använda ChatGPT helt gratis på svenska. Vi går igenom vad gratisversionen ger, vilka begränsningar som finns och när du behöver Plus.',
     category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
     hero: '/images/inline/chatgpt-gratis-svenska.webp',
@@ -248,7 +248,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-i-excel-och-sheets',
     url: '/guider/ai-i-excel-och-sheets/',
-    title: 'AI i Excel och Google Sheets, så använder du Copilot och Gemini',
+    title: 'AI i Excel och Google Sheets: så gör du',
     excerpt: 'Copilot i Excel och Gemini i Sheets fungerar nu på riktigt. Vi visar exakt vilka uppgifter de hanterar bra och var de fortfarande spårar ur.',
     category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
     hero: '/images/inline/ai-i-excel-och-sheets.webp',
@@ -286,7 +286,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-kundtjanst',
     url: '/jobb/ai-kundtjanst/',
-    title: 'AI-kundtjänst på svenska, vad som fungerar och vad som irriterar',
+    title: 'AI-kundtjänst på svenska: vad som funkar',
     excerpt: 'Chattbottar har gått från frustrerande till faktiskt användbara, om man bygger dem rätt. Genomgång av vad som krävs för en bra svensk implementation.',
     category: 'jobb', categoryLabel: 'AI på jobbet', categoryUrl: '/jobb/',
     hero: '/images/inline/ai-kundtjanst.webp',
@@ -310,7 +310,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-personligt-brev-cv',
     url: '/jobb/ai-personligt-brev-cv/',
-    title: 'Skriva personligt brev och CV med AI, utan att avslöja det',
+    title: 'Skriva personligt brev och CV med AI',
     excerpt: 'Rekryterare ser direkt om ett personligt brev är AI-genererat. Här är arbetsflödet som ger dig hjälp utan att avslöja sig, plus en gratis svensk prompt-mall.',
     category: 'jobb', categoryLabel: 'AI på jobbet', categoryUrl: '/jobb/',
     hero: '/images/inline/ai-personligt-brev-cv.webp',
@@ -348,7 +348,7 @@ export const articles: Article[] = [
   {
     slug: 'dina-data-i-ai',
     url: '/integritet/dina-data-i-ai/',
-    title: 'AI och dataskydd 2026: vad ChatGPT, Claude och Gemini lagrar',
+    title: 'AI och dataskydd: vad ChatGPT och Claude lagrar',
     excerpt: 'AI dataskydd 2026: så hanterar OpenAI, Anthropic, Google, Microsoft, Meta och Mistral dina inputs. Vi går igenom skillnaderna i klartext för svenska användare.',
     category: 'integritet', categoryLabel: 'Integritet & säkerhet', categoryUrl: '/integritet/',
     hero: '/images/inline/dina-data-i-ai.webp',
@@ -398,7 +398,7 @@ export const articles: Article[] = [
   {
     slug: 'skapa-ai-bilder',
     url: '/bild-och-video/skapa-ai-bilder/',
-    title: 'Skapa AI-bilder 2026: guide från första prompten till färdig bild',
+    title: 'Skapa AI-bilder: guide från prompt till bild',
     excerpt: 'Så skapar du AI-bilder från grunden. Vi går igenom prompt-struktur, val av verktyg, upplösning och de fem misstag nybörjare gör när de börjar skapa AI-bilder.',
     category: 'bild-och-video', categoryLabel: 'AI-bilder & video', categoryUrl: '/bild-och-video/',
     hero: '/images/inline/skapa-ai-bilder.webp',
@@ -410,7 +410,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-genererade-bilder',
     url: '/bild-och-video/ai-genererade-bilder/',
-    title: 'AI-genererade bilder 2026: bästa verktygen och tekniken bakom',
+    title: 'AI-genererade bilder: bästa verktygen 2026',
     excerpt: 'AI-genererade bilder har blivit mainstream. Vi förklarar tekniken bakom AI-genererade bilder, jämför de fyra stora modellerna och visar bildresultat.',
     category: 'bild-och-video', categoryLabel: 'AI-bilder & video', categoryUrl: '/bild-och-video/',
     hero: '/images/inline/ai-genererade-bilder.webp',
@@ -460,7 +460,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-sverige-strategi',
     url: '/samhalle/ai-sverige-strategi/',
-    title: 'Sveriges AI-strategi 2026: vad regeringen vill och vad som händer',
+    title: 'Sveriges AI-strategi 2026: vad som händer',
     excerpt: 'Regeringen har lagt fram en uppdaterad AI-strategi. Vi går igenom vad som faktiskt är finansierat, vad som är ord och hur Sverige står sig i Europa.',
     category: 'samhalle', categoryLabel: 'AI & samhälle', categoryUrl: '/samhalle/',
     hero: '/images/inline/ai-sverige-strategi.webp',
@@ -484,7 +484,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-i-skolan',
     url: '/samhalle/ai-i-skolan/',
-    title: 'AI i skolan, vad forskningen säger om lärande, fusk och rättvisa',
+    title: 'AI i skolan: vad forskningen säger',
     excerpt: 'Svenska kommuner har olika linjer om AI i klassrummet. Genomgång av vad forskningen säger om lärande, fusk och rättvisa konsekvenser.',
     category: 'samhalle', categoryLabel: 'AI & samhälle', categoryUrl: '/samhalle/',
     hero: '/images/inline/ai-i-skolan.webp',
@@ -496,7 +496,7 @@ export const articles: Article[] = [
   {
     slug: 'ai-energi-elforbrukning',
     url: '/samhalle/ai-energi-elforbrukning/',
-    title: 'AI och elförbrukning, hur mycket energi drar en ChatGPT-prompt?',
+    title: 'AI och elförbrukning: vad en prompt drar',
     excerpt: 'Påståenden om att en ChatGPT-prompt motsvarar tio googlingar i energi cirkulerar friskt. Vi kollar källorna och vad som faktiskt stämmer för svenska siffror.',
     category: 'samhalle', categoryLabel: 'AI & samhälle', categoryUrl: '/samhalle/',
     hero: '/images/inline/ai-energi-elforbrukning.webp',
