@@ -1,0 +1,91 @@
+---
+title: "Skugg-AI: när anställda använder AI i smyg"
+excerpt: "Skugg-AI är när medarbetare använder AI-verktyg utan arbetsgivarens vetskap. Vi förklarar varför det uppstår, riskerna för dataläckage och GDPR, och hur företag hanterar det utan att driva användningen längre under radarn."
+category: "jobb"
+publishDate: "2026-06-16"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+import Figure from '../../../components/Figure.astro';
+
+Skugg-AI är de AI-verktyg dina anställda redan använder, fast utan att du vet om det. En projektledare klistrar in ett kundavtal i ChatGPT på sin privata mobil för att få ett snabbare svar. En ekonom låter ett gratis verktyg sammanfatta ett internt bokslut. Inget av det syns i IT-avdelningens loggar, ingen har godkänt det, och ingen vet vilken data som lämnat företaget. Det är inte ett framtidsscenario, det är det vanligaste sättet AI faktiskt används på svenska arbetsplatser 2026.
+
+Den här genomgången förklarar vad skugg-AI är, varför det uppstår just för att förbud sällan biter, vilka konkreta risker det skapar kring dataläckage och GDPR, och hur företag hanterar fenomenet konstruktivt i stället för att jaga det.
+
+## Vad är skugg-AI?
+
+Skugg-AI är användning av AI-verktyg i arbetet utan arbetsgivarens kännedom eller godkännande. Begreppet är en variant av "skugg-IT", där anställda tar in egna program och tjänster utanför IT-avdelningens kontroll. Skillnaden är att AI-verktygen är gratis, ligger en webbsökning bort och tar emot exakt den text användaren klistrar in.
+
+Det handlar inte om sabotage. I de flesta fall är det en medarbetare som vill lösa en uppgift snabbare och griper efter det verktyg som finns närmast. Problemet är att det sker utanför all insyn: ledningen vet inte vilka verktyg som används, till vad, eller vilken information som matas in i dem.
+
+<Callout type="info" title="Skugg-AI mot godkänd AI: gränsen går vid insyn">
+  Skillnaden är inte verktyget i sig. Samma ChatGPT kan vara godkänd användning på ett betalkonto där träning är avstängd, och skugg-AI när någon kör gratisversionen på sin privata enhet med kunddata. Det avgörande är om arbetsgivaren vet om det och har satt ramar för vad som får matas in.
+</Callout>
+
+## Varför uppstår skugg-AI?
+
+Skugg-AI uppstår när tre saker krockar: AI sparar uppenbart tid, verktygen är gratis och frikopplade från IT, och arbetsgivaren antingen förbjudit allt eller inte sagt något alls. När det godkända alternativet saknas eller är krångligare än gratisverktyget väljer medarbetaren det som fungerar nu.
+
+Den vanligaste utlösaren är ett blankett-förbud. När en organisation säger "ni får inte använda ChatGPT" försvinner inte behovet, det flyttar bara till privata enheter och konton där IT inte kan se något. En undersökning som flera svenska arbetsgivarorganisationer refererar till under 2026 pekar på att en stor andel av de anställda som använder AI gör det utan att deras chef känner till det. Förbudet skapar alltså exakt den blindhet det var tänkt att förhindra.
+
+Tre drivkrafter återkommer. Tidspress, där AI gör en timmes arbete på fem minuter. Avsaknad av godkända verktyg, så att den enda vägen framåt är ett gratisverktyg. Och otydlighet, där medarbetaren helt enkelt inte vet om det är tillåtet och därför inte frågar.
+
+## Vilka risker skapar skugg-AI?
+
+Den allvarligaste risken är dataläckage: känslig information lämnar företaget när den klistras in i ett externt verktyg, och kan lagras, läsas av leverantören eller i värsta fall användas för att träna modellen. Därutöver tillkommer GDPR-ansvar, brist på spårbarhet och okontrollerad kvalitet på det AI:n producerar.
+
+Konkret ser riskerna ut så här:
+
+- **Företagshemligheter lämnar huset.** Källkod, prisstrategier, opublicerade siffror och förhandlingsunderlag som matas in i ett gratisverktyg är inte längre under företagets kontroll.
+- **Personuppgifter behandlas olagligt.** Kunddata och anställningsuppgifter som klistras in utan rättslig grund eller personuppgiftsbiträdesavtal är en GDPR-överträdelse.
+- **Ingen spårbarhet.** När användningen sker i skuggan finns ingen logg över vad som hänt, vilket gör det omöjligt att utreda en incident i efterhand.
+- **Okontrollerad kvalitet.** AI hittar på fakta, och utan granskningsrutin kan felaktiga underlag följa med ut till kunder och beslut.
+
+<Figure src="/images/inline/skugg-ai-risker.webp" alt="Person som skriver på en laptop i ett mörkt rum, illustrerar dold AI-användning" caption="Skugg-AI är svårast att se just för att den oftast sker på privata enheter, utanför IT-avdelningens insyn." />
+
+## Hur påverkar skugg-AI GDPR?
+
+Skugg-AI är ett dataskyddsproblem så snart personuppgifter matas in i ett verktyg utan rättslig grund, personuppgiftsbiträdesavtal och kontroll på var data lagras. Företaget är personuppgiftsansvarigt även när en enskild anställd agerar på egen hand, så ansvaret stannar hos organisationen, inte hos individen.
+
+Tre GDPR-krav blir snabbt problem vid skugg-AI. Det saknas oftast ett personuppgiftsbiträdesavtal med AI-leverantören, vilket krävs så fort verktyget behandlar personuppgifter för företagets räkning. Det är ofta oklart om data lagras inom EU eller överförs till tredjeland, vilket utlöser krav på överföringsmekanismer. Och eftersom användningen inte loggas kan företaget inte uppfylla sin upplysningsplikt eller hantera en begäran om radering. Om en incident inträffar har företaget 72 timmar på sig att anmäla en personuppgiftsincident till IMY, och en incident man inte känner till går inte att anmäla i tid.
+
+För djupare bakgrund på vad regelverket säger om de här verktygen, se vår genomgång av [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) och vad som faktiskt händer med [dina data i AI-tjänster](/integritet/dina-data-i-ai/).
+
+<Callout type="warning" title="Gratisversionerna är farligast">
+  De flesta gratis AI-verktyg använder som standard det du skriver in för att förbättra sina modeller, om du inte aktivt stänger av det. Betalda företagsversioner har oftast träning avstängd och erbjuder personuppgiftsbiträdesavtal. Just därför driver ett förbud mot betalkonton anställda mot gratisversionerna, alltså mot det sämre alternativet.
+</Callout>
+
+## Hur hanterar man skugg-AI konstruktivt?
+
+Det fungerande svaret är inte hårdare förbud, utan att göra det godkända alternativet enklare än skuggvägen. Erbjud betalda verktyg med träning avstängd, säg tydligt vilken data som aldrig får matas in, och gör det riskfritt att fråga. När den lagliga vägen är den smidigaste försvinner motivet att hålla användningen dold.
+
+Fyra steg tar en organisation från blindhet till kontroll:
+
+1. **Kartlägg den faktiska användningen.** Fråga öppet, utan sanktionshot, vilka verktyg som redan används och till vad. Du kan inte styra det du inte ser, och ärliga svar kräver att frågan inte är en fälla.
+2. **Erbjud godkända verktyg.** Köp in företagsversioner där träning är avstängd och personuppgiftsbiträdesavtal finns. Det tar bort det vanligaste skälet att smyga, nämligen att det godkända alternativet saknas.
+3. **Var tydlig med vad som aldrig får matas in.** Personnummer, hälsodata, kundavtal och affärshemligheter ska vara en konkret lista, inte en vag uppmaning till försiktighet.
+4. **Gör det enkelt att fråga och rapportera.** En namngiven kontakt och ett klimat där "jag testade ett verktyg" inte leder till bestraffning är det som faktiskt lyfter användningen upp i ljuset.
+
+Det här är samma logik som ligger bakom en bra [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/): en policy som förbjuder allt skapar mer skugg-AI, medan en som tillåter rätt verktyg med tydliga gränser drar tillbaka användningen i synligt läge. När verktygen dessutom får agera på egen hand blir gränserna ännu viktigare, något vi går igenom i genomgången av [AI-agenter](/jobb/ai-agenter/).
+
+## Hur upptäcker man skugg-AI i en organisation?
+
+Skugg-AI på företagets egna enheter och nätverk går att kartlägga med verktyg för molnsäkerhet som ser vilka AI-tjänster som anropas. Det som sker på privata mobiler och konton är däremot tekniskt osynligt, och där är en öppen dialog det enda som fungerar.
+
+Praktiskt kombineras tre spår. Tekniskt loggas vilka AI-domäner som besöks från företagets nätverk, ofta via samma verktyg som redan bevakar molnappar. Organisatoriskt frågar man rakt ut i en anonym enkät vilka verktyg som används, vilket nästan alltid avslöjar mer än loggarna. Och kulturellt sänker man tröskeln att berätta, eftersom den mesta skugg-AI:n sker på enheter ingen logg når. Att jaga och bestraffa är kontraproduktivt: det driver bara användningen längre ner i skuggan.
+
+## Vanliga frågor om skugg-AI
+
+<FAQ items={[
+  { q: "Vad betyder skugg-AI?", a: "Skugg-AI är när anställda använder AI-verktyg i arbetet utan att arbetsgivaren känner till det eller har godkänt det. Begreppet är en variant av skugg-IT, alltså program och tjänster som tas in utanför IT-avdelningens kontroll." },
+  { q: "Är skugg-AI olagligt?", a: "Själva användningen är inte olaglig i sig, men den blir ett brott mot GDPR så snart personuppgifter matas in i ett verktyg utan rättslig grund och personuppgiftsbiträdesavtal. Företaget är ansvarigt även när en enskild anställd agerar på egen hand." },
+  { q: "Varför räcker det inte att förbjuda AI?", a: "Ett blankett-förbud tar inte bort behovet, det flyttar bara användningen till privata enheter och konton där IT inte ser något. Resultatet blir mer skugg-AI och mindre insyn, alltså tvärtom mot syftet." },
+  { q: "Vilken är den största risken med skugg-AI?", a: "Dataläckage. Känslig information som klistras in i ett externt gratisverktyg kan lagras, läsas av leverantören eller användas för att träna modellen, och lämnar därmed företagets kontroll utan att någon vet om det." },
+  { q: "Hur upptäcker man skugg-AI?", a: "Användning på företagets nätverk kan kartläggas med molnsäkerhetsverktyg som ser vilka AI-tjänster som anropas. Användning på privata enheter är tekniskt osynlig, så där är en öppen, sanktionsfri dialog det som faktiskt avslöjar omfattningen." },
+  { q: "Hur hanterar man skugg-AI utan att förbjuda allt?", a: "Erbjud godkända betalverktyg med träning avstängd, var tydlig med vilken data som aldrig får matas in, och gör det riskfritt att fråga och rapportera. När den lagliga vägen är smidigare än skuggvägen försvinner motivet att smyga." },
+]} />
+
+## Vad härnäst?
+
+Skugg-AI är inte ett tecken på olydiga anställda, det är ett tecken på att behovet finns och att de godkända ramarna saknas. Börja med att kartlägga vad som redan används, sätt sedan en policy som tillåter rätt verktyg med tydliga gränser. För nästa steg, läs vår guide till [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/), bakgrunden i [GDPR och ChatGPT](/integritet/gdpr-chatgpt/) och den bredare bilden i [AI och jobben](/samhalle/ai-och-jobben/).
