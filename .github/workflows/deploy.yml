@@ -21,15 +21,50 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to Cloudflare Pages
+      # Fail loudly if the deploy credential is missing. Tidigare hoppade detta
+      # steg tyst over deploy med exit 0 (gron checkmark utan deploy) — vilket
+      # gjorde att live-siten blev stale: bara startsidan fanns, alla artiklar
+      # gav 404 och Ahrefs health-score dok till 26. Aldrig tyst skip igen.
+      - name: Verify deploy credentials present
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
-            echo "CLOUDFLARE_API_TOKEN saknas som repo-secret — hoppar over deploy."
-            echo "Lagg till en Cloudflare API-token (Cloudflare Pages: Edit, vettigare-kontot)"
-            echo "som secret sa deployar denna workflow automatiskt vid varje push."
-            exit 0
+            echo "::error::CLOUDFLARE_API_TOKEN saknas som repo-secret. Deploy avbruten."
+            echo "Lagg till token fran vettigare-kontot: gh secret set CLOUDFLARE_API_TOKEN -R johnerik510/aiblogg"
+            exit 1
           fi
-          npx wrangler pages deploy dist --project-name aiblogg --branch main
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::CLOUDFLARE_ACCOUNT_ID saknas som repo-secret. Deploy avbruten."
+            exit 1
+          fi
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=aiblogg --branch=main
+
+      # Smoke-test: en lyckad deploy maste serva en faktisk artikelsida (inte bara
+      # startsidan) och far inte ligga bakom x-robots-tag: noindex. Fangar partiella
+      # deploys och fel-konfigurerad produktionsdoman innan vi tror att allt ar gront.
+      - name: Post-deploy smoke test
+        run: |
+          sleep 20
+          fail=0
+          for url in \
+            "https://aiblogg.se/" \
+            "https://aiblogg.se/verktyg/chatgpt-vs-claude/" \
+            "https://aiblogg.se/sitemap-index.xml"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+            echo "$code  $url"
+            [ "$code" != "200" ] && { echo "::error::$url gav $code (forvantade 200)"; fail=1; }
+          done
+          robots=$(curl -sI "https://aiblogg.se/" | grep -i 'x-robots-tag' | grep -i 'noindex' || true)
+          if [ -n "$robots" ]; then
+            echo "::error::Startsidan serveras med x-robots-tag: noindex — produktionsdoman pekar fel."
+            fail=1
+          fi
+          exit $fail
