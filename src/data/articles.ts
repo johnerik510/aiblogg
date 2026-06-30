@@ -148,6 +148,18 @@ export const articles: Article[] = [
     tags: ['gratis AI-verktyg'],
   },
   {
+    slug: 'microsoft-copilot-svenska',
+    url: '/verktyg/microsoft-copilot-svenska/',
+    title: 'Microsoft Copilot: vad det är och hur du använder det',
+    excerpt: 'Microsoft Copilot är AI-assistenten som finns i Windows, Edge och Microsoft 365. Vi förklarar skillnaden mellan gratisversionen och Microsoft 365 Copilot, vad den kan och vad den kostar.',
+    category: 'verktyg', categoryLabel: 'AI-verktyg', categoryUrl: '/verktyg/',
+    hero: '/images/inline/microsoft-copilot-svenska.webp',
+    heroAlt: 'Person som arbetar vid en laptop med kontorsprogram',
+    publishDate: '2026-06-30', readingTime: 8, published: true,
+    primaryKeyword: 'microsoft copilot', searchVolume: 4000, kd: 6,
+    tags: ['Microsoft', 'Copilot'],
+  },
+  {
     slug: 'chatgpt-vs-claude',
     url: '/verktyg/chatgpt-vs-claude/',
     title: 'ChatGPT vs Claude 2026: vilken AI ska du välja till vad?',

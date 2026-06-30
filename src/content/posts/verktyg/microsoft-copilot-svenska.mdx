@@ -1,0 +1,53 @@
+---
+title: "Microsoft Copilot: vad det är och hur du använder det"
+excerpt: "Microsoft Copilot är AI-assistenten som finns i Windows, Edge och Microsoft 365. Vi förklarar skillnaden mellan gratisversionen och Microsoft 365 Copilot, vad den kan och vad den kostar."
+category: "verktyg"
+publishDate: "2026-06-30"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+import Figure from '../../../components/Figure.astro';
+
+Microsoft Copilot är Microsofts AI-assistent, byggd ovanpå OpenAI:s språkmodeller och inbakad i produkter du förmodligen redan använder: Windows, webbläsaren Edge och kontorspaketet Microsoft 365. Den största förvirringen kring Copilot är att namnet betyder flera olika saker. Det finns en gratisversion för vem som helst, en betald privatversion och en företagsversion som arbetar direkt i dina Word- och Excel-dokument. Den här guiden reder ut vilken som är vilken, vad de kan och vad de kostar.
+
+## Vad är Microsoft Copilot?
+
+Microsoft Copilot är ett samlingsnamn för Microsofts AI-assistenter. I grunden är det en chattbaserad assistent, ungefär som ChatGPT, som kan svara på frågor, sammanfatta text, skriva utkast och generera bilder. Det som skiljer Copilot från fristående chattbottar är integrationen: den finns direkt i operativsystemet, i webbläsaren och i Office-programmen, och företagsversionen kan dessutom arbeta med ditt eget innehåll som mejl, dokument och möten.
+
+<Figure src="/images/inline/microsoft-copilot-svenska-inline.webp" alt="Person som skriver på en laptop med kontorsdokument på skärmen" caption="Copilots styrka är att den finns där du redan arbetar, i Windows och Microsoft 365." />
+
+## Gratis Copilot, Copilot Pro och Microsoft 365 Copilot
+
+Tre varianter är lätta att blanda ihop, och skillnaden avgör vad du faktiskt får:
+
+- **Copilot (gratis):** Den öppna versionen på copilot.microsoft.com och i Windows och Edge. Du får chatt, webbgrundade svar och bildgenerering utan att betala. Den arbetar inte i dina egna dokument.
+- **Copilot Pro:** En betald privatabonnemang för enskilda användare. Ger snabbare svar vid hög belastning och Copilot-funktioner i Office-apparna för ditt personliga Microsoft-konto.
+- **Microsoft 365 Copilot:** Företagsversionen, ett tillägg till en Microsoft 365-licens. Den arbetar inuti Word, Excel, PowerPoint, Outlook och Teams och kan använda organisationens egna data via Microsoft Graph.
+
+<Callout type="tip" title="Vilken behöver du?">
+  Vill du bara testa en AI-assistent räcker gratisversionen. Vill du att AI:n ska skriva i dina egna Word- och Excel-filer på jobbet är det Microsoft 365 Copilot som gäller, och den beställs oftast via arbetsgivaren.
+</Callout>
+
+## Vad kan Microsoft Copilot göra?
+
+I företagsversionen ligger det praktiska värdet i Office-integrationen. I Word kan Copilot skriva ett första utkast eller sammanfatta ett långt dokument. I Excel kan den analysera data och föreslå formler. I PowerPoint kan den bygga en presentation från ett dokument. I Outlook sammanfattar den långa mejltrådar och föreslår svar, och i Teams kan den sammanfatta möten du missat. Gratisversionen klarar det mesta av den allmänna chatten, inklusive att skriva text, förklara begrepp och skapa bilder, men den kommer inte åt dina filer.
+
+## Vad kostar Microsoft Copilot?
+
+Gratisversionen kostar ingenting. Copilot Pro för privatpersoner ligger i skrivande stund på omkring 20 USD per månad, och Microsoft 365 Copilot för företag på omkring 30 USD per användare och månad, ofta med krav på årsavtal och en befintlig Microsoft 365-licens. Priser och paketering ändras dock relativt ofta, så kontrollera alltid den aktuella prisbilden hos Microsoft innan du beställer.
+
+## Copilot, ChatGPT eller Gemini?
+
+Copilots stora fördel är att den finns där du redan arbetar och, i företagsversionen, kan använda dina egna dokument. Rent språkligt och resonemangsmässigt ligger den nära <a href="/verktyg/chatgpt-vs-claude/">ChatGPT och Claude</a>, eftersom den bygger på liknande modeller. Vill du ha Googles motsvarighet integrerad i Gmail och Dokument är <a href="/verktyg/gemini-ai-svenska/">Gemini</a> det närmaste alternativet, och för källhänvisade webbsökningar är <a href="/verktyg/perplexity-svenska/">Perplexity</a> ofta vassare. Är du helt ny vid AI-assistenter kan det vara värt att först läsa vår genomgång av <a href="/guider/vad-ar-chatgpt/">vad ChatGPT är</a>.
+
+## Är dina data säkra i Copilot?
+
+För företagsversionen är ett av Microsofts huvudargument att din organisations data stannar inom din Microsoft 365-miljö och inte används för att träna de allmänna modellerna. För gratisversionen gäller andra villkor, precis som för andra publika AI-tjänster. Tänk därför på vilken information du matar in, särskilt känsliga eller personliga uppgifter. Vi går igenom vad som gäller mer generellt i guiden om <a href="/integritet/dina-data-i-ai/">dina data i AI-tjänster</a>.
+
+<FAQ items={[
+  { q: "Vad är Microsoft Copilot?", a: "Microsoft Copilot är Microsofts AI-assistent, byggd på OpenAI:s språkmodeller och inbyggd i Windows, Edge och Microsoft 365. Den kan chatta, sammanfatta, skriva utkast och generera bilder, och i företagsversionen arbeta direkt i dina Word-, Excel- och Outlook-filer." },
+  { q: "Vad är skillnaden på Copilot och Microsoft 365 Copilot?", a: "Vanliga Copilot är en gratis chattassistent som inte kommer åt dina dokument. Microsoft 365 Copilot är ett betalt företagstillägg som arbetar inuti Office-programmen och kan använda organisationens egna data." },
+  { q: "Är Microsoft Copilot gratis?", a: "Det finns en gratisversion i Windows, Edge och på copilot.microsoft.com. Copilot Pro för privatpersoner och Microsoft 365 Copilot för företag kostar däremot pengar och ger fler funktioner, framför allt i Office-apparna." },
+  { q: "Bygger Copilot på ChatGPT?", a: "Copilot använder OpenAI:s modeller, samma familj som driver ChatGPT, kombinerat med Microsofts egen teknik och dataintegration. Upplevelsen liknar ChatGPT, men Copilot är tätare integrerad i Microsofts produkter." },
+]} />
