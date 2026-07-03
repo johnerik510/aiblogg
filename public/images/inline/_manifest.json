@@ -6,5 +6,11 @@
   "ai-energi-elforbrukning": {
     "attribution": "Foto: Jacob McGowin via Unsplash",
     "query": "power plant electricity infrastructure"
+  },
+  "ai-optimering": {
+    "attribution": "Foto: Jonathan Kemper via Unsplash",
+    "query": "chatgpt openai screen",
+    "source": "unsplash",
+    "id": "N8AYH8R2rWQ"
   }
 }
