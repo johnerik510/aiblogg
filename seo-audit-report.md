@@ -1,46 +1,75 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-06-15T08:57:32.329Z
+Genererad: 2026-07-03T18:55:00.679Z
 
-Totalt 31 artiklar. Sorterat efter sämst score först.
+Totalt 34 artiklar. Sorterat efter sämst score först.
 
 ## Översikt
 
 | Slug | Score | KW | Vol | KD | Titel-len | Meta-len | Ord | H2 | Länkar | FAQ | Issues |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| microsoft-copilot-svenska | 9/15 | microsoft copilot | 4000 | 6 | 53 | 186 | 584 | 6 | 0 | 4 | 5 |
+| chatgpt-gratis-svenska | 9/15 | chatgpt svenska gratis | 1500 | 0 | 40 | 140 | 1258 | 12 | 9 | 6 | 5 |
 | chatgpt-detector-svenska | 9/15 | chatgpt detector svenska | 100 | 0 | 54 | 144 | 1430 | 14 | 4 | 5 | 6 |
-| ai-personligt-brev-cv | 10/15 | ai personligt brev | 110 | 4 | 58 | 157 | 1232 | 8 | 6 | 6 | 4 |
-| chatgpt-gratis-svenska | 11/15 | chatgpt svenska gratis | 1500 | 0 | 61 | 140 | 1258 | 12 | 9 | 6 | 4 |
+| ai-personligt-brev-cv | 10/15 | ai personligt brev | 110 | 4 | 36 | 157 | 1232 | 8 | 6 | 6 | 4 |
+| dina-data-i-ai | 10/15 | ai dataskydd | 40 | 3 | 47 | 159 | 1114 | 13 | 5 | 6 | 4 |
+| skapa-ai-bilder | 11/15 | skapa ai bilder | 700 | 0 | 44 | 158 | 1457 | 13 | 4 | 6 | 3 |
 | gemini-ai-svenska | 11/15 | gemini ai | 200 | 3 | 52 | 160 | 1240 | 11 | 6 | 6 | 3 |
 | sora-ai-video | 11/15 | sora ai | 200 | 5 | 47 | 133 | 1322 | 12 | 6 | 6 | 3 |
-| ai-i-excel-och-sheets | 11/15 | ai i excel | 60 | 5 | 63 | 140 | 1303 | 13 | 7 | 5 | 3 |
+| ai-i-skolan | 11/15 | ai i skolan | 110 | 7 | 34 | 133 | 1346 | 10 | 6 | 6 | 3 |
+| ai-i-excel-och-sheets | 11/15 | ai i excel | 60 | 5 | 39 | 140 | 1303 | 13 | 7 | 5 | 3 |
 | vad-ar-en-prompt | 11/15 | vad är en prompt inom ai | 40 | 1 | 50 | 146 | 1178 | 9 | 6 | 6 | 4 |
-| ai-energi-elforbrukning | 11/15 | ai energi | 40 | 5 | 63 | 157 | 1261 | 8 | 4 | 5 | 3 |
-| ai-sverige-strategi | 11/15 | sverige ai strategi | 30 | 4 | 65 | 148 | 1226 | 10 | 7 | 5 | 4 |
+| skugg-ai | 11/15 | skugg-ai | 40 | 3 | 42 | 222 | 1211 | 8 | 7 | 6 | 3 |
+| ai-energi-elforbrukning | 11/15 | ai energi | 40 | 5 | 40 | 157 | 1261 | 8 | 4 | 5 | 3 |
+| ai-sverige-strategi | 11/15 | sverige ai strategi | 30 | 4 | 41 | 148 | 1226 | 10 | 7 | 5 | 4 |
 | deepfake-skydd | 12/15 | deepfake | 4500 | 72 | 46 | 140 | 1156 | 11 | 4 | 6 | 3 |
 | ai-bilder-gratis | 12/15 | ai bilder gratis | 1200 | 1 | 55 | 156 | 1154 | 15 | 5 | 6 | 3 |
-| basta-ai-verktyg-svenska | 12/15 | ai verktyg | 900 | 1 | 50 | 183 | 1597 | 15 | 12 | 6 | 3 |
 | perplexity-svenska | 12/15 | perplexity ai | 350 | 8 | 50 | 159 | 1256 | 11 | 4 | 6 | 2 |
-| ai-i-skolan | 12/15 | ai i skolan | 110 | 7 | 64 | 133 | 1346 | 10 | 6 | 6 | 2 |
-| ai-kundtjanst | 12/15 | ai kundtjänst | 90 | 8 | 64 | 149 | 1493 | 11 | 6 | 6 | 2 |
+| ai-kundtjanst | 12/15 | ai kundtjänst | 90 | 8 | 40 | 149 | 1493 | 11 | 6 | 6 | 2 |
 | midjourney-svenska | 12/15 | midjourney svenska | 90 | 2 | 46 | 138 | 1104 | 10 | 5 | 6 | 3 |
-| ai-och-jobben | 12/15 | ai och jobben | 70 | 6 | 56 | 135 | 1338 | 8 | 7 | 6 | 2 |
-| dina-data-i-ai | 12/15 | ai dataskydd | 40 | 3 | 60 | 159 | 1114 | 13 | 5 | 6 | 3 |
-| chatgpt-svenska-guide | 13/15 | chatgpt svenska | 27000 | 0 | 55 | 135 | 1798 | 13 | 13 | 8 | 2 |
-| ai-genererade-bilder | 13/15 | ai genererade bilder | 1500 | 0 | 61 | 149 | 1120 | 11 | 5 | 6 | 2 |
-| skapa-ai-bilder | 13/15 | skapa ai bilder | 700 | 0 | 65 | 158 | 1457 | 13 | 4 | 6 | 2 |
+| ai-och-jobben | 12/15 | ai och jobben | 70 | 6 | 56 | 135 | 1357 | 8 | 8 | 6 | 2 |
+| chatgpt-svenska-guide | 13/15 | chatgpt svenska | 27000 | 0 | 39 | 135 | 1798 | 13 | 13 | 8 | 2 |
+| ai-genererade-bilder | 13/15 | ai genererade bilder | 1500 | 0 | 42 | 149 | 1120 | 11 | 5 | 6 | 2 |
+| basta-ai-verktyg-svenska | 13/15 | ai verktyg | 900 | 1 | 50 | 146 | 1608 | 15 | 13 | 6 | 2 |
+| ai-optimering | 13/15 | ai-optimering | 600 | 4 | 53 | 150 | 1267 | 9 | 6 | 5 | 1 |
 | chatgpt-vs-claude | 13/15 | chatgpt vs claude | 250 | 5 | 56 | 154 | 1221 | 12 | 8 | 6 | 2 |
-| ai-verktyg-gratis | 13/15 | ai verktyg gratis | 200 | 0 | 59 | 151 | 1279 | 18 | 7 | 6 | 2 |
+| ai-verktyg-gratis | 13/15 | ai verktyg gratis | 200 | 0 | 37 | 151 | 1279 | 18 | 7 | 6 | 2 |
 | vad-ar-chatgpt | 13/15 | vad är chatgpt | 90 | 2 | 48 | 148 | 1284 | 12 | 8 | 5 | 2 |
 | ai-for-smaforetag | 13/15 | ai för småföretag | 80 | 4 | 57 | 158 | 1299 | 12 | 11 | 6 | 2 |
 | ai-bedragerier-sverige | 13/15 | ai bedrägeri | 50 | 6 | 50 | 146 | 1296 | 11 | 4 | 6 | 2 |
 | eu-ai-act-sverige | 14/15 | eu ai act | 250 | 12 | 41 | 145 | 1319 | 10 | 6 | 6 | 1 |
 | cursor-ai-svenska | 14/15 | cursor ai | 150 | 4 | 54 | 154 | 1269 | 11 | 4 | 6 | 1 |
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
-| gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1321 | 12 | 6 | 6 | 1 |
-| ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1294 | 7 | 11 | 6 | 1 |
+| gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1342 | 12 | 7 | 6 | 1 |
+| ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1310 | 7 | 12 | 6 | 1 |
 
 ## Per artikel: åtgärder
+
+### microsoft-copilot-svenska (score 9/15, vol 4000, KD 6)
+
+- **PrimÃ¤rsÃ¶kord:** `microsoft copilot`
+- **Titel:** Microsoft Copilot: vad det är och hur du använder det
+- **Meta:** Microsoft Copilot är AI-assistenten som finns i Windows, Edge och Microsoft 365. Vi förklarar skillnaden mellan gratisversionen och Microsoft 365 Copilot, vad den kan och vad den kostar.
+
+Åtgärder:
+- TITLE: lägg in årtal (2026) för freshness-signal
+- META: justera längd 120-160 tecken (nu 186)
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
+- CONTENT: utöka till min 1200 ord (nu 584)
+- LÄNKAR: lägg till fler internlänkar (nu 0, mål 3+)
+
+### chatgpt-gratis-svenska (score 9/15, vol 1500, KD 0)
+
+- **PrimÃ¤rsÃ¶kord:** `chatgpt svenska gratis`
+- **Titel:** ChatGPT gratis på svenska: så funkar det
+- **Meta:** Du kan använda ChatGPT helt gratis på svenska. Vi går igenom vad gratisversionen ger, vilka begränsningar som finns och när du behöver Plus.
+
+Åtgärder:
+- TITLE: lägg in "chatgpt svenska gratis" i titeln
+- TITLE: lägg in årtal (2026) för freshness-signal
+- META: lägg in "chatgpt svenska gratis" i excerpt
+- H2: använd "chatgpt svenska gratis" i minst en H2-rubrik
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
 ### chatgpt-detector-svenska (score 9/15, vol 100, KD 0)
 
@@ -59,7 +88,7 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 ### ai-personligt-brev-cv (score 10/15, vol 110, KD 4)
 
 - **PrimÃ¤rsÃ¶kord:** `ai personligt brev`
-- **Titel:** Skriva personligt brev och CV med AI, utan att avslöja det
+- **Titel:** Skriva personligt brev och CV med AI
 - **Meta:** Rekryterare ser direkt om ett personligt brev är AI-genererat. Här är arbetsflödet som ger dig hjälp utan att avslöja sig, plus en gratis svensk prompt-mall.
 
 Åtgärder:
@@ -68,16 +97,27 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - META: lägg in "ai personligt brev" i excerpt
 - INTRO: lägg in "ai personligt brev" i första 100 orden
 
-### chatgpt-gratis-svenska (score 11/15, vol 1500, KD 0)
+### dina-data-i-ai (score 10/15, vol 40, KD 3)
 
-- **PrimÃ¤rsÃ¶kord:** `chatgpt svenska gratis`
-- **Titel:** ChatGPT gratis på svenska 2026: så funkar det utan att betala
-- **Meta:** Du kan använda ChatGPT helt gratis på svenska. Vi går igenom vad gratisversionen ger, vilka begränsningar som finns och när du behöver Plus.
+- **PrimÃ¤rsÃ¶kord:** `ai dataskydd`
+- **Titel:** AI och dataskydd: vad ChatGPT och Claude lagrar
+- **Meta:** AI dataskydd 2026: så hanterar OpenAI, Anthropic, Google, Microsoft, Meta och Mistral dina inputs. Vi går igenom skillnaderna i klartext för svenska användare.
 
 Åtgärder:
-- TITLE: lägg in "chatgpt svenska gratis" i titeln
-- META: lägg in "chatgpt svenska gratis" i excerpt
-- H2: använd "chatgpt svenska gratis" i minst en H2-rubrik
+- TITLE: lägg in årtal (2026) för freshness-signal
+- H2: justera antal till 5-12 (nu 13)
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
+- CONTENT: utöka till min 1200 ord (nu 1114)
+
+### skapa-ai-bilder (score 11/15, vol 700, KD 0)
+
+- **PrimÃ¤rsÃ¶kord:** `skapa ai bilder`
+- **Titel:** Skapa AI-bilder: guide från prompt till bild
+- **Meta:** Så skapar du AI-bilder från grunden. Vi går igenom prompt-struktur, val av verktyg, upplösning och de fem misstag nybörjare gör när de börjar skapa AI-bilder.
+
+Åtgärder:
+- TITLE: lägg in årtal (2026) för freshness-signal
+- H2: justera antal till 5-12 (nu 13)
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
 ### gemini-ai-svenska (score 11/15, vol 200, KD 3)
@@ -102,10 +142,21 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - META: lägg in "sora ai" i excerpt
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
+### ai-i-skolan (score 11/15, vol 110, KD 7)
+
+- **PrimÃ¤rsÃ¶kord:** `ai i skolan`
+- **Titel:** AI i skolan: vad forskningen säger
+- **Meta:** Svenska kommuner har olika linjer om AI i klassrummet. Genomgång av vad forskningen säger om lärande, fusk och rättvisa konsekvenser.
+
+Åtgärder:
+- TITLE: justera längd till 35-65 tecken (nu 34)
+- TITLE: lägg in årtal (2026) för freshness-signal
+- META: lägg in "ai i skolan" i excerpt
+
 ### ai-i-excel-och-sheets (score 11/15, vol 60, KD 5)
 
 - **PrimÃ¤rsÃ¶kord:** `ai i excel`
-- **Titel:** AI i Excel och Google Sheets, så använder du Copilot och Gemini
+- **Titel:** AI i Excel och Google Sheets: så gör du
 - **Meta:** Copilot i Excel och Gemini i Sheets fungerar nu på riktigt. Vi visar exakt vilka uppgifter de hanterar bra och var de fortfarande spårar ur.
 
 Åtgärder:
@@ -125,10 +176,21 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - H2: använd "vad är en prompt inom ai" i minst en H2-rubrik
 - CONTENT: utöka till min 1200 ord (nu 1178)
 
+### skugg-ai (score 11/15, vol 40, KD 3)
+
+- **PrimÃ¤rsÃ¶kord:** `skugg-ai`
+- **Titel:** Skugg-AI: när anställda använder AI i smyg
+- **Meta:** Skugg-AI är när medarbetare använder AI-verktyg utan arbetsgivarens vetskap. Vi förklarar varför det uppstår, riskerna för dataläckage och GDPR, och hur företag hanterar det utan att driva användningen längre under radarn.
+
+Åtgärder:
+- TITLE: lägg in årtal (2026) för freshness-signal
+- META: justera längd 120-160 tecken (nu 222)
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
+
 ### ai-energi-elforbrukning (score 11/15, vol 40, KD 5)
 
 - **PrimÃ¤rsÃ¶kord:** `ai energi`
-- **Titel:** AI och elförbrukning, hur mycket energi drar en ChatGPT-prompt?
+- **Titel:** AI och elförbrukning: vad en prompt drar
 - **Meta:** Påståenden om att en ChatGPT-prompt motsvarar tio googlingar i energi cirkulerar friskt. Vi kollar källorna och vad som faktiskt stämmer för svenska siffror.
 
 Åtgärder:
@@ -139,7 +201,7 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 ### ai-sverige-strategi (score 11/15, vol 30, KD 4)
 
 - **PrimÃ¤rsÃ¶kord:** `sverige ai strategi`
-- **Titel:** Sveriges AI-strategi 2026: vad regeringen vill och vad som händer
+- **Titel:** Sveriges AI-strategi 2026: vad som händer
 - **Meta:** Regeringen har lagt fram en uppdaterad AI-strategi. Vi går igenom vad som faktiskt är finansierat, vad som är ord och hur Sverige står sig i Europa.
 
 Åtgärder:
@@ -170,17 +232,6 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 - CONTENT: utöka till min 1200 ord (nu 1154)
 
-### basta-ai-verktyg-svenska (score 12/15, vol 900, KD 1)
-
-- **PrimÃ¤rsÃ¶kord:** `ai verktyg`
-- **Titel:** Bästa AI-verktygen 2026, komplett lista på svenska
-- **Meta:** Genomgång av de bästa AI-verktygen för svenska användare. ChatGPT, Claude, Gemini, Perplexity, Cursor, Midjourney och fler, vad de gör, vad de kostar och vilket du ska välja till vad.
-
-Åtgärder:
-- META: justera längd 120-160 tecken (nu 183)
-- H2: justera antal till 5-12 (nu 15)
-- H3: lägg till minst 2 H3-underrubriker för djupare struktur
-
 ### perplexity-svenska (score 12/15, vol 350, KD 8)
 
 - **PrimÃ¤rsÃ¶kord:** `perplexity ai`
@@ -191,20 +242,10 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - TITLE: lägg in årtal (2026) för freshness-signal
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
-### ai-i-skolan (score 12/15, vol 110, KD 7)
-
-- **PrimÃ¤rsÃ¶kord:** `ai i skolan`
-- **Titel:** AI i skolan, vad forskningen säger om lärande, fusk och rättvisa
-- **Meta:** Svenska kommuner har olika linjer om AI i klassrummet. Genomgång av vad forskningen säger om lärande, fusk och rättvisa konsekvenser.
-
-Åtgärder:
-- TITLE: lägg in årtal (2026) för freshness-signal
-- META: lägg in "ai i skolan" i excerpt
-
 ### ai-kundtjanst (score 12/15, vol 90, KD 8)
 
 - **PrimÃ¤rsÃ¶kord:** `ai kundtjänst`
-- **Titel:** AI-kundtjänst på svenska, vad som fungerar och vad som irriterar
+- **Titel:** AI-kundtjänst på svenska: vad som funkar
 - **Meta:** Chattbottar har gått från frustrerande till faktiskt användbara, om man bygger dem rätt. Genomgång av vad som krävs för en bra svensk implementation.
 
 Åtgärder:
@@ -232,21 +273,10 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 - TITLE: lägg in årtal (2026) för freshness-signal
 - META: lägg in "ai och jobben" i excerpt
 
-### dina-data-i-ai (score 12/15, vol 40, KD 3)
-
-- **PrimÃ¤rsÃ¶kord:** `ai dataskydd`
-- **Titel:** AI och dataskydd 2026: vad ChatGPT, Claude och Gemini lagrar
-- **Meta:** AI dataskydd 2026: så hanterar OpenAI, Anthropic, Google, Microsoft, Meta och Mistral dina inputs. Vi går igenom skillnaderna i klartext för svenska användare.
-
-Åtgärder:
-- H2: justera antal till 5-12 (nu 13)
-- H3: lägg till minst 2 H3-underrubriker för djupare struktur
-- CONTENT: utöka till min 1200 ord (nu 1114)
-
 ### chatgpt-svenska-guide (score 13/15, vol 27000, KD 0)
 
 - **PrimÃ¤rsÃ¶kord:** `chatgpt svenska`
-- **Titel:** ChatGPT på svenska 2026: komplett guide (gratis & Plus)
+- **Titel:** ChatGPT på svenska: komplett guide 2026
 - **Meta:** Allt du behöver veta om ChatGPT på svenska 2026. Skillnad gratis vs Plus, prompt-tips på svenska, säkerhet och vad du kan göra med det.
 
 Åtgärder:
@@ -256,22 +286,31 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 ### ai-genererade-bilder (score 13/15, vol 1500, KD 0)
 
 - **PrimÃ¤rsÃ¶kord:** `ai genererade bilder`
-- **Titel:** AI-genererade bilder 2026: bästa verktygen och tekniken bakom
+- **Titel:** AI-genererade bilder: bästa verktygen 2026
 - **Meta:** AI-genererade bilder har blivit mainstream. Vi förklarar tekniken bakom AI-genererade bilder, jämför de fyra stora modellerna och visar bildresultat.
 
 Åtgärder:
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 - CONTENT: utöka till min 1200 ord (nu 1120)
 
-### skapa-ai-bilder (score 13/15, vol 700, KD 0)
+### basta-ai-verktyg-svenska (score 13/15, vol 900, KD 1)
 
-- **PrimÃ¤rsÃ¶kord:** `skapa ai bilder`
-- **Titel:** Skapa AI-bilder 2026: guide från första prompten till färdig bild
-- **Meta:** Så skapar du AI-bilder från grunden. Vi går igenom prompt-struktur, val av verktyg, upplösning och de fem misstag nybörjare gör när de börjar skapa AI-bilder.
+- **PrimÃ¤rsÃ¶kord:** `ai verktyg`
+- **Titel:** Bästa AI-verktygen 2026, komplett lista på svenska
+- **Meta:** Genomgång av de bästa AI-verktygen för svenska användare: ChatGPT, Claude, Gemini, Perplexity, Cursor, Midjourney och fler: vad de gör och kostar.
 
 Åtgärder:
-- H2: justera antal till 5-12 (nu 13)
+- H2: justera antal till 5-12 (nu 15)
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
+
+### ai-optimering (score 13/15, vol 600, KD 4)
+
+- **PrimÃ¤rsÃ¶kord:** `ai-optimering`
+- **Titel:** AI-optimering: så syns din sajt i AI-modellernas svar
+- **Meta:** AI-optimering handlar om att bli källan som ChatGPT, Perplexity och Googles AI citerar. Så anpassar du din sajt för att synas i svaren, steg för steg.
+
+Åtgärder:
+- TITLE: lägg in årtal (2026) för freshness-signal
 
 ### chatgpt-vs-claude (score 13/15, vol 250, KD 5)
 
@@ -286,7 +325,7 @@ Totalt 31 artiklar. Sorterat efter sämst score först.
 ### ai-verktyg-gratis (score 13/15, vol 200, KD 0)
 
 - **PrimÃ¤rsÃ¶kord:** `ai verktyg gratis`
-- **Titel:** AI-verktyg gratis 2026: 12 alternativ som faktiskt fungerar
+- **Titel:** AI-verktyg gratis 2026: 12 som funkar
 - **Meta:** Vilka AI-verktyg är gratis utan att vara värdelösa? Vi går igenom 12 gratis AI-tjänster för text, bild, kod och sammanfattning, och var fällorna finns.
 
 Åtgärder:

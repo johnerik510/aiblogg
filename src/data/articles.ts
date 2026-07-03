@@ -208,7 +208,19 @@ export const articles: Article[] = [
     tags: ['Cursor', 'utveckling'],
   },
 
-  // GUIDER (5)
+  // GUIDER (6)
+  {
+    slug: 'ai-optimering',
+    url: '/guider/ai-optimering/',
+    title: 'AI-optimering: så syns din sajt i AI-modellernas svar',
+    excerpt: 'AI-optimering handlar om att bli källan som ChatGPT, Perplexity och Googles AI citerar. Så anpassar du din sajt för att synas i svaren, steg för steg.',
+    category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
+    hero: '/images/inline/ai-optimering.webp',
+    heroAlt: 'Grafik med rubriken AI-optimering mot mörk bakgrund med cyan och violett ljus',
+    publishDate: '2026-07-03', readingTime: 9, published: true,
+    primaryKeyword: 'ai-optimering', searchVolume: 600, kd: 4,
+    tags: ['ai-optimering', 'GEO', 'AEO', 'AI-sökresultat'],
+  },
   {
     slug: 'chatgpt-svenska-guide',
     url: '/guider/chatgpt-svenska-guide/',
