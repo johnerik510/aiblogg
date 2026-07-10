@@ -1,0 +1,116 @@
+---
+title: "VPN och AI 2026: vad en VPN skyddar mot, och vad den inte gör"
+excerpt: "VPN och AI: en VPN döljer din IP-adress från AI-tjänsterna, men inte det du skriver i prompten. Vi reder ut var gränsen går mellan nätverksskydd och kontoskydd."
+category: "integritet"
+publishDate: "2026-07-10"
+---
+
+import Callout from '../../../components/Callout.astro';
+import FAQ from '../../../components/FAQ.astro';
+import Figure from '../../../components/Figure.astro';
+
+VPN och AI blandas ihop oftare än nästan något annat par inom digital integritet. Föreställningen är att en VPN gör dig anonym mot ChatGPT, Gemini och Copilot. Det stämmer på ett lager och är fel på ett annat, och skillnaden avgör om ditt skydd faktiskt håller.
+
+En VPN arbetar på nätverkslagret. Den byter ut din IP-adress och krypterar trafiken mellan din dator och VPN-servern. AI-tjänsterna samlar däremot in det mesta av sin data på kontonivå: din inloggning, dina prompter, dina uppladdade filer. De två lagren möts nästan aldrig.
+
+Den här genomgången visar exakt var VPN hjälper, var den inte gör någon skillnad alls, och hur du kombinerar den med rätt inställningar hos AI-leverantören.
+
+## Vad en VPN faktiskt gör
+
+Integritetsskyddsmyndigheten beskriver mekaniken kortfattat: "Både webbproxyn och VPN-tjänsterna ersätter din IP-adress med sin egen." Trafiken mellan dig och VPN-servern krypteras, och servern skickar sedan vidare förfrågan i sitt eget namn.
+
+Det får tre konkreta effekter när du använder en AI-tjänst:
+
+**Din internetleverantör ser inte vilka tjänster du besöker.** IMY är tydlig med att detta annars loggas: "Din internetleverantör loggar dels din IP-adress, dels IP-adresser till de sidor du har besökt." Med VPN ser leverantören bara att du pratar med en VPN-server.
+
+**AI-tjänsten ser VPN-serverns IP, inte din.** Din ungefärliga geografiska plats blir därmed VPN-serverns plats.
+
+**Trafik över öppna nät blir oläsbar för andra på nätet.** Det gäller kaféets wifi, hotellet och flygplatsen.
+
+Allt tre handlar om vem som ser trafiken på vägen. Inget av dem handlar om vad tjänsten i andra änden sparar när du väl är inloggad.
+
+<Callout type="warning" title="En VPN loggar inte ut dig">
+  Är du inloggad på ditt Google- eller OpenAI-konto vet tjänsten exakt vem du är, oavsett vilken IP-adress du kommer ifrån. Kontot är identifieraren, inte IP-numret.
+</Callout>
+
+## Vad AI-företagen samlar in ändå
+
+Google beskriver i sin dokumentation för Gemini Apps att man samlar in "the general area from your device, IP address, or Home or Work addresses in your Google Account", tillsammans med "the prompts you submit or speak, and tasks you ask Gemini to do for you". Standardinställningen för hur länge aktiviteten sparas är 18 månader, med val att ändra till 3 eller 36 månader.
+
+Läs listan igen och notera vad en VPN påverkar. Den byter ut ett av fyra fält. IP-adressen. Prompterna, kontot och hemadressen i Google-profilen berörs inte.
+
+Samma logik gäller hela branschen. Vad som lagras och tränas på skiljer sig kraftigt mellan leverantörer och mellan gratisplaner och företagsplaner, vilket vi går igenom i detalj under [AI dataskydd](/integritet/dina-data-i-ai/). Det som är gemensamt: skyddet sitter i kontot och avtalet, inte i tunneln.
+
+Det finns ett undantag värt att känna till. Använder du en AI-tjänst helt utan konto, till exempel ett öppet chattgränssnitt utan inloggning, blir IP-adressen en betydligt viktigare identifierare. Då gör en VPN verklig skillnad för hur väl sessionerna kan kopplas ihop över tid.
+
+## Var VPN gör verklig skillnad för AI-användning
+
+Fyra situationer där skyddet är reellt och inte teoretiskt:
+
+### Öppna nät och företagsnät
+
+**Publika nätverk.** Du sitter på ett kafé och klistrar in ett utkast till avtal i en AI-tjänst. Trafiken är krypterad av HTTPS ändå, men DNS-uppslag, servernamn och trafikmönster läcker information om vilka tjänster du använder. En VPN täpper till det.
+
+**Företagsnät och gästnät.** Många arbetsplatser inspekterar utgående trafik. Det är sällan ett integritetsproblem för dig privat, men det gör att din användning av AI-verktyg blir synlig för IT-avdelningen. Det är för övrigt själva mekanismen bakom hur [skugg-AI](/jobb/skugg-ai/) upptäcks.
+
+### Geografi och profilering
+
+**Geografiska begränsningar.** Vissa AI-funktioner rullas ut regionsvis. En VPN kan påverka vilken variant du får, men var medveten om att leverantörens villkor kan förbjuda det, och att kontots registrerade land ofta väger tyngre än IP-adressen.
+
+**IP-baserad profilering hos tredje part.** Annonsnätverk och dataintermediärer bygger profiler på IP-nivå. Här är VPN ett av få effektiva motmedel för en privatperson.
+
+Skillnaderna mellan tjänsterna är stora när det gäller loggning, hemvist och hastighet, och det är värt att jämföra innan du väljer. Vår systersajt går igenom [bästa VPN](https://vpn-guiden.se/basta-vpn/) med tester av 23 tjänster på den svenska marknaden, inklusive vilka som faktiskt kör no-log-policy som granskats externt.
+
+<Figure src="/images/inline/vpn-och-ai-inline.webp" alt="Laptop och kaffekopp på ett cafébord, en typisk situation med öppet wifi" caption="På öppna nät är VPN ett reellt skydd. Framför AI-tjänstens inloggningsruta är det ett annat problem." />
+
+## VPN, AI och GDPR på arbetsplatsen
+
+För företag byter frågan karaktär. IMY skriver i sin vägledning: "Dataskyddsförordningen, GDPR, tillämpas när personuppgifter behandlas. När verksamheter utvecklar och använder AI-system uppstår flera aktiviteter som omfattas av GDPR."
+
+En VPN löser ingen av de aktiviteterna. Om en anställd klistrar in kunduppgifter i en konsumentversion av ChatGPT har personuppgifter överförts till en personuppgiftsbiträde som ni saknar avtal med. Att trafiken gick genom en krypterad tunnel ändrar varken den rättsliga grunden eller överföringen. Juridiken kring detta reder vi ut i genomgången av [GDPR och ChatGPT](/integritet/gdpr-chatgpt/).
+
+Där VPN däremot har en roll i företagsuppsättningen är åtkomstkontroll: att kräva att anställda når interna system och godkända AI-verktyg via en företags-VPN, så att trafik utanför tunneln kan blockeras. Det är ett verktyg för styrning, inte för anonymitet. Vilka krav som gäller när VPN används i en GDPR-kontext, och vad ett personuppgiftsbiträdesavtal med VPN-leverantören behöver innehålla, gås igenom i guiden om [VPN och GDPR för företag](https://vpn-guiden.se/gdpr-vpn-foretag/).
+
+<Callout type="tip" title="Rätt ordning att lösa problemet">
+  1. Välj plan hos AI-leverantören som inte tränar på er input. 2. Teckna personuppgiftsbiträdesavtal. 3. Stäng av träning i inställningarna. 4. Lägg till VPN för nätverksskydd. Punkt 4 ersätter aldrig punkt 1 till 3.
+</Callout>
+
+## Så kombinerar du VPN med rätt AI-inställningar
+
+Vill du ha ett skydd som håller hela vägen behöver du täcka båda lagren:
+
+1. **Nätverkslagret:** en VPN med granskad no-log-policy, aktiverad kill switch och DNS-läckageskydd. Utan kill switch exponeras din riktiga IP i sekunden tunneln tappar.
+2. **Kontolagret:** stäng av modellträning i AI-tjänstens dataschema, och begränsa hur länge historiken sparas. I Gemini görs det i Gemini Apps Activity, där du kan sänka de 18 månaderna till 3.
+3. **Innehållslagret:** det viktigaste och det billigaste. Klistra inte in personnummer, kunddata, patientuppgifter eller kod som omfattas av sekretess. Ingen teknisk åtgärd i steg 1 eller 2 räddar dig från vad du själv skriver i prompten.
+4. **Identitetslagret:** använd separata konton för privat och professionell AI-användning. En VPN kan inte separera det du redan har knutit ihop med samma inloggning.
+
+Ordningen är avsiktlig. Steg 3 skyddar mot den vanligaste incidenten. Steg 1 skyddar mot den ovanligaste.
+
+## Tre myter som håller sig kvar
+
+**"VPN gör mig anonym mot ChatGPT."** Nej. Så länge du loggar in med ett konto är du identifierad. VPN döljer varifrån du kopplar upp, inte vem du är.
+
+**"AI-företagen tränar på min IP-adress."** Träningen sker på innehåll: text, bilder, kod. IP-adressen används för säkerhet, missbruksdetektering och regionsanpassning, inte som träningsdata.
+
+**"Har jag VPN behöver jag inte bry mig om GDPR."** Rakt motsatt. GDPR-ansvaret följer personuppgiften, inte transportvägen. Det är samma missförstånd som gör att företag hamnar i problem med [AI-bedrägerier](/integritet/ai-bedragerier-sverige/), där skyddet läggs på fel lager.
+
+## Behöver du VPN om du bara använder AI privat?
+
+Ärligt svar: nyttan är måttlig om du sitter hemma på eget bredband och är inloggad på ditt vanliga konto. Din internetleverantör slutar se att du besöker openai.com, och det är i princip allt du vinner.
+
+Nyttan blir tydlig när du reser, arbetar från öppna nät, vill undvika IP-baserad profilering från annonsnätverk, eller använder AI-tjänster utan att vara inloggad. Då är VPN ett rimligt lager. Bara inte det första du ska lägga till.
+
+## Vanliga frågor om VPN och AI
+
+<FAQ items={[
+  { q: "Skyddar VPN mot AI-tjänsternas datainsamling?", a: "Delvis. En VPN döljer din IP-adress och ungefärliga plats från tjänsten och hindrar internetleverantören från att se vilka sidor du besöker. Den skyddar däremot inte prompterna, kontouppgifterna eller filerna du laddar upp, eftersom den insamlingen sker på kontonivå efter att du loggat in." },
+  { q: "Kan ChatGPT se min IP-adress om jag använder VPN?", a: "Tjänsten ser VPN-serverns IP-adress, inte din egen. Är du inloggad på ditt konto spelar det liten roll för identifieringen, eftersom kontot i sig identifierar dig. Utan inloggning ger VPN ett reellt skydd mot att sessioner kopplas ihop över tid." },
+  { q: "Vad skyddar VPN inte mot?", a: "VPN skyddar inte mot det du skriver i prompten, inte mot inloggade konton, inte mot cookies i webbläsaren, inte mot skadlig kod och inte mot att AI-leverantören lagrar din historik. Den skyddar transporten av data, inte behandlingen av den." },
+  { q: "Är det lagligt att använda VPN med AI-tjänster i Sverige?", a: "Ja, VPN är lagligt i Sverige. Däremot kan enskilda AI-leverantörers användarvillkor förbjuda att man kringgår geografiska begränsningar, och i värsta fall stängs kontot av. Att använda VPN för säkerhet och integritet strider inte mot villkoren." },
+  { q: "Hjälper VPN mot GDPR-problem när anställda använder AI?", a: "Nej. GDPR-ansvaret följer personuppgiften hela vägen till AI-leverantören. Att trafiken går genom en krypterad tunnel ändrar varken den rättsliga grunden, kravet på personuppgiftsbiträdesavtal eller frågan om tredjelandsöverföring. Lösningen är rätt plan, rätt avtal och rätt interna regler." },
+  { q: "Vilket skydd ska jag prioritera om jag bara orkar med ett?", a: "Innehållet i prompten. Att aldrig klistra in personuppgifter, kunddata eller sekretessbelagd information i en konsumentversion av en AI-tjänst skyddar mot fler faktiska incidenter än VPN och inställningar tillsammans." },
+]} />
+
+## Vad härnäst?
+
+Vill du förstå vad varje leverantör faktiskt sparar och tränar på finns hela genomgången under [AI dataskydd](/integritet/dina-data-i-ai/). Ska du sätta regler för en arbetsplats är [AI-policy på arbetsplatsen](/jobb/ai-policy-arbetsplats/) rätt startpunkt, eftersom det är där gränsen mellan tillåten och otillåten användning dras i praktiken.

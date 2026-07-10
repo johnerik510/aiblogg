@@ -382,6 +382,19 @@ export const articles: Article[] = [
     tags: ['AI-detektor', 'svenska'],
   },
   {
+    slug: 'vpn-och-ai',
+    url: '/integritet/vpn-och-ai/',
+    title: 'VPN och AI 2026: vad en VPN skyddar mot, och vad den inte gör',
+    excerpt: 'VPN och AI: en VPN döljer din IP-adress från AI-tjänsterna, men inte det du skriver i prompten. Vi reder ut var gränsen går mellan nätverksskydd och kontoskydd.',
+    category: 'integritet', categoryLabel: 'Integritet & säkerhet', categoryUrl: '/integritet/',
+    hero: '/images/inline/vpn-och-ai.webp',
+    heroAlt: 'Person vid en laptop som visar en VPN-app med världskarta och skölds-ikon',
+    publishDate: '2026-07-10', readingTime: 8, published: true,
+    // searchVolume 0 = ingen Ahrefs-data hämtad ännu för det här sökordet
+    primaryKeyword: 'vpn och ai', searchVolume: 0,
+    tags: ['VPN', 'integritet', 'GDPR'],
+  },
+  {
     slug: 'dina-data-i-ai',
     url: '/integritet/dina-data-i-ai/',
     title: 'AI och dataskydd: vad ChatGPT och Claude lagrar',

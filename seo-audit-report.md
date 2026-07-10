@@ -1,6 +1,6 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-07-03T18:55:00.679Z
+Genererad: 2026-07-10T12:01:06.445Z
 
 Totalt 34 artiklar. Sorterat efter sämst score först.
 
@@ -12,14 +12,13 @@ Totalt 34 artiklar. Sorterat efter sämst score först.
 | chatgpt-gratis-svenska | 9/15 | chatgpt svenska gratis | 1500 | 0 | 40 | 140 | 1258 | 12 | 9 | 6 | 5 |
 | chatgpt-detector-svenska | 9/15 | chatgpt detector svenska | 100 | 0 | 54 | 144 | 1430 | 14 | 4 | 5 | 6 |
 | ai-personligt-brev-cv | 10/15 | ai personligt brev | 110 | 4 | 36 | 157 | 1232 | 8 | 6 | 6 | 4 |
-| dina-data-i-ai | 10/15 | ai dataskydd | 40 | 3 | 47 | 159 | 1114 | 13 | 5 | 6 | 4 |
 | skapa-ai-bilder | 11/15 | skapa ai bilder | 700 | 0 | 44 | 158 | 1457 | 13 | 4 | 6 | 3 |
 | gemini-ai-svenska | 11/15 | gemini ai | 200 | 3 | 52 | 160 | 1240 | 11 | 6 | 6 | 3 |
 | sora-ai-video | 11/15 | sora ai | 200 | 5 | 47 | 133 | 1322 | 12 | 6 | 6 | 3 |
 | ai-i-skolan | 11/15 | ai i skolan | 110 | 7 | 34 | 133 | 1346 | 10 | 6 | 6 | 3 |
 | ai-i-excel-och-sheets | 11/15 | ai i excel | 60 | 5 | 39 | 140 | 1303 | 13 | 7 | 5 | 3 |
 | vad-ar-en-prompt | 11/15 | vad är en prompt inom ai | 40 | 1 | 50 | 146 | 1178 | 9 | 6 | 6 | 4 |
-| skugg-ai | 11/15 | skugg-ai | 40 | 3 | 42 | 222 | 1211 | 8 | 7 | 6 | 3 |
+| skugg-ai | 11/15 | skugg-ai | 40 | 3 | 42 | 222 | 1230 | 8 | 8 | 6 | 3 |
 | ai-energi-elforbrukning | 11/15 | ai energi | 40 | 5 | 40 | 157 | 1261 | 8 | 4 | 5 | 3 |
 | ai-sverige-strategi | 11/15 | sverige ai strategi | 30 | 4 | 41 | 148 | 1226 | 10 | 7 | 5 | 4 |
 | deepfake-skydd | 12/15 | deepfake | 4500 | 72 | 46 | 140 | 1156 | 11 | 4 | 6 | 3 |
@@ -31,7 +30,7 @@ Totalt 34 artiklar. Sorterat efter sämst score först.
 | chatgpt-svenska-guide | 13/15 | chatgpt svenska | 27000 | 0 | 39 | 135 | 1798 | 13 | 13 | 8 | 2 |
 | ai-genererade-bilder | 13/15 | ai genererade bilder | 1500 | 0 | 42 | 149 | 1120 | 11 | 5 | 6 | 2 |
 | basta-ai-verktyg-svenska | 13/15 | ai verktyg | 900 | 1 | 50 | 146 | 1608 | 15 | 13 | 6 | 2 |
-| ai-optimering | 13/15 | ai-optimering | 600 | 4 | 53 | 150 | 1267 | 9 | 6 | 5 | 1 |
+| ai-optimering | 13/15 | ai-optimering | 600 | 4 | 53 | 150 | 1293 | 9 | 6 | 5 | 1 |
 | chatgpt-vs-claude | 13/15 | chatgpt vs claude | 250 | 5 | 56 | 154 | 1221 | 12 | 8 | 6 | 2 |
 | ai-verktyg-gratis | 13/15 | ai verktyg gratis | 200 | 0 | 37 | 151 | 1279 | 18 | 7 | 6 | 2 |
 | vad-ar-chatgpt | 13/15 | vad är chatgpt | 90 | 2 | 48 | 148 | 1284 | 12 | 8 | 5 | 2 |
@@ -40,8 +39,9 @@ Totalt 34 artiklar. Sorterat efter sämst score först.
 | eu-ai-act-sverige | 14/15 | eu ai act | 250 | 12 | 41 | 145 | 1319 | 10 | 6 | 6 | 1 |
 | cursor-ai-svenska | 14/15 | cursor ai | 150 | 4 | 54 | 154 | 1269 | 11 | 4 | 6 | 1 |
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
-| gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1342 | 12 | 7 | 6 | 1 |
+| gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1359 | 12 | 8 | 6 | 1 |
 | ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1310 | 7 | 12 | 6 | 1 |
+| vpn-och-ai | 15/15 | vpn och ai | 40 | 3 | 61 | 160 | 1231 | 9 | 6 | 6 | 0 |
 
 ## Per artikel: åtgärder
 
@@ -96,18 +96,6 @@ Totalt 34 artiklar. Sorterat efter sämst score först.
 - TITLE: lägg in årtal (2026) för freshness-signal
 - META: lägg in "ai personligt brev" i excerpt
 - INTRO: lägg in "ai personligt brev" i första 100 orden
-
-### dina-data-i-ai (score 10/15, vol 40, KD 3)
-
-- **PrimÃ¤rsÃ¶kord:** `ai dataskydd`
-- **Titel:** AI och dataskydd: vad ChatGPT och Claude lagrar
-- **Meta:** AI dataskydd 2026: så hanterar OpenAI, Anthropic, Google, Microsoft, Meta och Mistral dina inputs. Vi går igenom skillnaderna i klartext för svenska användare.
-
-Åtgärder:
-- TITLE: lägg in årtal (2026) för freshness-signal
-- H2: justera antal till 5-12 (nu 13)
-- H3: lägg till minst 2 H3-underrubriker för djupare struktur
-- CONTENT: utöka till min 1200 ord (nu 1114)
 
 ### skapa-ai-bilder (score 11/15, vol 700, KD 0)
 
