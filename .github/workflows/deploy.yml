@@ -54,13 +54,23 @@ jobs:
         run: |
           sleep 20
           fail=0
+          # Cloudflare behover en stund pa sig att propagera den nya deployen till
+          # alla edge-noder. Utan retry ger testet falskt rott: 2026-07-10 rapporterade
+          # det 404 pa en sida som var 200 en minut senare. Retry, inte langre sleep.
+          check() {
+            for attempt in 1 2 3 4 5 6; do
+              code=$(curl -s -o /dev/null -w "%{http_code}" "$1?cachebust=$GITHUB_RUN_ID-$attempt")
+              [ "$code" = "200" ] && { echo "200  $1 (forsok $attempt)"; return 0; }
+              sleep 15
+            done
+            echo "::error::$1 gav $code efter 6 forsok (forvantade 200)"
+            return 1
+          }
           for url in \
             "https://aiblogg.se/" \
             "https://aiblogg.se/verktyg/chatgpt-vs-claude/" \
             "https://aiblogg.se/sitemap-index.xml"; do
-            code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
-            echo "$code  $url"
-            [ "$code" != "200" ] && { echo "::error::$url gav $code (forvantade 200)"; fail=1; }
+            check "$url" || fail=1
           done
           robots=$(curl -sI "https://aiblogg.se/" | grep -i 'x-robots-tag' | grep -i 'noindex' || true)
           if [ -n "$robots" ]; then
