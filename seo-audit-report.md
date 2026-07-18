@@ -1,6 +1,6 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-07-18T19:16:36.260Z
+Genererad: 2026-07-18T19:30:14.645Z
 
 Totalt 35 artiklar. Sorterat efter sämst score först.
 
@@ -8,6 +8,7 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 
 | Slug | Score | KW | Vol | KD | Titel-len | Meta-len | Ord | H2 | Länkar | FAQ | Issues |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+| prompt-engineering | 5/15 | prompt engineering | 300 | 3 | 74 | 132 | 860 | 5 | 0 | 0 | 9 |
 | microsoft-copilot-svenska | 9/15 | microsoft copilot | 4000 | 6 | 53 | 186 | 584 | 6 | 0 | 4 | 5 |
 | chatgpt-gratis-svenska | 9/15 | chatgpt svenska gratis | 1500 | 0 | 40 | 140 | 1258 | 12 | 9 | 6 | 5 |
 | chatgpt-detector-svenska | 9/15 | chatgpt detector svenska | 100 | 0 | 54 | 144 | 1430 | 14 | 4 | 5 | 6 |
@@ -41,10 +42,26 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
 | gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1359 | 12 | 8 | 6 | 1 |
 | ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1310 | 7 | 12 | 6 | 1 |
-| prompt-engineering | 15/15 | prompt engineering | 300 | 3 | 56 | 148 | 1218 | 6 | 5 | 5 | 0 |
 | vpn-och-ai | 15/15 | vpn och ai | 40 | 3 | 61 | 160 | 1231 | 9 | 6 | 6 | 0 |
 
 ## Per artikel: åtgärder
+
+### prompt-engineering (score 5/15, vol 300, KD 3)
+
+- **PrimÃ¤rsÃ¶kord:** `prompt engineering`
+- **Titel:** Vad är prompt engineering – och varför avgör det om du får bra svar av AI?
+- **Meta:** Skillnaden handlar sällan om vilket AI-verktyg du använder, utan om hur du ställer frågan. Det är det som kallas prompt engineering.
+
+Åtgärder:
+- TITLE: justera längd till 35-65 tecken (nu 74)
+- TITLE: lägg in årtal (2026) för freshness-signal
+- H2: använd "prompt engineering" i minst en H2-rubrik
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
+- CONTENT: utöka till min 1200 ord (nu 860)
+- LÄNKAR: lägg till fler internlänkar (nu 0, mål 3+)
+- FAQ: lägg till FAQ-block med 4-6 frågor
+- CALLOUT: lägg in minst en Callout-komponent
+- BILD: lägg in inline-bild med Figure-komponent
 
 ### microsoft-copilot-svenska (score 9/15, vol 4000, KD 6)
 
