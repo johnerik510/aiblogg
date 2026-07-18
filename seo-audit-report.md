@@ -1,8 +1,8 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-07-10T12:01:06.445Z
+Genererad: 2026-07-18T19:16:36.260Z
 
-Totalt 34 artiklar. Sorterat efter sämst score först.
+Totalt 35 artiklar. Sorterat efter sämst score först.
 
 ## Översikt
 
@@ -41,6 +41,7 @@ Totalt 34 artiklar. Sorterat efter sämst score först.
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
 | gdpr-chatgpt | 14/15 | gdpr chatgpt | 70 | 5 | 56 | 146 | 1359 | 12 | 8 | 6 | 1 |
 | ai-policy-arbetsplats | 14/15 | ai policy | 50 | 2 | 54 | 157 | 1310 | 7 | 12 | 6 | 1 |
+| prompt-engineering | 15/15 | prompt engineering | 300 | 3 | 56 | 148 | 1218 | 6 | 5 | 5 | 0 |
 | vpn-och-ai | 15/15 | vpn och ai | 40 | 3 | 61 | 160 | 1231 | 9 | 6 | 6 | 0 |
 
 ## Per artikel: åtgärder

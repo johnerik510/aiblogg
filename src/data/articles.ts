@@ -258,6 +258,18 @@ export const articles: Article[] = [
     tags: ['ChatGPT', 'grundläggande'],
   },
   {
+    slug: 'prompt-engineering',
+    url: '/guider/prompt-engineering/',
+    title: 'Vad är prompt engineering? Så får du bättre AI-svar 2026',
+    excerpt: 'Prompt engineering är konsten att formulera rätt instruktion till AI. Så fungerar det, tre grundregler och varför formuleringen avgör svaret du får.',
+    category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
+    hero: '/images/inline/prompt-engineering.webp',
+    heroAlt: 'Person som skriver en prompt till ett AI-verktyg på en bärbar dator',
+    publishDate: '2026-07-18', readingTime: 7, published: true,
+    primaryKeyword: 'prompt engineering', searchVolume: 300, kd: 3,
+    tags: ['prompting'],
+  },
+  {
     slug: 'vad-ar-en-prompt',
     url: '/guider/vad-ar-en-prompt/',
     title: 'Vad är en prompt inom AI? Förklaring med 8 exempel',
