@@ -1,6 +1,6 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-07-18T19:30:14.645Z
+Genererad: 2026-07-18T19:35:57.043Z
 
 Totalt 35 artiklar. Sorterat efter sämst score först.
 
@@ -8,7 +8,6 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 
 | Slug | Score | KW | Vol | KD | Titel-len | Meta-len | Ord | H2 | Länkar | FAQ | Issues |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| prompt-engineering | 5/15 | prompt engineering | 300 | 3 | 74 | 132 | 860 | 5 | 0 | 0 | 9 |
 | microsoft-copilot-svenska | 9/15 | microsoft copilot | 4000 | 6 | 53 | 186 | 584 | 6 | 0 | 4 | 5 |
 | chatgpt-gratis-svenska | 9/15 | chatgpt svenska gratis | 1500 | 0 | 40 | 140 | 1258 | 12 | 9 | 6 | 5 |
 | chatgpt-detector-svenska | 9/15 | chatgpt detector svenska | 100 | 0 | 54 | 144 | 1430 | 14 | 4 | 5 | 6 |
@@ -37,6 +36,7 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 | vad-ar-chatgpt | 13/15 | vad är chatgpt | 90 | 2 | 48 | 148 | 1284 | 12 | 8 | 5 | 2 |
 | ai-for-smaforetag | 13/15 | ai för småföretag | 80 | 4 | 57 | 158 | 1299 | 12 | 11 | 6 | 2 |
 | ai-bedragerier-sverige | 13/15 | ai bedrägeri | 50 | 6 | 50 | 146 | 1296 | 11 | 4 | 6 | 2 |
+| ai-agenter | 14/15 | ai agenter | 300 | 6 | 39 | 144 | 1237 | 8 | 7 | 5 | 1 |
 | eu-ai-act-sverige | 14/15 | eu ai act | 250 | 12 | 41 | 145 | 1319 | 10 | 6 | 6 | 1 |
 | cursor-ai-svenska | 14/15 | cursor ai | 150 | 4 | 54 | 154 | 1269 | 11 | 4 | 6 | 1 |
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
@@ -45,23 +45,6 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 | vpn-och-ai | 15/15 | vpn och ai | 40 | 3 | 61 | 160 | 1231 | 9 | 6 | 6 | 0 |
 
 ## Per artikel: åtgärder
-
-### prompt-engineering (score 5/15, vol 300, KD 3)
-
-- **PrimÃ¤rsÃ¶kord:** `prompt engineering`
-- **Titel:** Vad är prompt engineering – och varför avgör det om du får bra svar av AI?
-- **Meta:** Skillnaden handlar sällan om vilket AI-verktyg du använder, utan om hur du ställer frågan. Det är det som kallas prompt engineering.
-
-Åtgärder:
-- TITLE: justera längd till 35-65 tecken (nu 74)
-- TITLE: lägg in årtal (2026) för freshness-signal
-- H2: använd "prompt engineering" i minst en H2-rubrik
-- H3: lägg till minst 2 H3-underrubriker för djupare struktur
-- CONTENT: utöka till min 1200 ord (nu 860)
-- LÄNKAR: lägg till fler internlänkar (nu 0, mål 3+)
-- FAQ: lägg till FAQ-block med 4-6 frågor
-- CALLOUT: lägg in minst en Callout-komponent
-- BILD: lägg in inline-bild med Figure-komponent
 
 ### microsoft-copilot-svenska (score 9/15, vol 4000, KD 6)
 
@@ -366,6 +349,15 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 
 Åtgärder:
 - META: lägg in "ai bedrägeri" i excerpt
+- H3: lägg till minst 2 H3-underrubriker för djupare struktur
+
+### ai-agenter (score 14/15, vol 300, KD 6)
+
+- **PrimÃ¤rsÃ¶kord:** `ai agenter`
+- **Titel:** AI-agenter 2026: vad de faktiskt klarar
+- **Meta:** AI-agenter utför uppgifter på egen hand i stället för att bara svara. Vi förklarar vad agentisk AI är, vad den klarar 2026 och var den fallerar.
+
+Åtgärder:
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
 
 ### eu-ai-act-sverige (score 14/15, vol 250, KD 12)

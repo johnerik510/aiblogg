@@ -111,6 +111,18 @@ export const clusters: Cluster[] = [
 export const articles: Article[] = [
   // JOBB
   {
+    slug: 'ai-pa-arbetsplatsen',
+    url: '/jobb/ai-pa-arbetsplatsen/',
+    title: 'AI på arbetsplatsen – användningsområden du förmodligen inte tänkt på',
+    excerpt: 'De flesta som börjar använda AI på jobbet fastnar vid det uppenbara. AI kan göra betydligt mer, och det mest värdefulla händer ofta i verktyg du redan har.',
+    category: 'jobb', categoryLabel: 'AI jobb och företag', categoryUrl: '/jobb/',
+    hero: '/images/inline/ai-pa-arbetsplatsen.webp',
+    heroAlt: 'Team som arbetar tillsammans med bärbara datorer på ett modernt kontor',
+    publishDate: '2026-07-18', readingTime: 6, published: true,
+    primaryKeyword: 'ai på arbetsplatsen', searchVolume: 200, kd: 4,
+    tags: ['ai på jobbet', 'produktivitet'],
+  },
+  {
     slug: 'ai-agenter',
     url: '/jobb/ai-agenter/',
     title: 'AI-agenter 2026: vad de faktiskt klarar',
@@ -256,18 +268,6 @@ export const articles: Article[] = [
     publishDate: '2026-05-16', readingTime: 6, published: true,
     primaryKeyword: 'vad är chatgpt', searchVolume: 90, kd: 2,
     tags: ['ChatGPT', 'grundläggande'],
-  },
-  {
-    slug: 'prompt-engineering',
-    url: '/guider/prompt-engineering/',
-    title: 'Vad är prompt engineering – och varför avgör det om du får bra svar av AI?',
-    excerpt: 'Skillnaden handlar sällan om vilket AI-verktyg du använder, utan om hur du ställer frågan. Det är det som kallas prompt engineering.',
-    category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
-    hero: '/images/inline/prompt-engineering.webp',
-    heroAlt: 'Person som skriver en prompt till ett AI-verktyg på en bärbar dator',
-    publishDate: '2026-07-18', readingTime: 5, published: true,
-    primaryKeyword: 'prompt engineering', searchVolume: 300, kd: 3,
-    tags: ['prompting'],
   },
   {
     slug: 'vad-ar-en-prompt',
