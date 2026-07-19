@@ -1,8 +1,8 @@
 # SEO-audit aiblogg.se
 
-Genererad: 2026-07-18T19:35:57.043Z
+Genererad: 2026-07-19T18:42:41.774Z
 
-Totalt 35 artiklar. Sorterat efter sämst score först.
+Totalt 36 artiklar. Sorterat efter sämst score först.
 
 ## Översikt
 
@@ -19,7 +19,7 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 | ai-i-excel-och-sheets | 11/15 | ai i excel | 60 | 5 | 39 | 140 | 1303 | 13 | 7 | 5 | 3 |
 | vad-ar-en-prompt | 11/15 | vad är en prompt inom ai | 40 | 1 | 50 | 146 | 1178 | 9 | 6 | 6 | 4 |
 | skugg-ai | 11/15 | skugg-ai | 40 | 3 | 42 | 222 | 1230 | 8 | 8 | 6 | 3 |
-| ai-energi-elforbrukning | 11/15 | ai energi | 40 | 5 | 40 | 157 | 1261 | 8 | 4 | 5 | 3 |
+| ai-energi-elforbrukning | 11/15 | ai energi | 40 | 5 | 40 | 157 | 1281 | 8 | 5 | 5 | 3 |
 | ai-sverige-strategi | 11/15 | sverige ai strategi | 30 | 4 | 41 | 148 | 1226 | 10 | 7 | 5 | 4 |
 | deepfake-skydd | 12/15 | deepfake | 4500 | 72 | 46 | 140 | 1156 | 11 | 4 | 6 | 3 |
 | ai-bilder-gratis | 12/15 | ai bilder gratis | 1200 | 1 | 55 | 156 | 1154 | 15 | 5 | 6 | 3 |
@@ -36,7 +36,8 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 | vad-ar-chatgpt | 13/15 | vad är chatgpt | 90 | 2 | 48 | 148 | 1284 | 12 | 8 | 5 | 2 |
 | ai-for-smaforetag | 13/15 | ai för småföretag | 80 | 4 | 57 | 158 | 1299 | 12 | 11 | 6 | 2 |
 | ai-bedragerier-sverige | 13/15 | ai bedrägeri | 50 | 6 | 50 | 146 | 1296 | 11 | 4 | 6 | 2 |
-| ai-agenter | 14/15 | ai agenter | 300 | 6 | 39 | 144 | 1237 | 8 | 7 | 5 | 1 |
+| ai-agenter | 14/15 | ai agenter | 300 | 6 | 39 | 144 | 1252 | 8 | 8 | 5 | 1 |
+| styra-elforbrukning-smarta-system | 14/15 | styra elförbrukningen med smarta system | 300 | 5 | 69 | 149 | 1209 | 7 | 4 | 5 | 1 |
 | eu-ai-act-sverige | 14/15 | eu ai act | 250 | 12 | 41 | 145 | 1319 | 10 | 6 | 6 | 1 |
 | cursor-ai-svenska | 14/15 | cursor ai | 150 | 4 | 54 | 154 | 1269 | 11 | 4 | 6 | 1 |
 | ai-motesprotokoll | 14/15 | ai mötesprotokoll | 70 | 3 | 50 | 139 | 1441 | 10 | 5 | 6 | 1 |
@@ -359,6 +360,15 @@ Totalt 35 artiklar. Sorterat efter sämst score först.
 
 Åtgärder:
 - H3: lägg till minst 2 H3-underrubriker för djupare struktur
+
+### styra-elforbrukning-smarta-system (score 14/15, vol 300, KD 5)
+
+- **PrimÃ¤rsÃ¶kord:** `styra elförbrukningen med smarta system`
+- **Titel:** Styra elförbrukningen med smarta system: så kapar du elräkningen 2026
+- **Meta:** Så kan du styra elförbrukningen med smarta system: flytta tvätt, laddning och värme till billiga timmar. Men rätt elavtal avgör hur mycket du sparar.
+
+Åtgärder:
+- TITLE: justera längd till 35-65 tecken (nu 69)
 
 ### eu-ai-act-sverige (score 14/15, vol 250, KD 12)
 

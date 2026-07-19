@@ -484,8 +484,8 @@
     "excerptLen": 157,
     "h2": 8,
     "h3": 15,
-    "wordCount": 1261,
-    "internalLinkCount": 4,
+    "wordCount": 1281,
+    "internalLinkCount": 5,
     "faqCount": 5,
     "calloutCount": 2,
     "hasInlineImage": true,
@@ -1186,8 +1186,8 @@
     "excerptLen": 144,
     "h2": 8,
     "h3": 1,
-    "wordCount": 1237,
-    "internalLinkCount": 7,
+    "wordCount": 1252,
+    "internalLinkCount": 8,
     "faqCount": 5,
     "calloutCount": 2,
     "hasInlineImage": true,
@@ -1210,6 +1210,46 @@
     },
     "actions": [
       "H3: lägg till minst 2 H3-underrubriker för djupare struktur"
+    ]
+  },
+  {
+    "slug": "styra-elforbrukning-smarta-system",
+    "category": "guider",
+    "primaryKeyword": "styra elförbrukningen med smarta system",
+    "sv": 300,
+    "kd": 5,
+    "score": 14,
+    "total": 15,
+    "title": "Styra elförbrukningen med smarta system: så kapar du elräkningen 2026",
+    "titleLen": 69,
+    "excerpt": "Så kan du styra elförbrukningen med smarta system: flytta tvätt, laddning och värme till billiga timmar. Men rätt elavtal avgör hur mycket du sparar.",
+    "excerptLen": 149,
+    "h2": 7,
+    "h3": 4,
+    "wordCount": 1209,
+    "internalLinkCount": 4,
+    "faqCount": 5,
+    "calloutCount": 2,
+    "hasInlineImage": true,
+    "checks": {
+      "title_has_keyword": true,
+      "title_length_ok": false,
+      "title_has_year": true,
+      "title_has_number": true,
+      "meta_has_keyword": true,
+      "meta_length_ok": true,
+      "keyword_in_first_100": true,
+      "keyword_in_h2": true,
+      "h2_count_ok": true,
+      "has_h3": true,
+      "word_count_ok": true,
+      "internal_links_ok": true,
+      "has_faq": true,
+      "has_callout": true,
+      "has_inline_image": true
+    },
+    "actions": [
+      "TITLE: justera längd till 35-65 tecken (nu 69)"
     ]
   },
   {

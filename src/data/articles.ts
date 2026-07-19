@@ -234,6 +234,18 @@ export const articles: Article[] = [
     tags: ['ai-optimering', 'GEO', 'AEO', 'AI-sökresultat'],
   },
   {
+    slug: 'styra-elforbrukning-smarta-system',
+    url: '/guider/styra-elforbrukning-smarta-system/',
+    title: 'Styra elförbrukningen med smarta system: så kapar du elräkningen 2026',
+    excerpt: 'Så kan du styra elförbrukningen med smarta system: flytta tvätt, laddning och värme till billiga timmar. Men rätt elavtal avgör hur mycket du sparar.',
+    category: 'guider', categoryLabel: 'AI-guider', categoryUrl: '/guider/',
+    hero: '/images/inline/styra-elforbrukning-smarta-system.webp',
+    heroAlt: 'Grafik med rubriken smart elstyrning mot mörk bakgrund med cyan och violett ljus',
+    publishDate: '2026-07-19', readingTime: 8, published: true,
+    primaryKeyword: 'styra elförbrukningen med smarta system', searchVolume: 300, kd: 5,
+    tags: ['elförbrukning', 'smart hem', 'elavtal', 'energioptimering'],
+  },
+  {
     slug: 'chatgpt-svenska-guide',
     url: '/guider/chatgpt-svenska-guide/',
     title: 'ChatGPT på svenska: komplett guide 2026',
