@@ -3,6 +3,7 @@ title: "AI-agenter 2026: vad de faktiskt klarar"
 excerpt: "AI-agenter utför uppgifter på egen hand i stället för att bara svara. Vi förklarar vad agentisk AI är, vad den klarar 2026 och var den fallerar."
 category: "jobb"
 publishDate: "2026-06-15"
+updateDate: "2026-07-20"
 ---
 
 import Callout from '../../../components/Callout.astro';
@@ -38,6 +39,8 @@ Tidigare år handlade om generativ AI som behövde matas med instruktioner. Enli
 Agenter är bäst på avgränsade uppgifter med många steg men lågt omdömeskrav: research över flera webbsidor, fylla i formulär, sammanställa data från flera källor, sortera och svara på rutinmejl, och köra repetitiva moment i kalkylark. Alla tre stora leverantörer har lagt till agentläge under året.
 
 ChatGPT har ett agentläge som kan surfa, fylla i fält och köra analyser åt dig från start till mål. Claude är inriktat på företagsuppgifter där pålitlig verktygsanvändning och långt minne spelar roll, och har en funktion för att styra datorn via skärmbild plus mus och tangentbord. Google har byggt ut Gemini till en mer aktiv partner som kan utföra arbete i webbläsaren åt dig. Funktionerna utvecklas snabbt, så kontrollera alltid den aktuella versionen på respektive tjänst innan du bygger något viktigt på en specifik förmåga.
+
+En sak som avgör hur bra en agent klarar research är vad den får tillbaka när den söker på webben. Vanliga sökresultat är byggda för människor, med HTML, annonser och navigering som modellen måste sålla bort innan den kommer åt själva svaret. Därför har det vuxit fram [sök-API:er byggda för språkmodeller](https://oden-api.com/), till exempel europeiska ODEN, som svarar med strukturerad text och källhänvisningar i stället för råa sidor. Skillnaden märks tydligast när agenten ska gå igenom tio källor i rad: färre tokens går åt till att rensa brus, och fler till att faktiskt läsa innehållet.
 
 Vill du jämföra modellerna bakom agenterna har vi en hands-on-genomgång av [ChatGPT vs Claude](/verktyg/chatgpt-vs-claude/) där skillnaderna i kodning, långa dokument och svenska gås igenom. För agentarbete väger pålitlig verktygsanvändning tyngst, och där ligger Claude ofta före.
 
